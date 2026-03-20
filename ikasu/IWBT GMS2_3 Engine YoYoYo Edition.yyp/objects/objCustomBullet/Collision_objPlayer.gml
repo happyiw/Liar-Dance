@@ -1,0 +1,2 @@
+if (killer)
+    scrKillPlayer()

@@ -1,0 +1,1 @@
+if(surface_exists(srf)) surface_free(srf);

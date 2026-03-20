@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"des",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"des",
+  "parent":{
+    "name":"Script",
+    "path":"folders/z_Avoid_Sa/Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

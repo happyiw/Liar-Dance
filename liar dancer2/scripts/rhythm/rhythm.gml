@@ -1,0 +1,1 @@
+function rhythm(){return round(ts1*(argument0+argument1) + 1    )}

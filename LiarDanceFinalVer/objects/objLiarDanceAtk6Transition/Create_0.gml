@@ -1,7 +1,7 @@
 srf=noone
 srf2=noone
 
-
+muteki=0
 
 surf_r=0
 

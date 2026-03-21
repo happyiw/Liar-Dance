@@ -1,5 +1,5 @@
 scrPlayMusic(musLiarDance,false)
-t=3025		//3025		//2393		//1825		//1259      //-1
+t=-1		//3025		//2393		//1825		//1259      //-1
 
 //4158 start point is a bit broken (blocks get misplaced?), havent found out why yet
 //but other than that avoidance works fine

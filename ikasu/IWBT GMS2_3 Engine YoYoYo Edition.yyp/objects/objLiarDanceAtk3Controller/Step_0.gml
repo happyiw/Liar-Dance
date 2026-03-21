@@ -742,7 +742,7 @@ if t>=1786 and t<=1826 {
 		for (i=2; i<4; i++) {
 			r[i]=EaseInOutSine(clamp(other.t-1786+10*(i-1),0,35),2000+50*i,0,35)
 		}
-		surf_r=EaseInOutSine(clamp(other.t-1806,0,35),800,0,35)
+		surf_r=EaseInOutSine(clamp(other.t-1801,0,20),800,0,20)
 	}
 	
 	with(objLiarDanceAtk3PrimitiveTransition) {

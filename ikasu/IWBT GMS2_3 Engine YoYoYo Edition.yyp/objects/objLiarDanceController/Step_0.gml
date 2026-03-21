@@ -37,9 +37,11 @@ if t==1826 {
 
 if t==2394 {
 	instance_destroy(objLiarDanceAtk4Controller)	
-	if !instance_exists(objLiarDanceAtk5Controller)
-		instance_create(0,0,objLiarDanceAtk5Controller)
-		
+	if !instance_exists(objLiarDanceAtk5Controller) {
+		a=instance_create(scrPX(),scrPY(),objLiarDanceAtk5Controller)
+		a.spiral_mirror=atk5_spiral_mirror;
+		a.teto_side=atk6_teto_side	
+	}
 	border_width=0
 	
 }
@@ -47,8 +49,9 @@ if t==2394 {
 if t==3026 {
 	
 	instance_destroy(objLiarDanceAtk5Controller)	
-	if !instance_exists(objLiarDanceAtk6Controller)
-		instance_create(400,304,objLiarDanceAtk6Controller)
-		
+	if !instance_exists(objLiarDanceAtk6Controller) {
+		a=instance_create(400,304,objLiarDanceAtk6Controller)
+		a.teto_side=atk6_teto_side
+	}
 	border_width=80
 }

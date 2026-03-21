@@ -744,6 +744,7 @@ if t==2994 {
 	//a.alarm[0]=29
 	a.t=26
 	a.t_inc=-1
+	
 }
 
 if t==2995 {
@@ -754,9 +755,12 @@ if t==2995 {
 	set_camera(v,v/1.3,800-v*2,608-v*2/1.3,0)
 	
 	instance_destroy(objDecoCustomObject)
-	a=instance_create(400,304,objDecoCustomObject)
+	a=instance_create_depth(400,304,-300,objLiarDanceAtk5Crutch)
 	a.sprite_index=sprLiarDanceAtk6TetoSilhoulette;
 	a.image_alpha=0.2
 	a.image_xscale=teto_side
 	a.tag="atk 5 dancing silhoulette"
+	a.alarm[1]=30
+}
+if t>=2995 and t<=3000 {
 }

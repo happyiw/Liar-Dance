@@ -1,5 +1,5 @@
 scrPlayMusic(musLiarDance,false)
-t=4154		//3025		//2393		//1825		//1259      //-1
+t=-1		//3025		//2393		//1825		//1259      //-1
 
 //4158 start point for the 2nd half
 //its a bit broken (blocks get misplaced?), havent found out why yet

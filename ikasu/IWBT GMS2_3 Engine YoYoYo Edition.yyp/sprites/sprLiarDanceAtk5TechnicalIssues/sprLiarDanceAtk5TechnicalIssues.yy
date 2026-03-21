@@ -34,7 +34,7 @@
   "origin":0,
   "parent":{
     "name":"Atk5",
-    "path":"folders/Sprites/Avoidance/Atk5.yy",
+    "path":"folders/a_ikasu/Sprites/Avoidance/Atk5.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

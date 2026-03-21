@@ -49,7 +49,7 @@
   "origin":9,
   "parent":{
     "name":"Atk4",
-    "path":"folders/Sprites/Avoidance/Atk4.yy",
+    "path":"folders/a_ikasu/Sprites/Avoidance/Atk4.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

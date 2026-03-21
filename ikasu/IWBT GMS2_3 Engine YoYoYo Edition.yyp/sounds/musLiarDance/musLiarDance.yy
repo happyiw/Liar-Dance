@@ -15,7 +15,7 @@
   "name":"musLiarDance",
   "parent":{
     "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "path":"folders/a_ikasu/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

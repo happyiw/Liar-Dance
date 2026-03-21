@@ -14,7 +14,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Atk6",
-    "path":"folders/Objects/Avoidance/Atk6.yy",
+    "path":"folders/a_ikasu/Objects/Avoidance/Atk6.yy",
   },
   "parentObjectId":null,
   "persistent":false,

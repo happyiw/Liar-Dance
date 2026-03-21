@@ -1,3 +1,9 @@
+/*
+592 - sprLiarDanceAtk1TransitionText
+612-630 - spam
+*/
+
+
 if instance_exists(objPlayer) {
     t++
 }
@@ -260,14 +266,13 @@ if t==593 {
 	
 	with(objShadowDrawer) {
 		draw_player=false	
-	}	
+	}
 }
 
 if t>=595 and t<=612 {
 	
 	camera_set_view_angle(0,EaseOutExpo(t-595,0,15,17))
 	
-	//view_angle[0]=EaseOutExpo(t-595,0,15,17)
 	v=EaseOutExpo(t-595,0,80,17)
 	set_camera(v,v/1.3/1.3,800-v*2,608-v*2/1.3,0)
 }

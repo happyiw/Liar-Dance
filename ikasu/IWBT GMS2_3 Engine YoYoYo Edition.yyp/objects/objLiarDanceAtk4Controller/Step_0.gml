@@ -66,7 +66,7 @@ if t>=1826 and t<=1976 {
 }
 
 //if t mod (30+7*(t>=2012)) == 0 {
-if t mod 35 == 10 {
+if t mod (35+5*(t>=2012)) == 10 {
 	rand_y=480-random_range(32,128)
 	a = instance_create(832,rand_y,objLiarDanceAtk4BouncyCherries)
 	a.sprite_index=sprCustomRegularCherry

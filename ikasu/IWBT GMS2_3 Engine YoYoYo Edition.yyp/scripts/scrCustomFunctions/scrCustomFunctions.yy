@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrCustomFunctions",
   "parent":{
-    "name":"Custom",
-    "path":"folders/Scripts/Custom.yy",
+    "name":"Scripts",
+    "path":"folders/a_ikasu/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

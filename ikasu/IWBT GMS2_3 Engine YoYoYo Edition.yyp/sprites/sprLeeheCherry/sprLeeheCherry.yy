@@ -41,7 +41,7 @@
   "origin":9,
   "parent":{
     "name":"Avoidance",
-    "path":"folders/Sprites/Avoidance.yy",
+    "path":"folders/a_ikasu/Sprites/Avoidance.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

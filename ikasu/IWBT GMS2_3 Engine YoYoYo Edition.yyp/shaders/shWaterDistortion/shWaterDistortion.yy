@@ -4,7 +4,7 @@
   "name":"shWaterDistortion",
   "parent":{
     "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "path":"folders/a_ikasu/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

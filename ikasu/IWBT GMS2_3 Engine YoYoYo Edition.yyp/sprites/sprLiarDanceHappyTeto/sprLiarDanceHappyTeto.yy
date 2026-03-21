@@ -27,7 +27,7 @@
   "origin":1,
   "parent":{
     "name":"Atk3",
-    "path":"folders/Sprites/Avoidance/Atk3.yy",
+    "path":"folders/a_ikasu/Sprites/Avoidance/Atk3.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

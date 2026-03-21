@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEasing2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEasing2",
+  "parent":{
+    "name":"Script",
+    "path":"folders/z_Avoid_Sa/Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

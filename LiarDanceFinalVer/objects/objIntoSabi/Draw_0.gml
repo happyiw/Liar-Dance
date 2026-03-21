@@ -1,0 +1,21 @@
+if(live_call()) return live_result;
+if(point[2]<1){point[2]+=0.01}
+gpu_set_tex_filter(true)
+gpu_set_blendmode(bm_add)
+repeat(20)
+{
+point[10]+=1
+draw_sprite_ext(sprSSBrighting,0,400,140+point[6],scale[point[10]],scale[point[10]],angle[point[10]],make_color_hsv(30-point[5],180,196),0.07)
+angle[point[10]]+=angle2[point[10]]
+}
+repeat(20)
+{
+point[10]+=1
+draw_sprite_ext(sprSSBrighting,0,400,140+point[6],scale[point[10]]*3,scale[point[10]]*3,angle[point[10]],make_color_hsv(30-point[5],180,196),0.03)
+angle[point[10]]+=angle2[point[10]]
+}
+point[10]=0
+gpu_set_blendmode(bm_normal)
+gpu_set_texfilter(false)
+draw_sprite_ext(sprSSPlayer,0,400,140,-3,3,0,c_black,point[1])
+depth=-10

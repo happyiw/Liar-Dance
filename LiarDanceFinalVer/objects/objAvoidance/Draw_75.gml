@@ -1,0 +1,5 @@
+draw_set_color(c_black)
+draw_rectangle(-10000,-10000,-1,10000,0)
+draw_rectangle(800,-10000,10000,10000,0)
+draw_rectangle(-10000,-10000,10000,-1,0)
+draw_rectangle(-10000,608,10000,10000,0)

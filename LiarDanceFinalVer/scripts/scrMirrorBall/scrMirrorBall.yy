@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMirrorBall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMirrorBall",
+  "parent":{
+    "name":"Script",
+    "path":"folders/z_Avoid_Sa/Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

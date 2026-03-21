@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shWaterDistortion",
+  "name":"shWaterDistortion",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/z_ikasu/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

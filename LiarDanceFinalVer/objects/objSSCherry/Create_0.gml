@@ -1,0 +1,15 @@
+i=0
+trg=0
+z=0
+Light=0
+Light2=0
+Light3=0
+kage=0
+Px=0
+Py=0
+repeat(40)
+{
+point[i]=0
+i+=1
+}
+image_speed=0

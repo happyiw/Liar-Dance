@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shRectangle",
+  "name":"shRectangle",
+  "parent":{
+    "name":"Shader",
+    "path":"folders/z_Avoid_Sa/Shader.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

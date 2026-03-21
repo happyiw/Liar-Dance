@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEasings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEasings",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/z_ikasu/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

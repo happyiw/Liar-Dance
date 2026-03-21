@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"musLiarDance",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":181.57715,
+  "exportDir":"",
+  "name":"musLiarDance",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/z_ikasu/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"musLiarDance.mp3",
+  "volume":1.0,
+}

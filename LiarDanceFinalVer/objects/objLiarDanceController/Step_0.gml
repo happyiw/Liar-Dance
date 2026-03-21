@@ -56,7 +56,7 @@ if t==3026 {
 	border_width=80
 }
 
-if t==4159 {
+if t==4155 {
 	instance_destroy(objLiarDanceAtk6Controller)
 	instance_destroy(objCustomBullet)
 	instance_destroy(objShadowDrawer)

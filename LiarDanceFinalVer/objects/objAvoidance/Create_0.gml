@@ -1,5 +1,7 @@
 if(live_call()) return live_result;
 
+with(objBlock){des()}
+
 #region
 depth=-5
 SoundSetFirst=0

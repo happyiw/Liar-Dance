@@ -17,7 +17,7 @@ else {
 }
 
 if t==1826 {
-	instance_create_depth(0,472,300,objLiarDanceAtk4Road)
+	instance_create_depth(0,472,201,objLiarDanceAtk4Road)
 	instance_create_depth(0,0,200,objLiarDanceAtk4ShadowDrawer)
 	
 	instance_destroy(objLiarDanceAtk3FinalTransition)

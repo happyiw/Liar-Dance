@@ -1,6 +1,6 @@
 t=629
 
-
+muteki=1
 
 atk2_indicator=choose(0,1,2)
 

@@ -1,6 +1,6 @@
 
 t=2393      //-1
-
+muteki=1
 
 spiral_mirror=choose(-1,1)
 teto_side=1

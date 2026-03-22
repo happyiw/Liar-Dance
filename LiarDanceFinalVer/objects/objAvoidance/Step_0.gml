@@ -1422,7 +1422,7 @@ if(trg=23)
 point[1] += point[9];
 point[2] += point[9]/10;
 point[12]+=1
-if(point[12]>10)
+if(point[12]>10) and (point[9]<1.5)
 {
 point[9] += 0.009;
 }
@@ -1516,6 +1516,11 @@ if(step=round(ts1*298))
 with(objBlock){des()}
 with(objSSCherry){des()}
 with(objSSsh){des()}
+
+with(objPlayer) {
+	y=clamp(y,64,608-64)
+	yprevious=y
+}
 
 cre(-400,608-32,objBlock)
 a.visible=1

@@ -1,4 +1,4 @@
-
+/*
 var index=0
 
 with(objCustomBullet) {
@@ -8,3 +8,4 @@ with(objCustomBullet) {
 	show_debug_message(str)
 	index++	
 }
+*/

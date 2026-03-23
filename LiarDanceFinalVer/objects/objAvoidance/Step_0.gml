@@ -5256,6 +5256,7 @@ y-=60
 
 if(step=round(ts1*479))
 {
+depth=5
 point[900]=1
 	with(objSSCherry)
 {
@@ -5271,8 +5272,194 @@ trg=3
 sprite_index=sprDtetS
 y+=90
 	}
+	
 }
 
+point[21]=0
+point[22]=0
+
+}
+
+
+if(step>=round(ts1*479) and step<round(ts1*495))
+{
+point[21]+=44.325
+ point[22]=370*sin(degtorad(point[21]))
+	if(step mod 3=0)
+	{
+	cre(400+point[22],50,objSSCherry)
+	a.speed=10
+	a.direction=270+80*sin(degtorad(-point[21]/4+22.5))
+	a.trg=5
+	a.image_xscale=5
+	a.image_yscale=5
+	a.image_index=2
+    a.vspeed*=0.7
+	cre(400-point[22],50,objSSCherry)
+	a.speed=10
+	a.direction=270+80*sin(degtorad(point[21]/4-22.5))
+	a.trg=5
+	a.image_xscale=5
+	a.image_yscale=5
+	a.image_index=2
+    a.vspeed*=0.7
+	}
+
+	with(objSSCherry)
+	{
+		if(trg=5)
+		{
+		if(image_xscale>0.6){image_xscale-=0.2 image_yscale-=0.2}
+		else{image_xscale=0.6 image_yscale=0.6}
+		}
+	}
+	
+	if(step mod 4=0)
+{
+cre(0,500,objSSCherry)
+a.trg=6
+a.direction=70+random(40)
+a.speed=7+random(7)
+a.gravity=0.1+random(0.1)
+a.image_index=3
+
+cre(800,500,objSSCherry)
+a.trg=6
+a.direction=70+random(40)
+a.speed=7+random(7)
+a.gravity=0.1+random(0.1)
+a.image_index=3
+}
+}
+
+if(step=round(491*ts1)
+or step=round(491.5*ts1)
+or step=round(492.5*ts1))
+{
+with(objSSCherry)
+{
+	if(trg=3)
+	{
+		point[29]=0
+	}
+	if(trg=14)
+	{
+		point[1]=1
+	}
+}
+point[40]=point_direction(400,154,Px,Py)+360/20
+if(step!=round(492.5*ts1))
+{
+repeat(10)
+{
+cre(400,154,objSSCherry)
+a.trg=14
+a.direction=point[40]
+a.speed=30
+a.image_angle=a.direction-90
+a.image_index=12
+a.image_xscale=1.5
+a.image_yscale=1.5
+point[40]+=360/10
+}
+repeat(40)
+{
+cre(400,154,objSSCherry)
+a.trg=14
+a.direction=point[40]
+a.speed=30
+a.image_angle=a.direction-90
+a.image_index=12
+a.image_alpha=0.2
+a.mask_index=sprSSNothing
+point[40]+=360/40
+}
+}
+else
+{
+x=100 y=150
+scrSSstar(0,30,3,objSSCherry,18,15,1,12)
+scrSSstar(0,30,10,objSSCherry,18,16,1,12)
+
+x=700 y=150
+scrSSstar(0,30,3,objSSCherry,18,15,1,12)
+scrSSstar(0,30,10,objSSCherry,18,16,1,12)
+}
+}
+
+if(step>=round(ts1*491) and step<round(ts1*495))
+{
+if(step=round(492.5*ts1))
+{
+	with(objSSCherry)
+{
+	if(trg=15)
+	{
+		point[3]=1
+		point[6]=speed/40
+		image_xscale=1.5
+		image_yscale=1.5
+	}
+	if(trg=16)
+	{
+		point[3]=1
+		point[6]=speed/40
+		image_xscale=1
+		image_yscale=1
+		image_alpha=0.5
+		trg=15
+	}
+}
+}
+with(objSSCherry)
+{
+	if(trg=15)
+	{
+	if(point[2]<4){point[2]+=1 if(point[2]=4){speed=0}}else{
+			speed+=point[6]
+			if(x>400){direction+=point[6]*3+0.1}else{direction-=point[6]*3+0.1}
+			if(image_alpha=1){
+		cre(x,y,objSSCherry) 
+		a.image_alpha=0.2 
+		a.sprite_index=sprite_index 
+		a.image_index=image_index 
+		a.mask_index=sprSSNothing
+		a.trg=100 
+		a.image_angle=image_angle
+		a.direction=direction+180
+		a.speed=-4-random(4)
+		a.gravity_direction=direction+180 
+		a.gravity=random(1) 
+		a.depth=depth+1}}
+	}
+	if(trg=14)
+	{
+		if(!point[3] and !point[1]){point[2]+=1 if(point[2]=4){speed=0}}
+		if(point[1]){speed=18
+			if(image_alpha=1){
+		cre(x,y,objSSCherry) 
+		a.image_alpha=0.2 
+		a.sprite_index=sprite_index 
+		a.image_index=image_index 
+		a.mask_index=sprSSNothing
+		a.trg=100 
+		a.image_angle=image_angle
+		a.direction=direction+180
+		a.speed=-4-random(4)
+		a.gravity_direction=direction+180 
+		a.gravity=random(1) 
+		a.depth=depth+1}
+		}
+	}
+}
+}
+
+if( step=round(ts1*495))
+{
+with(objSSCherry)
+{
+des()
+}
 }
 
 if( step=round(ts1*498))

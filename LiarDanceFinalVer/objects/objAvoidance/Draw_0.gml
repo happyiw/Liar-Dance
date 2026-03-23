@@ -414,6 +414,7 @@ draw_set_font(fSasa2)
 draw_text(400,304,"GoodLuck.")
 }
 
+
 draw_set_alpha(0.7)
 if(step>=round(ts1*406.5) and step<round(ts1*411))
 {
@@ -469,3 +470,21 @@ if(step>=round(ts1*447))
 	}
 }
 
+if(step>=round(ts1*479))
+{
+		with(objSSCherry)
+	{
+		if(trg=5)
+		{
+		draw_sprite_ext(sprite_index,image_index,x+4*image_xscale,y+2*image_xscale,image_xscale*1.2,image_yscale*1.2,image_angle,c_black,0.4)
+		draw_self()
+		}
+		
+		if((trg=15 and image_alpha=1) or (trg=14 and image_alpha=1) or (point[3]!=0 and point[3]<=4 and image_alpha=1 and trg=6))
+		{
+		gpu_set_blendmode(bm_add)
+		draw_sprite_ext(sprSSLight,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha/2)
+		gpu_set_blendmode(bm_normal)
+		}
+	}
+}

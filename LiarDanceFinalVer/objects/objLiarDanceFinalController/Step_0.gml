@@ -354,13 +354,5 @@ if t>=1248 {
 }
 
 if t==9000 {
-	a=instance_create_depth(0,0,-1000,objDarkness)
-	a.image_blend=c_black
-	a.image_alpha=0
-}
-
-if t>=9000 {
-	with(objDarkness) {
-		image_alpha+=0.02	
-	}
+	instance_destroy()
 }

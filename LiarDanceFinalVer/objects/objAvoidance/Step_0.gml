@@ -1,3 +1,5 @@
+//5187
+
 if(live_call()) return live_result;
 
 if(instance_exists(objPlayer)==true){}else{scrStopMusic() point[780]+=0.02}
@@ -5183,33 +5185,46 @@ with(objSSCherry)
 if(step=round(ts1*463))
 {
 	point[900]=1
+	
+	instance_create(0,0,objLiarDanceFinalController)
+	
 with(objSSCherry)
 {
 	if(trg=1 or trg=2)
 	{
 	if(trg=2)
 	{
-	repeat(2)
-	{
+	//repeat(2)
+	//{
 	cre(x,y,objSSCherry)
-	a.trg=2
+	a.trg=1
 	a.image_index=10
-	a.image_alpha=1
+	//a.image_alpha=1
+	
+	a.mask_index=sprSSNothing
+	a.image_alpha=0.05
+	
 	a.speed=0.4+random(0.9)
 	a.direction=230+random(80)
 	a.point[29]=1
 	a.image_xscale=image_xscale*2/5
 	a.image_yscale=image_xscale*2/5
-	}
+	//}
 	des()
 	}
-	image_alpha=1
+	
+	
+	
 	speed=0.4+random(0.9)
 	direction=230+random(80)
 	point[29]=1
 	image_xscale*=3/5
 	image_yscale*=3/5
-	mask_index=sprite_index
+	
+	//image_alpha=1
+	//mask_index=sprite_index
+	mask_index=sprSSNothing
+	image_alpha=0.05
 	}
 }
 }
@@ -5260,7 +5275,16 @@ y+=90
 
 }
 
-
+if( step=round(ts1*498))
+{
+with(objPlayer)
+{
+	visible=0
+	frozen=true
+	muteki=1
+}
+}
+/*
 if(step=round(ts1*495)
 or step=round(ts1*496) 
 or step=round(ts1*497.5)
@@ -5300,7 +5324,7 @@ with(objBlock)
 des()	
 }
 }
-
+*/
 
 
 if(step=round(ts1*506))

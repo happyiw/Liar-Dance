@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"objLiarDanceController1",
+  "%Name":"objLiarDanceFinalSurfaceTarget",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":75,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objLiarDanceController1",
+  "name":"objLiarDanceFinalSurfaceTarget",
   "overriddenProperties":[],
   "parent":{
-    "name":"Avoidance",
-    "path":"folders/a_ikasu/Objects/Avoidance.yy",
+    "name":"Final",
+    "path":"folders/z_ikasu/Objects/Avoidance/Final.yy",
   },
   "parentObjectId":null,
   "persistent":false,

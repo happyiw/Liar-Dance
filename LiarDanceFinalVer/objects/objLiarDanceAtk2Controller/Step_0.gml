@@ -96,7 +96,7 @@ if t>=630 and t<=913 {
 	                len=16
 	            dir_inc=lerp(-15,0,(other.t-870)/15)
 	            cx=EaseOutSine(other.t-869,xprevious,400+lengthdir_x(80,64+120*free_variable[0]),15)
-	            cy=EaseOutSine(other.t-869,xprevious,304+lengthdir_y(80,64+120*free_variable[0]),15)
+	            cy=EaseOutSine(other.t-869,yprevious,304+lengthdir_y(80,64+120*free_variable[0]),15)
 	        }
 	    }
 	}
@@ -431,10 +431,12 @@ if t==1238 || t==1248 {
 	    if tag=="atk 3 to 4" {
 	        free_variable[0]--
 	        image_alpha=1
-	        image_xscale+=random_range(0.1,1.5)
-	        image_yscale=image_xscale
+			if other.t==1248 {
+		        image_xscale+=random_range(0.1,1.5)
+		        image_yscale=image_xscale
+			}
 	        depth=1000
-	        if place_meeting(x,y,objPlayer) and other.t==1238
+	        if place_meeting(x,y,objPlayer) and other.t==1238 and y<480
 	            scrKillPlayer()
 	    }
 	}

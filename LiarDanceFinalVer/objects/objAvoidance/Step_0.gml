@@ -3990,7 +3990,7 @@ a.image_xscale=0.6
 a.image_yscale=0.6
 a.mask_index=sprSSNothing
 a.sprite_index=sprSSSabTt
-a.image_index=1
+a.image_index=0
 a.image_alpha=1
 
 cre(424,250,objSSCherry)

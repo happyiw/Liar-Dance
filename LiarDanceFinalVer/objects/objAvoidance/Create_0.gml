@@ -19,7 +19,7 @@ ts2=ts1/2
 //スタート地点調整用
 
 
-step=round(ts1*367)-1
+step=round(ts1*233)-1
 //step=round(ts1*233)-1
 
 

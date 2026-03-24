@@ -3079,15 +3079,18 @@ if(point[1]>=2){image_alpha-=0.1 mask_index=sprSSNothing} if(image_alpha<=0){des
 
 if(step=round(ts1*373))
 {
+if(point[552]=0){point[552]=choose(-1,1)}
 with(objSSCherry)
 {
 	if(trg=1)
 	{
 	if(point[3]!=0)
 {
+trg=1
 direction=-point[4]
 speed=26.1
 gravity=2
+
 }
 else{gravity=1
 	repeat(8)
@@ -3104,6 +3107,20 @@ a.direction=random(360)
 }
 	
 	}
+	}
+}
+}
+
+
+if(step>=round(ts1*373) and step<round(ts1*378))
+{
+with(objSSCherry)
+{
+	if(trg=1)
+	{
+if(!point[25]){point[27]=image_angle point[26]=1 point[25]=1}
+image_angle=-90*other.point[552]*(1-point[26])+point[27]*point[26]
+point[26]*=0.65
 	}
 }
 }
@@ -3216,7 +3233,7 @@ or step=round(ts1*376)
 or step=round(ts1*376.5))
 {
 point[551]=random(360)
-if(point[552]=0){point[552]=choose(-1,1)}
+
 repeat(50)
 {
 cre(400,304,objSSCherry)

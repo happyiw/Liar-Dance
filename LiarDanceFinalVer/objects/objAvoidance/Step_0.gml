@@ -4882,6 +4882,43 @@ a.depth=-9
 point[752]+=360/24
 point[753]+=1
 }
+
+repeat(10)
+{
+repeat(70)
+{
+point[880]+=20
+cre(-300+point[880],-300+point[881],objSSCherry)
+a.image_index=9
+a.trg=30
+a.point[29]=1
+a.mask_index=sprSSNothing
+a.image_alpha=0.3
+a.point[1]=2
+}
+point[880]=0
+point[881]+=130
+}
+point[881]=0
+
+repeat(10)
+{
+repeat(70)
+{
+point[880]+=20
+cre(-300+point[881],-300+point[880],objSSCherry)
+a.image_index=9
+a.trg=30
+a.point[29]=1
+a.mask_index=sprSSNothing
+a.image_alpha=0.3
+a.point[1]=2
+}
+point[880]=0
+point[881]+=130
+}
+point[881]=0
+
 }
 
 if(step=round(ts1*444.3))
@@ -4915,8 +4952,98 @@ a.depth=-10
 point[752]+=360/24
 point[753]+=1
 }
+
+
 }
 
+with(objSSCherry)
+{
+	if(trg=30)
+	{
+image_xscale=point[1]+1
+image_yscale=point[1]+1
+point[1]*=0.8
+	}
+}
+
+if(step=round(ts1*443))
+{
+
+repeat(10)
+{
+repeat(70)
+{
+point[880]+=20
+cre(-300+point[880],-300+point[881],objSSCherry)
+a.image_index=9
+a.trg=30
+a.point[29]=1
+a.mask_index=sprSSNothing
+a.image_alpha=0.3
+a.point[1]=2
+}
+point[880]=0
+point[881]+=130
+}
+point[881]=0
+
+repeat(10)
+{
+repeat(70)
+{
+point[880]+=20
+cre(-300+point[881],-300+point[880],objSSCherry)
+a.image_index=9
+a.trg=30
+a.point[29]=1
+a.mask_index=sprSSNothing
+a.image_alpha=0.3
+a.point[1]=2
+}
+point[880]=0
+point[881]+=130
+}
+point[881]=0
+
+}
+
+if(step>=round(ts1*444))
+{
+with(objSSCherry)
+{
+	if(trg=30)
+	{
+if(!point[11])
+{
+if(!point[2]){point[2]=1 point[3]=210 point[6]=210 
+	point[4]=point_direction(400,400,x,y)
+	point[5]=point_distance(400,400,x,y)}
+x=point[5]*dcos(-point[4]-point[3]+point[6])+400
+y=point[5]*dsin(-point[4]-point[3]+point[6])+400
+point[6]*=0.8
+	}
+	}
+}
+}
+
+if(step>=round(ts1*445))
+{
+with(objSSCherry)
+{
+	if(trg=30)
+	{
+point[8]+=24
+if(point_distance(x,y,400,400)>(600-point[8])){point[11]=1}
+if(point[11]){if(!point[12]){
+	gravity_direction=point_direction(Px,Py,x,y)
+	gravity=point_distance(400,400,x,y)/200
+	image_alpha=1
+	mask_index=sprite_index
+	point[12]=1
+	}image_xscale+=gravity image_yscale=image_xscale }
+	}
+}
+}
 
 }
 
@@ -4968,68 +5095,7 @@ if(step=rhythm(434.6,point[756])){point[756]+=4}
 }
 }
 
-if(step=round(ts1*445.5)
-or step=round(ts1*446)
-or step=round(ts1*446.5))
-{
-repeat(40)
-{
-cre(point[760],608-50,objSSCherry)
-a.trg=7
-a.image_xscale=2-point[761]
-a.image_yscale=2-point[761]
-a.point[1]=Py-(608-50)+10
-a.point[2]=a.point[1]
-a.image_index=12
-point[760]+=20
-}
-point[760]=0
-repeat(40)
-{
-cre(0,point[760],objSSCherry)
-a.trg=7
-a.image_xscale=2-point[761]
-a.image_yscale=2-point[761]
-a.point[3]=20+point[761]*310
-a.point[4]=a.point[3]
-a.image_index=12
 
-cre(800,point[760],objSSCherry)
-a.trg=7
-a.image_xscale=2-point[761]
-a.image_yscale=2-point[761]
-a.point[3]=-20-point[761]*310
-a.point[4]=a.point[3]
-a.image_index=12
-
-cre(point[760],50,objSSCherry)
-a.trg=7
-a.image_xscale=2-point[761]
-a.image_yscale=2-point[761]
-a.point[1]=60+point[761]*210
-a.point[2]=a.point[1]
-a.image_index=12
-
-point[760]+=20
-}
-
-point[761]+=0.5
-point[760]=0
-}
-
-if(step>=round(ts1*445.5) and step<round(ts1*447))
-{
-		with(objSSCherry)
-{
-	if(trg=7)
-	{
-x=xstart+point[4]-point[3]
-y=ystart+point[2]-point[1]
-point[1]*=0.5
-point[3]*=0.5
-	}
-}
-}
 
 if(step>=round(ts1*431) and step<round(ts1*463))
 {
@@ -5058,7 +5124,7 @@ if(step=round(ts1*431+ts1*16))
 {
 	point[900]=1
 	point[720]=1
-	with(objSSCherry){if(trg=5 or trg=4 or trg=2 or trg=7){des()}}
+	with(objSSCherry){if(trg=5 or trg=4 or trg=2 or trg=7 or trg=30){des()}}
 }
 
 if(step=round(ts1*431+ts1*16) or step=round(ts1*439+ts1*16))

@@ -5368,7 +5368,7 @@ if(step>=round(ts1*479) and step<round(ts1*495))
 {
 point[21]+=44.325
  point[22]=370*sin(degtorad(point[21]))
-	if(step mod 3=0)
+	if(step mod 4=0)
 	{
 	cre(400+point[22],50,objSSCherry)
 	a.speed=10
@@ -5397,7 +5397,7 @@ point[21]+=44.325
 		}
 	}
 	
-	if(step mod 4=0)
+	if(step mod 5=0)
 {
 cre(0,500,objSSCherry)
 a.trg=6

@@ -2237,8 +2237,12 @@ if(step=round(ts1*335))
 	a.image_yscale=32
 	a.sprite_index=sprSSWhite1
 	a.image_blend=make_color_hsv(200,100,255)
-
-	
+	cre(400,304,objSSCherry)
+	a.trg=93
+	a.sprite_index=sprSSTex
+	a.image_alpha=0.1
+	a.mask_index=sprSSNothing
+	a.depth=50
 }
 
 if(step>=round(ts1*335) and step<round(ts1*345))
@@ -2296,6 +2300,12 @@ if(step>=round(ts1*335) and step<round(ts1*366))
 {
 with(objSSCherry)
 {
+	if(trg=93)
+	{
+	image_angle+=30+random(30)
+	x=xstart+random_range(-100,100)
+	y=ystart+random_range(-100,100)
+	}
 	if(trg=1)
 	{
 	if(!point[6])
@@ -4883,41 +4893,6 @@ point[752]+=360/24
 point[753]+=1
 }
 
-repeat(10)
-{
-repeat(70)
-{
-point[880]+=20
-cre(-300+point[880],-300+point[881],objSSCherry)
-a.image_index=9
-a.trg=30
-a.point[29]=1
-a.mask_index=sprSSNothing
-a.image_alpha=0.3
-a.point[1]=2
-}
-point[880]=0
-point[881]+=130
-}
-point[881]=0
-
-repeat(10)
-{
-repeat(70)
-{
-point[880]+=20
-cre(-300+point[881],-300+point[880],objSSCherry)
-a.image_index=9
-a.trg=30
-a.point[29]=1
-a.mask_index=sprSSNothing
-a.image_alpha=0.3
-a.point[1]=2
-}
-point[880]=0
-point[881]+=130
-}
-point[881]=0
 
 }
 
@@ -4956,13 +4931,16 @@ point[753]+=1
 
 }
 
+
 with(objSSCherry)
 {
 	if(trg=30)
 	{
-image_xscale=point[1]+1
-image_yscale=point[1]+1
+	if(!point[11]){
+image_xscale=point[1]+1.3
+image_yscale=point[1]+1.3
 point[1]*=0.8
+	}
 	}
 }
 
@@ -4971,10 +4949,10 @@ if(step=round(ts1*443))
 
 repeat(10)
 {
-repeat(70)
+repeat(40)
 {
-point[880]+=20
-cre(-300+point[880],-300+point[881],objSSCherry)
+point[880]+=30
+cre(-200+point[880],-200+point[881],objSSCherry)
 a.image_index=9
 a.trg=30
 a.point[29]=1
@@ -4989,10 +4967,10 @@ point[881]=0
 
 repeat(10)
 {
-repeat(70)
+repeat(34)
 {
-point[880]+=20
-cre(-300+point[881],-300+point[880],objSSCherry)
+point[880]+=30
+cre(-200+point[881],-200+point[880],objSSCherry)
 a.image_index=9
 a.trg=30
 a.point[29]=1
@@ -5040,7 +5018,7 @@ if(point[11]){if(!point[12]){
 	image_alpha=1
 	mask_index=sprite_index
 	point[12]=1
-	}image_xscale+=gravity image_yscale=image_xscale }
+	}image_xscale+=gravity/4 image_yscale=image_xscale }
 	}
 }
 }

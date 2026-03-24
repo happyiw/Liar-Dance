@@ -1,5 +1,9 @@
 if(live_call()) return live_result;
 
+if(step<round(ts1*296))
+{
+draw_sprite_ext(sprSSDarkness,0,400,304,4,4,0,c_white,1)
+}
 
 
 if(step>=round(ts1*297))

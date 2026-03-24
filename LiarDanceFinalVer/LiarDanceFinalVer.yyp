@@ -410,6 +410,7 @@
     {"id":{"name":"sprSSTen","path":"sprites/sprSSTen/sprSSTen.yy",},},
     {"id":{"name":"sprSSTetKid","path":"sprites/sprSSTetKid/sprSSTetKid.yy",},},
     {"id":{"name":"sprSSTetKidBg","path":"sprites/sprSSTetKidBg/sprSSTetKidBg.yy",},},
+    {"id":{"name":"sprSSTex","path":"sprites/sprSSTex/sprSSTex.yy",},},
     {"id":{"name":"sprSSWhite1","path":"sprites/sprSSWhite1/sprSSWhite1.yy",},},
     {"id":{"name":"sprT4P","path":"sprites/sprT4P/sprT4P.yy",},},
     {"id":{"name":"sprT4PMask","path":"sprites/sprT4PMask/sprT4PMask.yy",},},

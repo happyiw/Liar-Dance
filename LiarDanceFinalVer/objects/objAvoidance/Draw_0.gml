@@ -447,11 +447,12 @@ if(step>=round(ts1*431))
 {
 	with(objSSCherry)
 	{
-	if(trg=1 or trg=4)
+	if(trg=1 or trg=4 or trg=30)
 {
 		draw_sprite_ext(sprite_index,image_index,x+4*image_xscale,y+2*image_xscale,image_xscale*1.2,image_yscale*1.2,image_angle,c_black,image_alpha/3)
 		draw_self()
 }
+
 	}
 	
 

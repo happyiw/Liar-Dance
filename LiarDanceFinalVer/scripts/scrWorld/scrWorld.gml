@@ -3,6 +3,8 @@
 function scrInitEngineOptions() {
 
 	global.AvoidanceStartTime=-1
+	global.AvoidancePB=0
+	global.AvoidancePracticeSegment=0
 	// Set global engine options that can be changed mid-game
 
 	global.debugMode = true; // Enables debug keys (check objWorld step event to see all of them), make sure to set this to "false" before releasing your game

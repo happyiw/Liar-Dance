@@ -1,8 +1,8 @@
 if keyboard_check_pressed(vk_up) {
-	atk=(atk+1) mod 11	
+	atk=(atk+1) mod atk_limit
 }
 if keyboard_check_pressed(vk_down) {
-	atk=(11+atk-1) mod 11	
+	atk=(atk_limit+atk-1) mod atk_limit	
 }
 
 
@@ -36,7 +36,14 @@ switch(atk) {
 		
 	case 9:
 		global.AvoidanceStartTime=6506; break;
-		
+	
+	/*
 	case 10:
 		global.AvoidanceStartTime=7650; break;
+	
+	It would be funny if we give no outro practice for players, wouldnt it?
+	*/
 }
+
+
+global.AvoidancePracticeSegment=atk

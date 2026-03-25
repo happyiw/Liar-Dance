@@ -2,6 +2,8 @@ if(live_call()) return live_result;
 
 with(objBlock){des()}
 
+
+
 #region
 depth=-5
 SoundSetFirst=0
@@ -20,6 +22,7 @@ ts2=ts1/2
 
 
 step=round(ts1*233)-1
+step_inc=1
 //step=round(ts1*233)-1
 
 

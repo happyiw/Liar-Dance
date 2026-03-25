@@ -12,6 +12,9 @@ if instance_exists(objPlayer) {
 }
 if !instance_exists(objPlayer) {
     scrStopMusic()
+	if global.AvoidanceStartTime==-1
+		global.AvoidancePB=max(global.AvoidancePB,t)
+		
 }
 
 if t==629 {
@@ -76,6 +79,33 @@ if t==4155 {
 	//instance_destroy()
 }
 
+if t>=5888 and t<=5958 {
+	with(objPlayer) {
+		muteki=1
+	}
+}
+
+if t==5960 {
+	with(objPlayer) {
+		muteki=0
+	}
+	
+}
+
+if t==7650 {
+	if global.AvoidanceStartTime!=-1 {
+		with(objPlayer) {
+			x=400;
+			xprevious=x;
+			y=608-48
+			yprevious=y
+			muteki=0
+		}
+		scrKillPlayer()
+		with(objAvoidance)
+			step_inc=0
+	}
+}
 
 if t==7627 {
 	border_width=128

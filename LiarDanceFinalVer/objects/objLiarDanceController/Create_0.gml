@@ -35,19 +35,37 @@ switch(t) {
 		instance_create(0,0,objAvoidance)
 		break;
 	*/
+	case 5306:
+		cre(0,304+32*6,objBlock)
+		a.visible=1
+		a.image_xscale=800
+		a.image_yscale=304
+		a.sprite_index=sprSSBlack1
+		a.image_alpha=1
+		a.depth=-100
+		cre(0,304-32*6,objBlock)
+		a.visible=1
+		a.image_xscale=800
+		a.image_yscale=-304
+		a.sprite_index=sprSSBlack1
+		a.image_alpha=1
+		a.depth=-100
 }
 
 if t>=4154 {
 	a=instance_create(0,0,objAvoidance)
 	a.step=global.AvoidanceStartTime-44
 	
-	if t<7627
+	if t<=7627
 		border_width=0
-	if t==7627
-		border_width=128
+		
+	//if t==7627
+	//	border_width=128
 		
 }
 
 if t!=1259 and t!=1825 and t!=2393 and t<4154 {
 	instance_create(0,0,objShadowDrawer)	
 }
+
+muteki=0

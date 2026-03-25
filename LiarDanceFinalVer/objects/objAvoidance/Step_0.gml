@@ -27,7 +27,7 @@ Px=objPlayer.x
 Py=objPlayer.y
 }else{Px=400 Py=304}
 }}
-step+=1
+step+=step_inc
 
 /*
 //音ズレ対策

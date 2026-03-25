@@ -54,6 +54,9 @@ function scrSaveGame(savePosition) {
 
 	ds_map_add(saveMap,"saveGameClear",global.saveGameClear);
 
+	ds_map_add(saveMap,"avoidancePB",global.AvoidancePB);
+	ds_map_add(saveMap,"avoidancePracticeSegment",global.AvoidancePracticeSegment)
+	
 	// Add MD5 hash to verify saves and make them harder to hack
 	ds_map_add(saveMap,"mapMd5",md5_string_unicode(ds_map_write(saveMap)+MD5_STR_ADD));
 
@@ -111,6 +114,9 @@ function scrLoadGame(loadFile) {
         
 	        global.saveGameClear = ds_map_find_value(saveMap,"saveGameClear");
         
+			global.AvoidancePB = ds_map_find_value(saveMap,"avoidancePB");
+			global.AvoidancePracticeSegment = ds_map_find_value(saveMap,"avoidancePracticeSegment");
+			
 	        // Load MD5 string from the save map
 	        var mapMd5 = ds_map_find_value(saveMap,"mapMd5");
         

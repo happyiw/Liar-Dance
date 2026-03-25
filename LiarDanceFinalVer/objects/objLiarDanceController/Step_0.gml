@@ -76,6 +76,7 @@ if t==4155 {
 	//instance_destroy()
 }
 
+
 if t==7627 {
 	border_width=128
 	

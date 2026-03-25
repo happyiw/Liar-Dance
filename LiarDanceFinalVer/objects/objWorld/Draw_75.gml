@@ -56,7 +56,7 @@ if (global.debugOverlay) {
 		drawY = 0;
 		drawAlign = 0;
 	}
-    
+    /*
     draw_text(20,20,"X: "+string(drawX));
     draw_text(20,40,"Y: "+string(drawY));
     draw_text(20,60,"Align: "+string(drawAlign));
@@ -66,6 +66,17 @@ if (global.debugOverlay) {
     draw_text(20,140,"Infinite jump: "+string(global.debugInfJump));
     draw_text(20,160,"FPS: "+string(fps));
     draw_text(20,180,"Real FPS: "+string(fps_real));
+	*/
+	draw_text_outline(20,20,"X: "+string(drawX),c_white,c_black)
+	draw_text_outline(20,40,"Y: "+string(drawY),c_white,c_black)
+	draw_text_outline(20,60,"Room name: "+room_get_name(room),c_white,c_black)
+	draw_text_outline(20,80,"God mode: "+string(global.debugNoDeath),c_white,c_black)
+	draw_text_outline(20,100,"Infinite jump: "+string(global.debugInfJump),c_white,c_black)
+	draw_text_outline(20,120,"FPS: "+string(fps),c_white,c_black)
+	draw_text_outline(20,140,"Real FPS: "+string(fps_real),c_white,c_black)
+	
+	
+	
 }
 
 // Draw debug mode text when we're on the title screen

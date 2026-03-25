@@ -1,8 +1,9 @@
 scrPlayMusic(musLiarDance,false)
-t=4154		//4154		//3025		//2393		//1825		//1259      //-1
+t=global.AvoidanceStartTime		//4154		//3025		//2393		//1825		//1259      //-1
 
 global.noPause = true
 
+border_width=160
 
 atk5_spiral_mirror=choose(-1,1)
 atk6_teto_side=choose(-1,1)
@@ -29,12 +30,24 @@ switch(t) {
 		a=instance_create(400,304,objLiarDanceAtk6Controller)
 		a.teto_side=atk6_teto_side
 		break;
+	/*
 	case 4154:
 		instance_create(0,0,objAvoidance)
 		break;
-}
-if t!=1259 and t!=1825 and t!=2393 and t!=4154 {
-	instance_create(0,0,objShadowDrawer)	
+	*/
 }
 
-border_width=160
+if t>=4154 {
+	a=instance_create(0,0,objAvoidance)
+	a.step=global.AvoidanceStartTime-44
+	
+	if t<7627
+		border_width=0
+	if t==7627
+		border_width=128
+		
+}
+
+if t!=1259 and t!=1825 and t!=2393 and t<4154 {
+	instance_create(0,0,objShadowDrawer)	
+}

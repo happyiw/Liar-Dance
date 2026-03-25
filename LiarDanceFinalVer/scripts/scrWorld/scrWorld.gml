@@ -2,6 +2,7 @@
 /// @description Sets configurable engine options
 function scrInitEngineOptions() {
 
+	global.AvoidanceStartTime=-1
 	// Set global engine options that can be changed mid-game
 
 	global.debugMode = true; // Enables debug keys (check objWorld step event to see all of them), make sure to set this to "false" before releasing your game
@@ -14,7 +15,7 @@ function scrInitEngineOptions() {
 	global.windowCaptionDef = "I Wanna Liar Dance"; // Sets the default window caption
 	window_set_caption(global.windowCaptionDef);
 
-	global.startRoom = rAvoidance; // Sets which room for the game to begin with
+	global.startRoom = rAvoidancePractice; // Sets which room for the game to begin with
 
 	global.deathMusicMode = 0; // Sets whether or not to play death music when the player dies (0 = no death music, 1 = death music and instantly pause current music, 2 = death music and fade out current music)
 	global.adAlign = false; // Sets whether or not to enable A/D align

@@ -475,7 +475,7 @@ if(step>=round(ts1*479))
 {
 		with(objSSCherry)
 	{
-		if(trg=5)
+		if(trg=5 or trg=6)
 		{
 		draw_sprite_ext(sprite_index,image_index,x+4*image_xscale,y+2*image_xscale,image_xscale*1.2,image_yscale*1.2,image_angle,c_black,0.4)
 		draw_self()

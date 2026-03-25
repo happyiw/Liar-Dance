@@ -2240,7 +2240,7 @@ if(step=round(ts1*335))
 	cre(400,304,objSSCherry)
 	a.trg=93
 	a.sprite_index=sprSSTex
-	a.image_alpha=0.1
+	a.image_alpha=0.07
 	a.mask_index=sprSSNothing
 	a.depth=50
 }
@@ -2531,7 +2531,7 @@ speed=6+point[24]+point[25]
 if(trg=2)
 {
 
-	if(!point[4]){speed*=0.85}else{ gravity_direction=direction gravity=(1-point[3])/4}
+	if(!point[4]){speed*=0.85}else{ gravity_direction=direction gravity=(1-point[3])/5}
 	point[2]*=0.85
 	
 image_xscale=1+point[2]-point[3]

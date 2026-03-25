@@ -411,7 +411,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 draw_set_colour(c_white)
 draw_set_font(fSasa2)
-if global.AvoidanceStartTime==-1
+if global.AvoidanceStartTime==-1 || global.debugMode
 	draw_text(400,304,"GoodLuck.")
 else
 	draw_text(400,304,"Enough.")

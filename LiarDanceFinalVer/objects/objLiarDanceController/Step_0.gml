@@ -93,7 +93,7 @@ if t==5960 {
 }
 
 if t==7650 {
-	if global.AvoidanceStartTime!=-1 {
+	if global.AvoidanceStartTime!=-1 and !global.debugMode {
 		with(objPlayer) {
 			x=400;
 			xprevious=x;

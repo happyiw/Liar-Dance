@@ -77,7 +77,11 @@ if t==4155 {
 	set_camera(0,0,800,608,0)
 	border_width=0
 	//instance_destroy()
+	
 }
+
+
+
 
 if t>=5888 and t<=5958 {
 	with(objPlayer) {

@@ -68,4 +68,10 @@ if t!=1259 and t!=1825 and t!=2393 and t<4154 {
 	instance_create(0,0,objShadowDrawer)	
 }
 
+if(t=5302)
+{
+	with(objPlayer) {des()}
+	cre(100,500,objPlayer)
+}
+
 muteki=0

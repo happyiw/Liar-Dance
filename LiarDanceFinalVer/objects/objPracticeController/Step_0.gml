@@ -29,7 +29,7 @@ switch(atk) {
 		global.AvoidanceStartTime=4154; break;
 		
 	case 7: 
-		global.AvoidanceStartTime=5306; break;
+		global.AvoidanceStartTime=5302; break;
 		
 	case 8:
 		global.AvoidanceStartTime=5888; break;

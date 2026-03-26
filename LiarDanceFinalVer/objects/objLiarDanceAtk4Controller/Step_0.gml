@@ -18,7 +18,7 @@ else {
 
 if t==1826 {
 	instance_create_depth(0,472,201,objLiarDanceAtk4Road)
-	instance_create_depth(0,0,200,objLiarDanceAtk4ShadowDrawer)
+	//instance_create_depth(0,0,200,objLiarDanceAtk4ShadowDrawer)
 	
 	instance_destroy(objLiarDanceAtk3FinalTransition)
 	instance_destroy(objCustomBullet)
@@ -41,8 +41,8 @@ if t==1826 {
 		xprevious=x
 	}
 	
-	for (_x=300;_x<=300+800*4; _x+=600) {
-		a=instance_create_depth(_x+random_range(-150,150),480-32,250,objLiarDanceAtk4RoadSign)
+	for (_x=300;_x<=300+800*4; _x+=1200) {
+		a=instance_create_depth(_x+random_range(-150,150),480-32,200,objLiarDanceAtk4RoadSign)
 		a.base_scale=1.4//random_range(1.5,2);
 		a.image_xscale=a.base_scale;
 		a.image_yscale=a.base_scale;
@@ -66,7 +66,7 @@ if t>=1826 and t<=1976 {
 }
 
 //if t mod (30+7*(t>=2012)) == 0 {
-if t mod (35+5*(t>=2012)) == 10 {
+if t mod 35 == 10 and t<2000 {
 	rand_y=480-random_range(32,128)
 	a = instance_create(832,rand_y,objLiarDanceAtk4BouncyCherries)
 	a.sprite_index=sprCustomRegularCherry
@@ -80,10 +80,20 @@ if t mod (35+5*(t>=2012)) == 10 {
 	a.persist=true;
 	a.free_variable[0]=random_range(1,3)
 	a.tag="atk 4 jumpy cherries"
+	a.draw=true
 }
 
 if t>=1966 and t<=2112 {
-	
+	with(objLiarDanceAtk4Car) {
+		x=EaseOutSine(other.t-2000,xstart,760,112)
+	}
+}
+
+if t==2000 {
+	scale=0.84
+	a=instance_create(800 + (549*scale/2),488,objLiarDanceAtk4Car)
+	a.image_xscale=scale;
+	a.image_yscale=a.image_xscale;
 }
 
 if t>=2112 {

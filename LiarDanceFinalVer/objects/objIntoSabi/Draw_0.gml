@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 if(point[2]<1){point[2]+=0.01}
 gpu_set_tex_filter(true)
 gpu_set_blendmode(bm_add)

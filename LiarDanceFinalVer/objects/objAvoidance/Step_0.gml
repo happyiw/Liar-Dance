@@ -1,6 +1,6 @@
 //5187
 
-if(live_call()) return live_result;
+
 
 if(instance_exists(objPlayer)==true){}else{scrStopMusic() point[780]+=0.02}
 

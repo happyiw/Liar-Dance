@@ -1,7 +1,5 @@
 {
   "FolderOrderSettings":[
-    {"name":"Extensions","order":1,"path":"folders/Extensions.yy",},
-    {"name":"GMLive","order":1,"path":"folders/Extensions/GMLive.yy",},
     {"name":"Items","order":1,"path":"folders/Sprites/Items.yy",},
     {"name":"Killers","order":2,"path":"folders/Sprites/Killers.yy",},
     {"name":"Misc","order":3,"path":"folders/Sprites/Misc.yy",},
@@ -37,7 +35,6 @@
     {"name":"Atk6","order":5,"path":"folders/z_ikasu/Sprites/Avoidance/Atk6.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"GMLive_fallback","order":1,"path":"extensions/GMLive_fallback/GMLive_fallback.yy",},
     {"name":"fDefault12","order":3,"path":"fonts/fDefault12/fDefault12.yy",},
     {"name":"fDefault18","order":2,"path":"fonts/fDefault18/fDefault18.yy",},
     {"name":"fDefault24","order":1,"path":"fonts/fDefault24/fDefault24.yy",},
@@ -45,7 +42,6 @@
     {"name":"fSasa3_1","order":3,"path":"fonts/fSasa3_1/fSasa3_1.yy",},
     {"name":"fSasa3","order":2,"path":"fonts/fSasa3/fSasa3.yy",},
     {"name":"changelog","order":1,"path":"notes/changelog/changelog.yy",},
-    {"name":"obj_gmlive","order":6,"path":"objects/obj_gmlive/obj_gmlive.yy",},
     {"name":"objBlockFake","order":7,"path":"objects/objBlockFake/objBlockFake.yy",},
     {"name":"objBlockFall","order":4,"path":"objects/objBlockFall/objBlockFall.yy",},
     {"name":"objBlockInvis","order":6,"path":"objects/objBlockInvis/objBlockInvis.yy",},
@@ -172,10 +168,6 @@
     {"name":"rTitle","order":1,"path":"rooms/rTitle/rTitle.yy",},
     {"name":"cre","order":5,"path":"scripts/cre/cre.yy",},
     {"name":"des","order":4,"path":"scripts/des/des.yy",},
-    {"name":"GMLive_noDeactivate","order":2,"path":"scripts/GMLive_noDeactivate/GMLive_noDeactivate.yy",},
-    {"name":"GMLive_notOnce","order":3,"path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},
-    {"name":"GMLiveAPI_js","order":5,"path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},
-    {"name":"GMLiveAPI","order":4,"path":"scripts/GMLiveAPI/GMLiveAPI.yy",},
     {"name":"rhythm","order":6,"path":"scripts/rhythm/rhythm.yy",},
     {"name":"scrAvoidance","order":1,"path":"scripts/scrAvoidance/scrAvoidance.yy",},
     {"name":"scrConfig","order":2,"path":"scripts/scrConfig/scrConfig.yy",},

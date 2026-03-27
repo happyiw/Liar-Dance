@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 
 if(surface_exists(surf)=false){surf=surface_create(800,608)}
 

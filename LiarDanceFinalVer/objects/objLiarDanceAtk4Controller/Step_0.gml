@@ -90,6 +90,7 @@ if t>=1966 and t<=2112 {
 }
 
 if t==2000 {
+	
 	scale=0.84
 	a=instance_create(800 + (549*scale/2),488,objLiarDanceAtk4Car)
 	a.image_xscale=scale;

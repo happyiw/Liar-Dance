@@ -34,6 +34,7 @@ if t==2394 {
 	instance_destroy(objLiarDanceAtk4Road)
 	instance_destroy(objLiarDanceAtk4RoadSign)
 	instance_destroy(objCustomBullet)
+	instance_destroy(objLiarDanceAtk4Car)
 	instance_destroy(objBlock)
 	with(objPlayer) {
 		image_alpha=1;

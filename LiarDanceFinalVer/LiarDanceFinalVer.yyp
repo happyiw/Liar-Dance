@@ -81,21 +81,11 @@
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_distort-1.0.0","name":"io.gamemaker.gm_filter_distort-1.0.0","path":"io.gamemaker.gm_filter_distort-1.0.0.yyp",},
   ],
-  "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gcmt-dll.dll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"gmlive-server-alt.exe","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gmlive-server-alt.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"gmlive-server.exe","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gmlive-server.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"gmlive-server.n","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gmlive-server.n","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"gmlive.html","CopyToMask":0,"filePath":"datafiles/GMLive","name":"gmlive.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"neko.dll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"neko.dll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"regexp.ndll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"regexp.ndll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"std.ndll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"std.ndll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"zlib.ndll","CopyToMask":0,"filePath":"datafiles/GMLive","name":"zlib.ndll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-  ],
+  "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.212",
   },
   "name":"LiarDanceFinalVer",
   "resources":[

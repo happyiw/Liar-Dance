@@ -79,6 +79,7 @@ if t mod 35 == 10 and t<2000 {
 	a.gravity=random_range(0.1,0.175)
 	a.persist=true;
 	a.free_variable[0]=random_range(1,3)
+	a.free_variable[1]=0
 	a.tag="atk 4 jumpy cherries"
 	a.draw=true
 }
@@ -92,9 +93,43 @@ if t>=1966 and t<=2112 {
 if t==2000 {
 	
 	scale=0.84
-	a=instance_create(800 + (549*scale/2),488,objLiarDanceAtk4Car)
+	_x=800 + (549*scale/2)
+	_y=488
+	
+	a=instance_create_depth(_x,_y,-1,objLiarDanceAtk4Car)
 	a.image_xscale=scale;
 	a.image_yscale=a.image_xscale;
+	
+	a2=instance_create_depth(_x,_y,-5,objDecoCustomObject)
+	a2.parent_id=a.id;
+	a2.sprite_index=sprLiarDanceAtk4CarWindow
+	a2.image_xscale=scale;
+	a2.image_yscale=a2.image_xscale;
+	a2.tag="atk 4 car window"
+	a2.persist=true
+}
+
+if t>=2000 {
+	//232,97
+	//274,149
+	if t mod 50 == 0 {
+		with(objLiarDanceAtk4Car) {
+			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
+			a.sprite_index=sprCustomRegularCherry
+			a.image_index=irandom(12)
+			a.image_xscale=random_range(1.35,2.2)
+			a.image_yscale=a.image_xscale
+			a.image_angle=random(360)
+			a.direction=90+random_range(13,17)		//random_range(12,25)
+			a.speed=4.8			//random_range(5.5,7.5)
+			a.gravity=random_range(0.1,0.175)
+			a.persist=true;
+			a.free_variable[0]=random_range(1,3)
+			a.free_variable[1]=random_range(1.5,2.6)
+			a.tag="atk 4 jumpy cherries"
+			a.draw=true
+		}
+	}
 }
 
 if t>=2112 {
@@ -138,4 +173,19 @@ if t>=2332 and t<=2394 {
     }
 	v=EaseInCubic(t-2332,0,128,62)
 	set_camera(v,v/1.3+v/3,800-v*2,608-v*2/1.3,0)
+}
+
+with(objDecoCustomObject) {
+	if tag=="atk 4 car window" {
+		x=parent_id.x;
+		y=parent_id.y;
+	}
+}
+
+with(objLiarDanceAtk4BouncyCherries) {
+	if tag=="atk 4 jumpy cherries" {
+		x-=free_variable[1]
+		if vspeed>0 and depth!=-10
+			depth=-10
+	}
 }

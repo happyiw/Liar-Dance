@@ -36,6 +36,8 @@ if t==2394 {
 	instance_destroy(objCustomBullet)
 	instance_destroy(objLiarDanceAtk4Car)
 	instance_destroy(objBlock)
+	instance_destroy(objDecoCustomObject)
+	
 	with(objPlayer) {
 		image_alpha=1;
 		x=400;

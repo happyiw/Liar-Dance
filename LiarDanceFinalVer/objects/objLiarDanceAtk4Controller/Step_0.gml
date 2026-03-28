@@ -125,7 +125,7 @@ if t>=2000 {
 			a.gravity=random_range(0.1,0.175)
 			a.persist=true;
 			a.free_variable[0]=random_range(1,3)
-			a.free_variable[1]=random_range(1.5,2.6)
+			a.free_variable[1]=random_range(1.5,2.6)*2
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
@@ -157,6 +157,7 @@ if t==2332 {
 if t>=2332 and t<=2394 {
 	with(objLiarDanceScreenBreakEffect) {
         a = EaseLinear(t,0,4,62);
+		text_alpha= a/4
 		/*squares_list_limit=floor(EaseLinear(t,2,95,62))
 		if t mod 2 == 0 {
 			ds_list_shuffle(squares_list)	
@@ -171,6 +172,10 @@ if t>=2332 and t<=2394 {
 			}
 		}
     }
+	if t>=2360 {
+		with(objLiarDanceAtk4BouncyCherries)
+			killer=false;
+	}
 	v=EaseInCubic(t-2332,0,128,62)
 	set_camera(v,v/1.3+v/3,800-v*2,608-v*2/1.3,0)
 }

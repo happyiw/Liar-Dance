@@ -221,7 +221,7 @@ if t==2460 {
 			}
 			if i==10 {
 				ang_inc=40
-				for (spd=1.1; spd<5; spd+=2.5) {
+				for (spd=1.2; spd<5; spd+=2.8) {
 					//for (angle=base_direction-60; angle<=base_direction+ang_inc*2; angle+=ang_inc) {
 					for (_i=-2; _i<=2; _i++) {
 						angle=base_direction+ang_inc*_i

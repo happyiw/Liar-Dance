@@ -27,6 +27,9 @@ move=1;
 
 draw_bg=true
 
+text_alpha=0
+
+
 //squares_list=ds_list_create()
 //squares_list_limit=0
 

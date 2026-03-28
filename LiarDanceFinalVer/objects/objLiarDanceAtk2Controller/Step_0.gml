@@ -390,8 +390,11 @@ if t>=1195 and t<=1210 {
 
 if t==1195 || t==1215 {
 	repeat(70) {
-	    _x = 400-random(430)*sign(t-1205)*atk3_to_4_side
-	    _y=304+random_range(-208,208)
+	    //_x = 400-random(430)*sign(t-1205)*atk3_to_4_side
+	    //_y=304+random_range(-208,208)
+		
+		_x=random(800)
+		_y=304-random(208)*sign(t-1205)
 	    a = instance_create(400,304,objCustomBullet)
 	    a.killer=false;
 	    a.drop_shadow=false;

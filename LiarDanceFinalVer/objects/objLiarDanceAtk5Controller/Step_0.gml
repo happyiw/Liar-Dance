@@ -168,7 +168,7 @@ if t==2464 {
 	a.tag="atk 5 starts with immediate flashbang 2"
 	
 	dirinc=8//random_range(3,10)*choose(-1,1)
-	for (ang=90; ang<450; ang+=72) {
+	for (var ang=90; ang<450; ang+=72) {
 		i = ((ang - 90) / 72);
 		val = abs(i - 2) - (i > 2 ? 1 : 0);
 		a = instance_create_depth(400,304,-150,objCustomBullet);
@@ -220,17 +220,22 @@ if t==2460 {
 				a.persist=true
 			}
 			if i==10 {
-				for (angle=base_direction-60; angle<=base_direction+60; angle+=30) {
-					a=instance_create(xx[j],yy[j],objCustomBullet)
-					a.direction=angle
-					a.speed=random_range(0.5,5)
-					a.sprite_index=sprMayuCherry;
-					a.image_blend=make_color_hsv((spd*14+rand_blend) mod 255,62+(a.speed-2)*10.7,255)						
-					a.image_xscale=0.75
-					a.image_yscale=a.image_xscale
-					a.draw=true;
-					a.tag="atk 5 corners jumpscare"
-					a.persist=true
+				ang_inc=40
+				for (spd=1.1; spd<5; spd+=2.5) {
+					//for (angle=base_direction-60; angle<=base_direction+ang_inc*2; angle+=ang_inc) {
+					for (_i=-2; _i<=2; _i++) {
+						angle=base_direction+ang_inc*_i
+						a=instance_create(xx[j],yy[j],objCustomBullet)
+						a.direction=angle+random_range(-7,7)
+						a.speed=spd+random_range(-1,1)/2		//random_range(0.5,5)
+						a.sprite_index=sprMayuCherry;
+						a.image_blend=make_color_hsv((spd*14+rand_blend) mod 255,62+(a.speed-2)*10.7,255)						
+						a.image_xscale=0.75
+						a.image_yscale=a.image_xscale
+						a.draw=true;
+						a.tag="atk 5 corners jumpscare"
+						a.persist=true
+					}
 				}
 			}
 		}
@@ -590,7 +595,7 @@ if t>=2675 and t<=2816 {
 					a.killer=(a.image_alpha==1)
 					a.tag="atk 5 three spawner spirals"
 				}
-				if t mod 10 == 0 {
+				if t mod 4 == 0 {
 					//repeat(2) {
 						
 						a=instance_create_depth(x,y,depth+1,objCustomBullet);
@@ -619,6 +624,7 @@ if t>=2675 and t<=2816 {
 					a.cx=400;
 					a.cy=304;
 					a.free_variable[0]=dir+angle;
+					a.free_variable[1]=angle/40
 					a.dir=dir
 					a.len=len;
 					a.tag="atk 5 expanded spawners"
@@ -638,7 +644,7 @@ if t>=2675 and t<=2816 {
 					//a.gravity_direction=dir;
 					//a.gravity=0.1
 					a.tag="atk 5 so we nuked spawners"
-					a.persist=true
+					//a.persist=true
 					a.free_variable[0]=random_range(0.75,1)
 				}
 				instance_destroy()
@@ -687,6 +693,24 @@ if t>=2675 and t mod 2 == 0 {
 				a.speed=10
 				a.tag="atk 5 final"
 				
+				if t mod 4 == 0 and free_variable[1]==((t/4) mod 3) {
+					
+					a=instance_create_depth(x,y,depth+1,objCustomBullet);
+					a.sprite_index=sprite_index;
+					//a.image_xscale=image_xscale;
+					//a.image_yscale=a.image_xscale;
+					a.image_blend=image_blend;
+					a.draw=true;
+					a.direction=random(360)
+					a.speed=random_range(3,5)
+					//a.friction=(a.speed-3)/irandom_range(40,150)
+					//a.gravity_direction=dir;
+					//a.gravity=0.1
+					a.tag="atk 5 lets claustrophobia"
+					//a.persist=true
+					a.free_variable[0]=random_range(0.75,1)
+				}
+				
 				len-=3
 			}
 			
@@ -707,6 +731,12 @@ if t>=2856 and t<=2952 {
 if t==2925 {
 	a=instance_create_depth(0,0,-500,objLiarDanceAtk5TechIssuesEffect)
 	a.alarm[0]=29
+}
+
+if t>=2925 {
+	with(objCustomBullet) {
+		killer=false;	
+	}
 }
 
 if t==2952 {

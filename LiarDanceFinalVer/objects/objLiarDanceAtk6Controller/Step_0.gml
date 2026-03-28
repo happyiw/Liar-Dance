@@ -311,9 +311,9 @@ if t>=3160 and t<=3240 {
 					a.image_blend=image_blend
 					a.image_xscale=image_xscale;
 					a.image_yscale=a.image_xscale;
-					a.direction=direction+t*23+180*i
+					a.direction=direction+180*i+t*23
 					a.speed=random_range(4,7)
-					a.accel=0.15
+					a.accel=0.1
 					a.free_variable[0]=random_range(0.9,1.2)
 					a.drop_shadow=false
 					a.draw=true
@@ -392,7 +392,7 @@ if t==3200 || t==3220 {
 			
 			
 			for (spd=3; spd<21; spd+=3) {
-				for (angle=-45; angle<=45; angle+=90) {
+				for (angle=-120; angle<=120; angle+=120) {
 					
 					a=instance_create_depth(x,y,depth+1,objCustomBullet)
 					a.sprite_index=sprite_index		//sprInvertedLeeheCherry			//sprCustomRegularCherry;
@@ -400,7 +400,7 @@ if t==3200 || t==3220 {
 					a.image_blend=image_blend
 					a.image_xscale=lerp(image_xscale*0.7,2,spd/18)
 					a.image_yscale=a.image_xscale;
-					a.direction=point_direction(x,y,scrPX(),scrPY())+random_range(35,325);
+					a.direction=point_direction(x,y,scrPX(),scrPY())+angle+180;
 					a.speed=irandom_range(3,20);
 					a.accel=0.2
 					a.free_variable[0]=a.image_xscale;

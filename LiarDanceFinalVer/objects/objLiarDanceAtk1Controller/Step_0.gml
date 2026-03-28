@@ -144,8 +144,8 @@ if(t<345){Mstep=2}
                 
 	            //direction=random(360)
 	            speed=random_range(0.2,0.5)
-				gravity_direction=point_direction(x,y,scrPX(),scrPY())
-				gravity=0.1
+					gravity_direction=point_direction(x,y,scrPX(),scrPY())
+				gravity=0.1-0.2*(y>476)
 	            tag="atk 1 end"
                 
 	            if killer {

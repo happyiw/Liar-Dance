@@ -2973,7 +2973,7 @@ a.image_yscale=4
 a.image_index=10
 a.point[3]=5
 a.point[29]=1
-a.speed=3+random(27)
+a.speed=3+random(24)
 a.point[5]=a.speed
 a.direction=point[25]
 point[25]+=360/10
@@ -2992,7 +2992,7 @@ with(objSSCherry)
 	if(trg=2)
 	{
 	if(!point[1]){speed*=0.8 if(speed<1){point[1]=1}}
-	else{speed+=0.05+random(point[5]/100)}
+	else{speed+=0.04+random(point[5]/130)}
 	point[3]*=0.8
 	image_xscale=0.75+point[3]
 	image_yscale=image_xscale

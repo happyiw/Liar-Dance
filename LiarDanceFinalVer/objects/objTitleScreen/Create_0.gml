@@ -1,0 +1,14 @@
+i=0
+repeat(100)
+{
+point[i]=0
+i+=1
+}
+
+point[1]=random(360)
+point[2]=random(360)
+point[3]=random(360)
+point[4]=random(360)
+point[5]=random(360)
+point[9]=random(360)
+point[10]=random(360)

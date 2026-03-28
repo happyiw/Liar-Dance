@@ -50,6 +50,7 @@
     {"$GMFolder":"","%Name":"Warps","folderPath":"folders/Sprites/Warps.yy","name":"Warps","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"World","folderPath":"folders/Sprites/World.yy","name":"World","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Title","folderPath":"folders/Title.yy","name":"Title","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"z_Avoid_Sa","folderPath":"folders/z_Avoid_Sa.yy","name":"z_Avoid_Sa","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Font","folderPath":"folders/z_Avoid_Sa/Font.yy","name":"Font","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Music","folderPath":"folders/z_Avoid_Sa/Music.yy","name":"Music","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -85,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -219,6 +220,7 @@
     {"id":{"name":"objSSsh","path":"objects/objSSsh/objSSsh.yy",},},
     {"id":{"name":"objT4Pplaceholder","path":"objects/objT4Pplaceholder/objT4Pplaceholder.yy",},},
     {"id":{"name":"objTitleMenu","path":"objects/objTitleMenu/objTitleMenu.yy",},},
+    {"id":{"name":"objTitleScreen","path":"objects/objTitleScreen/objTitleScreen.yy",},},
     {"id":{"name":"objTriggerButton","path":"objects/objTriggerButton/objTriggerButton.yy",},},
     {"id":{"name":"objWalljumpL","path":"objects/objWalljumpL/objWalljumpL.yy",},},
     {"id":{"name":"objWalljumpR","path":"objects/objWalljumpR/objWalljumpR.yy",},},
@@ -403,6 +405,7 @@
     {"id":{"name":"sprT4PMask","path":"sprites/sprT4PMask/sprT4PMask.yy",},},
     {"id":{"name":"sprTetoDance","path":"sprites/sprTetoDance/sprTetoDance.yy",},},
     {"id":{"name":"sprTetoFD","path":"sprites/sprTetoFD/sprTetoFD.yy",},},
+    {"id":{"name":"sprTitleLogo","path":"sprites/sprTitleLogo/sprTitleLogo.yy",},},
     {"id":{"name":"sprTriggerButton","path":"sprites/sprTriggerButton/sprTriggerButton.yy",},},
     {"id":{"name":"sprTriggerMask","path":"sprites/sprTriggerMask/sprTriggerMask.yy",},},
     {"id":{"name":"sprWalljumpL","path":"sprites/sprWalljumpL/sprWalljumpL.yy",},},

@@ -18,11 +18,11 @@ if t>=65 and t<=67+150 {
 	set_camera(v,v/1.3/1.3,800-v*2,608-v*2/1.3,0)
 	intro_ratio=EaseOutCubic(t-67,0.2,1,150)
 }
-if t<87 {
+if t<85 {
 	with(objPlayer)
 	    frozen=true
 }
-if t==87 {
+if t==85 {
 	//show_message(instance_exists(objShadowDrawer))
 	with(objPlayer)
 	    frozen=false

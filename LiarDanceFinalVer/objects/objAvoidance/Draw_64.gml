@@ -436,13 +436,13 @@ gpu_set_tex_filter(false)
 
 
 
-draw_set_font(fDefault12)
-draw_set_color(c_red)
-draw_text(40,40,step)
+//draw_set_font(fDefault12)
+//draw_set_color(c_red)
+//draw_text(40,40,step)
 
-draw_set_font(fDefault12)
-draw_set_color(c_red)
-draw_text(40,100,instance_number(all))
+//draw_set_font(fDefault12)
+//draw_set_color(c_red)
+//draw_text(40,100,instance_number(all))
 
 if(point[900]>0)
 {

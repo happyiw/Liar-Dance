@@ -483,7 +483,8 @@ if t==1545 {
 	a.image_yscale=a.image_xscale;
 	a.tag="atk 3 happy teto"
 	
-	/*for (yy=96; yy<512; yy+=16) {
+	y_shift=random(32)
+	for (yy=96; yy<512; yy+=24) {
 		dist=900
 		angle=random(360)
 		a=instance_create(modwrap(400+lengthdir_x(dist, angle),0,800), modwrap(yy+lengthdir_y(dist,angle),0,608),objCustomBullet)
@@ -493,12 +494,12 @@ if t==1545 {
 		a.image_yscale=a.image_xscale
 		a.killer=false
 		a.cx=400
-		a.cy=yy
+		a.cy=yy+y_shift
 		a.dir=angle
-		a.dir_inc=irandom_range(10,20)
+		a.dir_inc=irandom_range(10,20)/6
 		a.len=900
 		a.tag="atk 3 lazy wall"
-	}*/
+	}
 }
 
 if t>=1545 and t<=1545+65 {
@@ -514,7 +515,7 @@ if t>=1545 and t<=1545+65 {
 if t>=1545 and t<=1660 {
 	with(objCustomBullet) {
 		if tag=="atk 3 lazy wall" {
-			image_alpha=EaseLinear(t,0,0.25,115);
+			image_alpha=EaseLinear(t,0,0.1,115);
 			image_xscale=EaseLinear(t,5,1.5,115);
 			image_yscale=image_xscale;
 			len=EaseOutCubic(t,900,100,115)	
@@ -535,7 +536,7 @@ if t==1660 || t==1670 {
 		if tag=="atk 3 lazy wall" {
 			image_xscale-=0.125;
 			image_yscale=image_xscale;
-			image_alpha+=0.25
+			image_alpha+=0.35
 			len-=50
 			dir_inc=0
 			cx+=random_range(-16,16)

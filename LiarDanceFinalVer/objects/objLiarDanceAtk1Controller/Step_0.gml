@@ -13,7 +13,7 @@ else {
 }
 
 
-if t>=67 and t<=67+150 {
+if t>=65 and t<=67+150 {
 	v=EaseOutCubic(t-67,160,0,150)
 	set_camera(v,v/1.3/1.3,800-v*2,608-v*2/1.3,0)
 	intro_ratio=EaseOutCubic(t-67,0.2,1,150)
@@ -28,18 +28,20 @@ if t==87 {
 	    frozen=false
 }
 
-if t>=67 and t<=612 {
+if t>=65 and t<=612 {
 	if t<=561 {
 	    with(objDarkness) {
 	        if tag=="teto intro" {
 	            y=lerp(y,400,1/300)
 	        }
 	    }
+var Mstep=0
+if(t<345){Mstep=2}
 	    for (var i=0; i<4; i++) {
-	        if (t==67+intro_step[i] || t==84+intro_step[i] || t==103+intro_step[i]
-	            || t==116+intro_step[i] || t==129+intro_step[i] || t==136+intro_step[i] 
-	            || t==155+intro_step[i] || t==173+intro_step[i] || t==185+intro_step[i] 
-	            || t==200+intro_step[i]) and instance_exists(objPlayer)
+	        if (t==67+intro_step[i]-Mstep || t==84+intro_step[i]-Mstep || t==103+intro_step[i]-Mstep
+	            || t==116+intro_step[i]-Mstep || t==129+intro_step[i]-Mstep || t==136+intro_step[i]-Mstep 
+	            || t==155+intro_step[i]-Mstep || t==173+intro_step[i]-Mstep || t==185+intro_step[i]-Mstep 
+	            || t==200+intro_step[i]-Mstep) and instance_exists(objPlayer)
 	        {
 	            with(objCustomBullet) {
 	                if tag=="atk 1 bursts" || tag=="atk 1 wall"{
@@ -102,7 +104,7 @@ if t>=67 and t<=612 {
 	        }
 	    }
         
-	    if t==347 {
+	    if t==345 {
 	        for (var yy=128; yy<=480; yy+=32) {
 	            var a=instance_create(-9,yy,objCustomBullet);
 	            a.direction=0;

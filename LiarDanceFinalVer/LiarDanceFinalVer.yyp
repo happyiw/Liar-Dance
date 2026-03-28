@@ -50,6 +50,7 @@
     {"$GMFolder":"","%Name":"Warps","folderPath":"folders/Sprites/Warps.yy","name":"Warps","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"World","folderPath":"folders/Sprites/World.yy","name":"World","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Title","folderPath":"folders/Title.yy","name":"Title","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"z_Avoid_Sa","folderPath":"folders/z_Avoid_Sa.yy","name":"z_Avoid_Sa","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Font","folderPath":"folders/z_Avoid_Sa/Font.yy","name":"Font","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Music","folderPath":"folders/z_Avoid_Sa/Music.yy","name":"Music","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -76,7 +77,6 @@
     {"$GMFolder":"","%Name":"Atk4","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk4.yy","name":"Atk4","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Atk5","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk5.yy","name":"Atk5","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Atk6","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk6.yy","name":"Atk6","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Title","folderPath":"folders/Title.yy","name":"Title","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},

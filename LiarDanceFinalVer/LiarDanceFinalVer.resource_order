@@ -10,6 +10,7 @@
     {"name":"Triggers","order":8,"path":"folders/Sprites/Triggers.yy",},
     {"name":"Warps","order":9,"path":"folders/Sprites/Warps.yy",},
     {"name":"World","order":10,"path":"folders/Sprites/World.yy",},
+    {"name":"Title","order":3,"path":"folders/Title.yy",},
     {"name":"Font","order":45,"path":"folders/z_Avoid_Sa/Font.yy",},
     {"name":"Music","order":46,"path":"folders/z_Avoid_Sa/Music.yy",},
     {"name":"Object","order":42,"path":"folders/z_Avoid_Sa/Object.yy",},
@@ -33,7 +34,6 @@
     {"name":"Atk4","order":2,"path":"folders/z_ikasu/Sprites/Avoidance/Atk4.yy",},
     {"name":"Atk5","order":3,"path":"folders/z_ikasu/Sprites/Avoidance/Atk5.yy",},
     {"name":"Atk6","order":5,"path":"folders/z_ikasu/Sprites/Avoidance/Atk6.yy",},
-    {"name":"Title","order":3,"path":"folders/Title.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fDefault12","order":3,"path":"fonts/fDefault12/fDefault12.yy",},

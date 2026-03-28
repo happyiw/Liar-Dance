@@ -76,6 +76,7 @@
     {"$GMFolder":"","%Name":"Atk4","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk4.yy","name":"Atk4","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Atk5","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk5.yy","name":"Atk5","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Atk6","folderPath":"folders/z_ikasu/Sprites/Avoidance/Atk6.yy","name":"Atk6","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Title","folderPath":"folders/Title.yy","name":"Title","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
@@ -85,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -219,6 +220,7 @@
     {"id":{"name":"objSSsh","path":"objects/objSSsh/objSSsh.yy",},},
     {"id":{"name":"objT4Pplaceholder","path":"objects/objT4Pplaceholder/objT4Pplaceholder.yy",},},
     {"id":{"name":"objTitleMenu","path":"objects/objTitleMenu/objTitleMenu.yy",},},
+    {"id":{"name":"objTitleScreen","path":"objects/objTitleScreen/objTitleScreen.yy",},},
     {"id":{"name":"objTriggerButton","path":"objects/objTriggerButton/objTriggerButton.yy",},},
     {"id":{"name":"objWalljumpL","path":"objects/objWalljumpL/objWalljumpL.yy",},},
     {"id":{"name":"objWalljumpR","path":"objects/objWalljumpR/objWalljumpR.yy",},},
@@ -403,6 +405,7 @@
     {"id":{"name":"sprT4PMask","path":"sprites/sprT4PMask/sprT4PMask.yy",},},
     {"id":{"name":"sprTetoDance","path":"sprites/sprTetoDance/sprTetoDance.yy",},},
     {"id":{"name":"sprTetoFD","path":"sprites/sprTetoFD/sprTetoFD.yy",},},
+    {"id":{"name":"sprTitleLogo","path":"sprites/sprTitleLogo/sprTitleLogo.yy",},},
     {"id":{"name":"sprTriggerButton","path":"sprites/sprTriggerButton/sprTriggerButton.yy",},},
     {"id":{"name":"sprTriggerMask","path":"sprites/sprTriggerMask/sprTriggerMask.yy",},},
     {"id":{"name":"sprWalljumpL","path":"sprites/sprWalljumpL/sprWalljumpL.yy",},},

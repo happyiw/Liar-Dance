@@ -33,6 +33,7 @@
     {"name":"Atk4","order":2,"path":"folders/z_ikasu/Sprites/Avoidance/Atk4.yy",},
     {"name":"Atk5","order":3,"path":"folders/z_ikasu/Sprites/Avoidance/Atk5.yy",},
     {"name":"Atk6","order":5,"path":"folders/z_ikasu/Sprites/Avoidance/Atk6.yy",},
+    {"name":"Title","order":3,"path":"folders/Title.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fDefault12","order":3,"path":"fonts/fDefault12/fDefault12.yy",},
@@ -146,6 +147,7 @@
     {"name":"objSSsh","order":3,"path":"objects/objSSsh/objSSsh.yy",},
     {"name":"objT4Pplaceholder","order":21,"path":"objects/objT4Pplaceholder/objT4Pplaceholder.yy",},
     {"name":"objTitleMenu","order":1,"path":"objects/objTitleMenu/objTitleMenu.yy",},
+    {"name":"objTitleScreen","order":1,"path":"objects/objTitleScreen/objTitleScreen.yy",},
     {"name":"objTriggerButton","order":1,"path":"objects/objTriggerButton/objTriggerButton.yy",},
     {"name":"objWalljumpL","order":6,"path":"objects/objWalljumpL/objWalljumpL.yy",},
     {"name":"objWalljumpR","order":5,"path":"objects/objWalljumpR/objWalljumpR.yy",},

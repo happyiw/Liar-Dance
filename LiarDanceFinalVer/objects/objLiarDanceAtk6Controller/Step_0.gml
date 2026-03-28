@@ -156,7 +156,11 @@ if t>=3076 and t<=3136 {
 				a.r_1=circle_radius[i]
 				a.r_2=a.r_1;
 				*/
-				a.dir=angle+rand;
+				
+				
+				
+				//a.dir=angle+rand;
+				
 				a.ofs=rand2;
 				a.dir_inc=_dir_inc;
 				a.ofs_inc=_ofs_inc;
@@ -169,6 +173,11 @@ if t>=3076 and t<=3136 {
 				a.killer=false;
 				a.tag="atk 6 prima circles"
 				a.free_variable[1]=i;
+				
+				a.free_variable[2]=angle+rand;
+				a.free_variable[3]=random(180);
+				a.t=-irandom(15)
+				
 				//a.t=-i*2
 				a.t_inc=lerp(0.7,1.5,i/8)
 				a.persist=true
@@ -188,13 +197,24 @@ if t>=3076 and t<=3136 {
 		if tag=="atk 6 prima circles" {
 			
 			
-			if t<=50 {
+			if t>=0 and t<=50 {
 				image_alpha=EaseOutCubic(t,0,0.4,50)
 				//image_xscale=EaseLinear(t,3,free_variable[0]/110,35)
 				//image_yscale=image_xscale;
 				r_1=EaseOutBack(t,500,free_variable[0],50)
 				r_2=r_1//EaseInOutCubic(t,-500,free_variable[0],35)
+				
+				if t<=30 {
+					dir=free_variable[2]+EaseOutSine(t,free_variable[3],0,30)
+				}
 			}
+			
+			/*
+			if t>=50 {
+				r_1=free_variable[0]-dsin((other.t-3126)*22)*40	
+				r_2=r_1
+			}
+			*/
 			
 			if instance_exists(objLiarDanceAtk6Controller) {
 				x_start=objLiarDanceAtk6Controller.xx[free_variable[1]]
@@ -282,6 +302,7 @@ if t>=3160 and t<=3240 {
 			//if t mod 3 == 0 
 			//image_index++
 			image_blend=make_color_hsv(t*4,255,255)
+			
 			if t mod 3 == 0 {
 				for (i=0; i<2; i++) {
 					a=instance_create_depth(x,y,depth+1,objCustomBullet)
@@ -292,13 +313,14 @@ if t>=3160 and t<=3240 {
 					a.image_yscale=a.image_xscale;
 					a.direction=direction+t*23+180*i
 					a.speed=random_range(4,7)
-					a.accel=0.05
+					a.accel=0.15
 					a.free_variable[0]=random_range(0.9,1.2)
 					a.drop_shadow=false
 					a.draw=true
 					a.tag="atk 6 accelerating bullshit"
 				}
 			}
+			
 			len=lerp(len,250,0.2)
 			deg_y=lerp(deg_y,-0.8,0.125)
 			//dir_inc=lerp(dir_inc,1,0.1)
@@ -368,7 +390,7 @@ if t==3200 || t==3220 {
 		if tag=="atk 6 accelerating bullshit spawner" {
 			dir_inc=15
 			
-			/*
+			
 			for (spd=3; spd<21; spd+=3) {
 				for (angle=-45; angle<=45; angle+=90) {
 					
@@ -388,7 +410,7 @@ if t==3200 || t==3220 {
 					a.alarm[1]=(3240-other.t)
 				}
 			}
-			*/
+			
 		}
 	}
 }

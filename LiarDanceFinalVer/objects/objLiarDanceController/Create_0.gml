@@ -71,7 +71,7 @@ if t!=1259 and t!=1825 and t!=2393 and t<4154 {
 if(t=5302)
 {
 	with(objPlayer) {des()}
-	cre(100,500,objPlayer)
+	cre(64,500,objPlayer)
 }
 
 muteki=0

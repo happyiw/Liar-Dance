@@ -1,8 +1,25 @@
+/*
 if instance_exists(objPlayer) {
     t++
 }
 else {
 	instance_destroy()	
+}
+*/
+
+t++
+if !instance_exists(objPlayer) {
+	with(objCustomBullet) {
+		persist=false;	
+	}
+}
+
+if t<=1510 {
+	
+	with(objPlayer) {
+		visible=false;
+		image_alpha=0;
+	}	
 }
 
 if t>=1260 and t<=1310 {
@@ -315,10 +332,12 @@ if t==1265+140 || t==1280+140 || t==1300+140 || t==1315+140 || t==1335+140 || t=
 	}
 }
 
+
 if t==1510 {
 	with(objCustomBullet) {
 		killer=false	
 	}
+	
 	with(objLiarDanceAtk3CloudSurfaceTarget) {
 		sprite_index=sprLiarDanceAtk3CloudDistorted
 	}
@@ -410,7 +429,6 @@ if t>=1510 and t<=1545 {
 if t==1545 {
 	instance_destroy(objLiarDanceAtk3CloudSurface)
 	instance_destroy(objLiarDanceAtk3Bullet)
-	instance_destroy(objPlayer)
 	instance_destroy(objLDBasicShaderHandler)
 	instance_destroy(objDarkness)
 	instance_destroy(objBlock)
@@ -474,8 +492,11 @@ if t==1545 {
 		a.image_alpha=0.1
 		a.tag="atk 3 explosion jumpscare"
 	}
-		
-	a=instance_create_layer(400, 450, "Player", objPlayer)
+	
+	if instance_exists(objPlayer) {
+		instance_destroy(objPlayer)
+		a=instance_create_layer(400, 450, "Player", objPlayer)
+	}
 	
 	a=instance_create_depth(400,480,100,objDecoCustomObject)
 	a.sprite_index=sprLiarDanceHappyTeto
@@ -630,8 +651,10 @@ if t==1686 {
 		a.cy=304;
 		a.dir=angle;
 		a.dir_inc=20
+		a.deg_y=-mirror
 		a.image_alpha=0.3+0.7*sign((angle - rand) mod 60)
 		a.killer=(a.image_alpha==1)
+		//a.free_variable[0]=sign((angle - rand) mod 60)
 		a.tag="atk 3 last instagib"
 	}
 }
@@ -648,7 +671,8 @@ if t>=1686 and t<=1756 {
 		if tag=="atk 3 last instagib" {
 			image_xscale=EaseOutCubic(t,0,1.25,70)
 			image_yscale=image_xscale;
-			dir_inc=EaseInOutSine(t,10,0,70)
+			dir_inc=EaseInOutSine(t,8,0,70)
+			//len=EaseOutSine(t,0,150+32*free_variable[0],70)
 			len=EaseOutSine(t,0,150+32*(image_alpha<1),70)
 			if other.t>=1736 {
 				image_alpha	+= 0.035
@@ -705,6 +729,8 @@ if t==1756 {
 		a.speed=1
 		a.persist=true
 		a.killer=false
+		a.drop_shadow=false;
+		a.draw=true
 		a.image_blend=make_color_rgb(119,75,172)
 		a.tag="atk 3 deco bs"
 		
@@ -813,7 +839,7 @@ with(objLiarDanceAtk3Bullet) {
 	
 	
 	if tag=="atk 3 overtake circle parent" {
-		x=lerp(x, 400+free_variable[0]*232, 0.1)
+		x=lerp(x, 400+free_variable[0]*240, 0.1)
 		y=lerp(y, ystart+free_variable[1], 0.1)
 		if t>=22 {
 			image_alpha-=0.05

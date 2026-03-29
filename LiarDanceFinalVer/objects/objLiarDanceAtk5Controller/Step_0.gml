@@ -1,3 +1,5 @@
+
+/*
 if instance_exists(objPlayer) {
     t++
 	with(objPlayer) {
@@ -10,6 +12,24 @@ if instance_exists(objPlayer) {
 else {
 	global.edgeDeath=true
 	instance_destroy()	
+}
+*/
+
+t++
+if instance_exists(objPlayer) {
+	with(objPlayer) {
+		djump=1
+	}
+	x=scrPX()
+	y=scrPY()
+}
+if !instance_exists(objPlayer) {
+	
+	with(objCustomBullet) {
+		persist=false;	
+	}
+	global.edgeDeath=true
+		
 }
 
 if t==2394 {
@@ -693,7 +713,7 @@ if t>=2675 and t mod 2 == 0 {
 				a.speed=10
 				a.tag="atk 5 final"
 				
-				if t mod 4 == 0 and free_variable[1]==((t/4) mod 3) {
+				if t mod 4 == 0 and free_variable[1]!=((t/4) mod 3) {
 					
 					a=instance_create_depth(x,y,depth+1,objCustomBullet);
 					a.sprite_index=sprite_index;

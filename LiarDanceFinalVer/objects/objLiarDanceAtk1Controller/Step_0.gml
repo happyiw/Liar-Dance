@@ -4,12 +4,14 @@
 */
 
 
-if instance_exists(objPlayer) {
+//if instance_exists(objPlayer) {
     t++
-}
+//}
 
-else {
-	instance_destroy()	
+if !instance_exists(objPlayer) {
+	with(objCustomBullet) {
+		persist=false;	
+	}
 }
 
 

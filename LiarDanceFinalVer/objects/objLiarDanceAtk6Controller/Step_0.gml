@@ -1,9 +1,4 @@
-//1465
 /*
-sprLiarDanceAtk6Liar
-sprLiarDanceAtk6Dance
-sprLiarDanceAtk6Usodeodorunosa
-*/
 if instance_exists(objPlayer) {
     t++
 	
@@ -16,6 +11,25 @@ if instance_exists(objPlayer) {
 
 else {
 	instance_destroy()	
+}
+*/
+
+
+t++
+if instance_exists(objPlayer) {
+	with(objPlayer) {
+		djump=1
+	}
+	x=scrPX()
+	y=scrPY()
+}
+if !instance_exists(objPlayer) {
+	
+	with(objCustomBullet) {
+		if sprite_index!=sprLiarDanceAtk6CherryLine
+			persist=false;	
+	}
+		
 }
 
 if t==3026 {
@@ -166,7 +180,7 @@ if t>=3076 and t<=3136 {
 				a.ofs_inc=_ofs_inc;
 				a.sprite_index=sprCustomRegularCherry;		//sprLeeheCherry
 				//a.image_xscale=3;
-				a.image_xscale=a.free_variable[0]/110
+				a.image_xscale=a.free_variable[0]/100
 				a.image_yscale=a.image_xscale;
 				a.image_index=color_offset+i*2
 				a.image_alpha=0;
@@ -176,7 +190,7 @@ if t>=3076 and t<=3136 {
 				
 				a.free_variable[2]=angle+rand;
 				a.free_variable[3]=random(180);
-				a.t=-irandom(15)
+				a.t=-irandom(8)
 				
 				//a.t=-i*2
 				a.t_inc=lerp(0.7,1.5,i/8)
@@ -186,7 +200,7 @@ if t>=3076 and t<=3136 {
 	}
 	
 	for (i=0; i<circles_amount; i++) {
-		increment=EaseOutSine(t-3086,angle_offset_inc[i]/5,0,100)
+		increment=angle_offset_inc[i]/EaseOutSine(t-3086,4,7,100)
 		angle_offset[i]+=increment
 		if i!=0 {
 			xx[i]=xx[i-1]+lengthdir_x(radius_offset[i],angle_offset[i])
@@ -197,11 +211,11 @@ if t>=3076 and t<=3136 {
 		if tag=="atk 6 prima circles" {
 			
 			
-			if t>=0 and t<=50 {
-				image_alpha=EaseOutCubic(t,0,0.4,50)
+			if t>=0 and t<=40 {
+				image_alpha=EaseOutCubic(t,0,0.4,40)
 				//image_xscale=EaseLinear(t,3,free_variable[0]/110,35)
 				//image_yscale=image_xscale;
-				r_1=EaseOutBack(t,500,free_variable[0],50)
+				r_1=EaseOutBack(t,500,free_variable[0],40)
 				r_2=r_1//EaseInOutCubic(t,-500,free_variable[0],35)
 				
 				if t<=30 {
@@ -239,13 +253,6 @@ if t>=3076 and t<=3136 {
 		}
 	}
 	
-	with(objCustomBullet) {
-		if tag=="atk 6 start transition" {
-			if free_variable[2]==280 and t mod 30 == 0 {
-				//a=instance_create(
-			}
-		}
-	}
 }
 
 if t>=3160 and t<=3240 {
@@ -259,8 +266,6 @@ if t>=3160 and t<=3240 {
 				instance_destroy()
 		}
 		if tag=="atk 6 six spawners" {
-			
-			
 			
 			if t mod 2 == 0 {
 				
@@ -1121,10 +1126,11 @@ if t==3590 {
 	a.image_alpha=0.5
 	a.tag="atk 6 another flashbang"
 	
-	instance_destroy(objPlayer)
+	if instance_exists(objPlayer) {
+		instance_destroy(objPlayer)
 
-	instance_create_layer(400,304,"Player",objPlayer)
-	
+		instance_create_layer(400,304,"Player",objPlayer)
+	}
 	_x=400+400*second_part_side
 	scaler=1;
 	
@@ -1771,6 +1777,15 @@ with(objCustomBullet) {
 		if t==10
 			persist=false
 			
+	}
+	
+	if tag=="atk 6 six spawners" {
+		if other.t>=3076 and other.t<=3134 {
+			dir_inc=EaseInQuart(other.t-3076,-4.3,0,58)	
+		}
+		if other.t>=3160 {
+			dir_inc=lerp(dir_inc,6,0.1)	
+		}
 	}
 	
 	/*

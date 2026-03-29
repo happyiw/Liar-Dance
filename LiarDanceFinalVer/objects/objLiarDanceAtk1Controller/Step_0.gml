@@ -47,7 +47,7 @@ if(t<345){Mstep=2}
 	        {
 	            with(objCustomBullet) {
 	                if tag=="atk 1 bursts" || tag=="atk 1 wall"{
-	                    distance=10
+	                    distance=8
 	                    if tag=="atk 1 bursts"
 	                        distance=random_range(8,16)*(1.5+(other.t>=347))
 	                    x+=lengthdir_x(distance,direction)

@@ -1681,6 +1681,11 @@ or step=round(ts1*302.3))
 	a.depth=50
 	point[100]=choose(72,-72)
 	with(objSSCherry){
+	if(trg=1 and image_alpha>0.4)
+	{
+	image_alpha=1
+	mask_index=sprite_index
+	}
 	        }
 	with(objSSCherry){
 	if(trg=1 or trg=2)

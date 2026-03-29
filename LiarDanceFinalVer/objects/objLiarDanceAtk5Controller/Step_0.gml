@@ -59,6 +59,7 @@ if t==2394 {
 	instance_destroy(objBlock)
 	instance_destroy(objDecoCustomObject)
 	
+	
 	with(objPlayer) {
 		image_alpha=1;
 		x=400;
@@ -66,6 +67,8 @@ if t==2394 {
 		y=460;
 		yprevious=460;
 	}
+	
+	
 	
 	a = instance_create_layer(400,304,"Background_cherries",objLiarDanceAtk5KaijuBG)
 	//a.sprite_index=sprLiarDanceAtk5KaijuBG

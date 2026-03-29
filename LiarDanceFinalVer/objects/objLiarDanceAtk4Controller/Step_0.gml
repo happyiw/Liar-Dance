@@ -3,7 +3,7 @@ t++
 
 if instance_exists(objPlayer) {
 	with(objPlayer) {
-		if !place_free(x,y+9) {
+		if !place_free(x,y+9) and other.t<2332 {
 			x-=1.5
 			xprevious-=1.5
 		}
@@ -271,6 +271,12 @@ if t>=2332 and t<=2394 {
 		with(objCustomBullet)
 			killer=false;
 	}
+	
+	with(objPlayer) {
+		x=clamp(x,32,768)
+		xprevious=x
+	}
+	
 	v=EaseInCubic(t-2332,0,128,62)
 	set_camera(v,v/1.3+v/3,800-v*2,608-v*2/1.3,0)
 }

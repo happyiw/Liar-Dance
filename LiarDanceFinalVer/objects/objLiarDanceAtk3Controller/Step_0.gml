@@ -620,7 +620,7 @@ if t==1686 {
 					image_yscale=image_xscale
 					image_alpha=image_alpha
 					//image_blend=make_color_hsv(random(255),255,255)
-					killer=killer
+					killer=true*(y>476)
 					
 					_dist=point_distance(400,0,scrPX(),0)
 					direction = point_direction(400+max(150,_dist)*objLiarDanceAtk3Controller.mirror,y,x,y)+random_range(-15,15)

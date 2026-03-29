@@ -14,4 +14,12 @@ if !instance_exists(objLiarDanceScreenBreakEffect) {
 	a.enable_surfacecopy=0;
 	a.move=0;
 }*/
+
+
+instance_destroy(objPlayer)
+
+instance_create_layer(400,460,"Player",objPlayer)
+x=400
+y=460
+
 global.edgeDeath=false

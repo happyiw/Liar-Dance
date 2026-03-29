@@ -5574,6 +5574,18 @@ des()
 }
 */
 
+if( step=round(ts1*512)-50)
+{
+cre(0,0,objScreenChangeBlackWall)
+}
+
+
+if( step=round(ts1*512))
+{
+room_goto(rEnd)
+with(objPlayer){des()}
+}
+
 
 if(step=round(ts1*506))
 {

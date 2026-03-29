@@ -86,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -115,6 +115,7 @@
     {"id":{"name":"objCherry","path":"objects/objCherry/objCherry.yy",},},
     {"id":{"name":"objCherryBounce","path":"objects/objCherryBounce/objCherryBounce.yy",},},
     {"id":{"name":"objCherryTrigger","path":"objects/objCherryTrigger/objCherryTrigger.yy",},},
+    {"id":{"name":"objClearScreen","path":"objects/objClearScreen/objClearScreen.yy",},},
     {"id":{"name":"objControllerMenu","path":"objects/objControllerMenu/objControllerMenu.yy",},},
     {"id":{"name":"objCustomBullet","path":"objects/objCustomBullet/objCustomBullet.yy",},},
     {"id":{"name":"objDarkness","path":"objects/objDarkness/objDarkness.yy",},},
@@ -193,6 +194,7 @@
     {"id":{"name":"objSaveMediumFlip","path":"objects/objSaveMediumFlip/objSaveMediumFlip.yy",},},
     {"id":{"name":"objSaveVHard","path":"objects/objSaveVHard/objSaveVHard.yy",},},
     {"id":{"name":"objSaveVHardFlip","path":"objects/objSaveVHardFlip/objSaveVHardFlip.yy",},},
+    {"id":{"name":"objScreenChangeBlackWall","path":"objects/objScreenChangeBlackWall/objScreenChangeBlackWall.yy",},},
     {"id":{"name":"objSecretIndicator","path":"objects/objSecretIndicator/objSecretIndicator.yy",},},
     {"id":{"name":"objSecretItem","path":"objects/objSecretItem/objSecretItem.yy",},},
     {"id":{"name":"objShadowDrawer","path":"objects/objShadowDrawer/objShadowDrawer.yy",},},
@@ -299,6 +301,7 @@
     {"id":{"name":"sprBullet","path":"sprites/sprBullet/sprBullet.yy",},},
     {"id":{"name":"sprCamera","path":"sprites/sprCamera/sprCamera.yy",},},
     {"id":{"name":"sprCherry","path":"sprites/sprCherry/sprCherry.yy",},},
+    {"id":{"name":"sprClearTeto","path":"sprites/sprClearTeto/sprClearTeto.yy",},},
     {"id":{"name":"sprCustomGreyCherry","path":"sprites/sprCustomGreyCherry/sprCustomGreyCherry.yy",},},
     {"id":{"name":"sprCustomRegularCherry","path":"sprites/sprCustomRegularCherry/sprCustomRegularCherry.yy",},},
     {"id":{"name":"sprDtetS","path":"sprites/sprDtetS/sprDtetS.yy",},},

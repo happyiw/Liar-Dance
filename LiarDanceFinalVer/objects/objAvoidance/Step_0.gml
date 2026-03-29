@@ -1580,6 +1580,8 @@ y=304
 	point[1]=speed
 	point[2]=direction
 	speed=40
+	image_alpha=0.5
+	mask_index=sprSSNothing
 	}
 	if(trg=4)
 	{
@@ -1587,7 +1589,7 @@ y=304
 	point[2]=direction
 	point[19]=1
 	if(speed<10){speed=20}else{speed=60}
-	image_alpha=0.2
+	image_alpha=0.15
 	mask_index=sprSSNothing
 	trg=1
 	}
@@ -1678,6 +1680,8 @@ or step=round(ts1*302.3))
 	a.image_alpha=0.3
 	a.depth=50
 	point[100]=choose(72,-72)
+	with(objSSCherry){
+	        }
 	with(objSSCherry){
 	if(trg=1 or trg=2)
 	{

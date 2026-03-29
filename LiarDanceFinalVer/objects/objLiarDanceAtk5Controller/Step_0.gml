@@ -26,7 +26,8 @@ if instance_exists(objPlayer) {
 if !instance_exists(objPlayer) {
 	
 	with(objCustomBullet) {
-		persist=false;	
+		if tag!="atk 5 star spawner"
+			persist=false;	
 	}
 	global.edgeDeath=true
 		

@@ -12,6 +12,10 @@ if instance_exists(objPlayer) {
 }
 if !instance_exists(objPlayer) {
     scrStopMusic()
+	
+	if !instance_exists(objAvoidance)
+		blackout+=0.01
+	
 	if global.AvoidanceStartTime==-1
 		global.AvoidancePB=max(global.AvoidancePB,t)
 		

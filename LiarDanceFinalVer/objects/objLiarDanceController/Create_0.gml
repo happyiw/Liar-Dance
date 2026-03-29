@@ -8,6 +8,9 @@ border_width=160
 atk5_spiral_mirror=choose(-1,1)
 atk6_teto_side=choose(-1,1)
 
+blackout=0
+
+
 switch(t) {
 	case -1: 
 		instance_create(0,0,objLiarDanceAtk1Controller);

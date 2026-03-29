@@ -466,11 +466,12 @@ if t==1545 {
 	a.image_index=attack_option
 	a.image_xscale=0.6;
 	a.image_yscale=a.image_xscale;
-		
+	
 	a = instance_create(400-200*mirror,304,objLiarDanceAtk3OptionSurfaceTarget)
 	a.image_index=(attack_option+choose(1,2)) mod 3
 	a.image_xscale=0.6;
 	a.image_yscale=a.image_xscale;
+	
 	
 	for (i=-1; i<2; i+=2) {
 		repeat(20) {

@@ -200,7 +200,7 @@ if t>=3076 and t<=3136 {
 	}
 	
 	for (i=0; i<circles_amount; i++) {
-		increment=angle_offset_inc[i]/EaseOutSine(t-3086,4,7,100)
+		increment=angle_offset_inc[i]/EaseOutSine(t-3086,4,10,100)
 		angle_offset[i]+=increment
 		if i!=0 {
 			xx[i]=xx[i-1]+lengthdir_x(radius_offset[i],angle_offset[i])

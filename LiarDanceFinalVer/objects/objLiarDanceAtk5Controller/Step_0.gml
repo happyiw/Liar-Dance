@@ -244,7 +244,7 @@ if t==2460 {
 				a.persist=true
 			}
 			if i==10 {
-				ang_inc=30
+				ang_inc=35
 				for (spd=1.2; spd<5; spd+=2.4) {
 					//for (angle=base_direction-60; angle<=base_direction+ang_inc*2; angle+=ang_inc) {
 					for (_i=-2; _i<=2; _i++) {

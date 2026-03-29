@@ -10,7 +10,8 @@ if !surface_exists(srf2)
 draw_set_alpha(1)
 
 surface_set_target(srf)
-draw_clear_alpha(c_black,0)
+
+draw_rectangle_colour(-400,-304,1200, 912, col,col,col,col, false)
 
 with(objLiarDanceAtk3OptionSurfaceTarget)
 	draw_self()
@@ -23,6 +24,8 @@ surface_reset_target()
 surface_set_target(srf2)
 
 draw_clear_alpha(c_white,0)
+draw_set_alpha(1)
+
 with(objLiarDanceAtk3OptionSurfaceCircle)
 	draw_circle_colour(x,y,r,c_white,c_white,false)
 	
@@ -35,4 +38,5 @@ gpu_set_blendmode(bm_normal)
 
 surface_reset_target()
 
+draw_rectangle_colour(-400,-304, 1200, 912, col,col,col,col, false)
 draw_surface(srf2,0,0)

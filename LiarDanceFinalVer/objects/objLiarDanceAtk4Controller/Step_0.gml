@@ -1,12 +1,17 @@
+
+t++
+
 if instance_exists(objPlayer) {
-    t++
 	with(objPlayer) {
-		x-=1.5
-		xprevious-=1.5
+		if !place_free(x,y+9) {
+			x-=1.5
+			xprevious-=1.5
+		}
 	}
 }
 
 else {
+	/*
 	with(objLiarDanceAtk4Road) {
 		hspeed=0	
 	}
@@ -14,6 +19,10 @@ else {
 		hspeed=0	
 	}
 	instance_destroy()	
+	*/
+	with(objCustomBullet) {
+		persist=false;	
+	}
 }
 
 if t==1826 {
@@ -75,7 +84,7 @@ if t mod 35 == 10 and t<2000 {
 	a.image_yscale=a.image_xscale
 	a.image_angle=random(360)
 	a.direction=180-20		//random_range(12,25)
-	a.speed=random_range(5.5,8)
+	a.speed=random_range(4.5,7)
 	a.gravity=random_range(0.1,0.175)
 	a.persist=true;
 	a.free_variable[0]=random_range(1,3)
@@ -86,7 +95,7 @@ if t mod 35 == 10 and t<2000 {
 
 if t>=1966 and t<=2112 {
 	with(objLiarDanceAtk4Car) {
-		x=EaseOutSine(other.t-2000,xstart,760,112)
+		x=EaseOutSine(other.t-2000,xstart,760+dsin(other.t/3)*32,112)
 	}
 }
 
@@ -110,10 +119,11 @@ if t==2000 {
 }
 
 if t>=2000 {
-	//232,97
-	//274,149
-	if t mod 50 == 0 {
-		with(objLiarDanceAtk4Car) {
+	with(objLiarDanceAtk4Car) {
+		if other.t>=2112
+			x=760+dsin(other.t/2)*16
+			
+		if other.t mod 50 == 0 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)
@@ -125,28 +135,74 @@ if t>=2000 {
 			a.gravity=random_range(0.1,0.175)
 			a.persist=true;
 			a.free_variable[0]=random_range(1,3)
-			a.free_variable[1]=random_range(1.5,2.6)*2
+			a.free_variable[1]=random_range(1.3,2.6)*2
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
+		}
+		
+		/*
+		if other.t>=2108 and other.t mod 42 == 9 {
+			
+			with(objCustomBullet) {
+				if tag=="atk 4 shape spawner" {
+					instance_destroy()	
+				}
+			}
+			
+			a = instance_create_depth(x-22,y-52,-2,objCustomBullet)
+			a.sprite_index=sprCustomRegularCherry
+			a.image_index=irandom(12)
+			a.image_xscale=0.8
+			a.image_yscale=a.image_xscale
+			a.image_angle=random(360)
+			a.image_alpha=0.45
+			a.direction=90+random_range(5,15)
+			a.speed=random_range(7,8)				
+			a.gravity=random_range(0.1,0.175)
+			a.persist=true;
+			a.free_variable[0]=random_range(1,3)
+			a.free_variable[1]=random_range(1.3,2.6)
+			a.tag="atk 4 shape spawner"
+			a.draw=true
+		}
+		*/
+		if other.t>=2108 {
+			if other.t==2108 || other.t mod 42 == 4 {
+				a = instance_create_depth(x-22,y-52,-2,objCustomBullet)
+				a.sprite_index=sprCustomRegularCherry
+				a.image_index=irandom(12)
+				a.image_xscale=1.25
+				a.image_yscale=a.image_xscale
+				a.image_angle=random(360)
+				a.direction=90+random_range(5,15)
+				a.speed=random_range(8,9.5)				
+				a.gravity=random_range(0.1,0.175)
+				a.persist=true;
+				a.free_variable[0]=random_range(1,3)
+				a.free_variable[1]=random_range(1.3,2.6)
+				a.tag="atk 4 shape spawner"
+				a.draw=true
+			}
+		}
+	}
+	with(objCustomBullet) {
+		if tag=="atk 4 shape spawner" {
+			if t==43 {
+				instance_destroy()
+			}
 		}
 	}
 }
 
-if t>=2112 {
-	_t=(t-2112)
-	if _t mod 35 == 0 {
-		
-	}
-	//2112,2146,2184,2218
-}
-
 if t==2332 {
-	a=instance_create_depth(0,0,-400,objLiarDanceScreenBreakEffect)
-	a.spd_inc_min=0;
-    a.spd_inc_max=0;
-    a.alpha=1;
-    a.enable_alphablend=false
-    a.move=0;
+	if instance_exists(objPlayer) {
+		a=instance_create_depth(0,0,-400,objLiarDanceScreenBreakEffect)
+		a.spd_inc_min=0;
+	    a.spd_inc_max=0;
+	    a.alpha=1;
+	    a.enable_alphablend=false
+	    a.move=0;
+	}
 	with(objPlayer) {
 		image_alpha=0	
 	}

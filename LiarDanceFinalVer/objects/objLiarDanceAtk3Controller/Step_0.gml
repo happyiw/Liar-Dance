@@ -690,7 +690,7 @@ if t==1756 {
 		if tag=="atk 3 last instagib" {
 			repeat(40) {
 				a=instance_create(x,y,objCustomBullet)
-				a.direction=dir+random_range(-45,45)
+				a.direction=point_direction(cx,cy,x,y)+random_range(-45,45)
 				a.speed=random_range(2,10)
 				a.sprite_index=sprite_index;
 				a.image_index=image_index;

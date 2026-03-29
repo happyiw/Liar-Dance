@@ -244,14 +244,14 @@ if t==2460 {
 				a.persist=true
 			}
 			if i==10 {
-				ang_inc=40
-				for (spd=1.2; spd<5; spd+=2.8) {
+				ang_inc=30
+				for (spd=1.2; spd<5; spd+=2.4) {
 					//for (angle=base_direction-60; angle<=base_direction+ang_inc*2; angle+=ang_inc) {
 					for (_i=-2; _i<=2; _i++) {
 						angle=base_direction+ang_inc*_i
 						a=instance_create(xx[j],yy[j],objCustomBullet)
 						a.direction=angle+random_range(-7,7)
-						a.speed=spd+random_range(-1,1)/2		//random_range(0.5,5)
+						a.speed=spd+random_range(-1,1)/3		//random_range(0.5,5)
 						a.sprite_index=sprMayuCherry;
 						a.image_blend=make_color_hsv((spd*14+rand_blend) mod 255,62+(a.speed-2)*10.7,255)						
 						a.image_xscale=0.75

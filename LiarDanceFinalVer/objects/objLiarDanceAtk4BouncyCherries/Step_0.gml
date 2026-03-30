@@ -16,7 +16,7 @@ if inst_place!=noone {
 						a.image_xscale=random_range(0.7,0.85);
 						a.image_yscale=a.image_xscale;
 						a.image_index=image_index;
-						a.direction=90+random_range(-25, 25)
+						a.direction=90+random_range(-15, 15)
 						a.speed=random_range(4,10)
 						a.gravity=0.15;
 						a.tag="atk 4 little explosions"
@@ -29,7 +29,7 @@ if inst_place!=noone {
 						a.image_xscale=random_range(0.4,0.6);
 						a.image_yscale=a.image_xscale;
 						a.image_index=image_index;
-						a.direction=90+random_range(-25, 25)
+						a.direction=90+random_range(-15, 15)
 						a.speed=random_range(4,10)
 						a.gravity=0.15;
 						a.tag="atk 4 little explosions deco"
@@ -40,7 +40,7 @@ if inst_place!=noone {
 				break;
 				case sprMayuCherry:
 					for (angle=0; angle<360; angle+=15) {
-						a=instance_create_depth(x,y+10,3,objCustomBullet)		//-1+dsin(angle)*4
+						a=instance_create_depth(x,y+10,depth-dsin(angle)*3.5,objCustomBullet)
 						a.sprite_index=sprite_index;
 						a.image_xscale=0.4
 						a.image_yscale=a.image_xscale;

@@ -1,4 +1,28 @@
+/*
+if(!surface_exists(surf)){
+    surf=surface_create(800,608);
+}
+*/
+//xsh=(mouse_x)/800;
+//ysh=(mouse_y)/608;
 
+//surface_copy(surf,0,0,application_surface);
+/*
+
+var shaderTimerHandle=shader_get_uniform(shader,"barrel_size");
+var shaderIntensityHandle=shader_get_uniform(shader,"intensity");
+
+var shaderXShiftHandle=shader_get_uniform(shader,"x_shift");
+var shaderYShiftHandle=shader_get_uniform(shader,"y_shift");
+
+shader_set(shader);
+
+shader_set_uniform_f(shaderTimerHandle,barrelsize);
+shader_set_uniform_f(shaderIntensityHandle,intensity);
+
+shader_set_uniform_f(shaderXShiftHandle,xsh);
+shader_set_uniform_f(shaderYShiftHandle,ysh);
+*/
 draw_clear_alpha(c_white,0)
 draw_set_alpha(1);
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)

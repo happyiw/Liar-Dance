@@ -2,8 +2,8 @@
 
 if(MenuMode)
 {
-
-if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance)
+CanSelectStep+=1
+if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance and CanSelectStep>50)
 {
         if (keyboard_check_pressed(vk_up)) { 
             audio_play_sound(sndTitleMove,0,false);

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fSasa3_2",
+  "%Name":"fSasa3_3",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":19,
@@ -142,7 +142,7 @@
   "last":0,
   "lineHeight":22,
   "maintainGms1Font":false,
-  "name":"fSasa3_2",
+  "name":"fSasa3_3",
   "parent":{
     "name":"Font",
     "path":"folders/z_Avoid_Sa/Font.yy",

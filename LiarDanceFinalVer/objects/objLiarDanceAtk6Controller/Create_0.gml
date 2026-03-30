@@ -18,11 +18,12 @@ instance_destroy(objDecoCustomObject)
 	
 
 	global.edgeDeath=true
-	
+
+/*
 _id = layer_get_id("Background")
 bg_id = layer_background_get_id(_id)
 layer_background_blend(bg_id,make_colour_rgb(119,75,192))
-
+*/
 instance_destroy(objPlayer)
 instance_destroy(objBlock)
 

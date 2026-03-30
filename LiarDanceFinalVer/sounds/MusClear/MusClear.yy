@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":238.21353,
+  "duration":237.53784,
   "exportDir":"",
   "name":"MusClear",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"MusClear.mp3",
+  "soundFile":"MusClear.ogg",
   "volume":1.0,
 }

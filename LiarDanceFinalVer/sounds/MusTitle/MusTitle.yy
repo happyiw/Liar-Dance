@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":238.25998,
+  "duration":238.25995,
   "exportDir":"",
   "name":"MusTitle",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"MusTitle.mp3",
+  "soundFile":"MusTitle.ogg",
   "volume":1.0,
 }

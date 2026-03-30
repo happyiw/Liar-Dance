@@ -310,6 +310,7 @@
     {"name":"sprTetoDance","order":19,"path":"sprites/sprTetoDance/sprTetoDance.yy",},
     {"name":"sprTetoFD","order":20,"path":"sprites/sprTetoFD/sprTetoFD.yy",},
     {"name":"sprTitleTeto1","order":5,"path":"sprites/sprTitleTeto1/sprTitleTeto1.yy",},
+    {"name":"sprTitleTeto2","order":6,"path":"sprites/sprTitleTeto2/sprTitleTeto2.yy",},
     {"name":"sprTriggerButton","order":1,"path":"sprites/sprTriggerButton/sprTriggerButton.yy",},
     {"name":"sprWalljumpL","order":3,"path":"sprites/sprWalljumpL/sprWalljumpL.yy",},
     {"name":"sprWalljumpR","order":2,"path":"sprites/sprWalljumpR/sprWalljumpR.yy",},

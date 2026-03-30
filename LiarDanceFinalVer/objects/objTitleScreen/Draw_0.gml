@@ -37,8 +37,18 @@ point[21]=scrEasing1(point[20],2)*1/5
 	point[22]+=1/5
 if(point[23]<1){point[23]+=1/300}	
 point[24]=scrEasing1(point[23],2)
+
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*400+4,360+4,3/7,3/7,0,c_black,0.5)
 draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*400,360,3/7,3/7,0,c_white,1)
-	
+
+point[26]+=4
+repeat(6)
+{
+draw_sprite_ext(sprTitleTeto2,point[22]*2,1000-((point[26]+point[27]) mod 1200)+4,-120+point[24]*210+4,3/8,-3/8,0,c_black,0.5)
+draw_sprite_ext(sprTitleTeto2,point[22]*2,1000-((point[26]+point[27]) mod 1200),-120+point[24]*210,3/8,-3/8,0,c_white,1)
+point[27]+=200
+}
+point[27]=0
 	
 if(fileSelect=0){Px=60 Py=304}
 if(fileSelect=1){Px=60 Py=374}
@@ -66,7 +76,7 @@ draw_rectangle(0,0,800,608,0)
 draw_set_alpha(1)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
-draw_text_outline(400,304,string("Delete Data?\n[Z : Back] [Shift : Accept]"),c_white,c_black)
+draw_text_outline(400,304,string("Delete Data?\n[Z : Back]\n[Shift : Accept]"),c_white,c_black)
 }
 
 if(OptionMode)

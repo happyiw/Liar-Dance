@@ -237,6 +237,8 @@
     {"name":"sprLiarDanceAtk3CloudDistorted","order":3,"path":"sprites/sprLiarDanceAtk3CloudDistorted/sprLiarDanceAtk3CloudDistorted.yy",},
     {"name":"sprLiarDanceAtk3Phone","order":4,"path":"sprites/sprLiarDanceAtk3Phone/sprLiarDanceAtk3Phone.yy",},
     {"name":"sprLiarDanceAtk3VariousScreens","order":1,"path":"sprites/sprLiarDanceAtk3VariousScreens/sprLiarDanceAtk3VariousScreens.yy",},
+    {"name":"sprLiarDanceAtk4BuroCat","order":6,"path":"sprites/sprLiarDanceAtk4BuroCat/sprLiarDanceAtk4BuroCat.yy",},
+    {"name":"sprLiarDanceAtk4BuroTank","order":5,"path":"sprites/sprLiarDanceAtk4BuroTank/sprLiarDanceAtk4BuroTank.yy",},
     {"name":"sprLiarDanceAtk4Car","order":3,"path":"sprites/sprLiarDanceAtk4Car/sprLiarDanceAtk4Car.yy",},
     {"name":"sprLiarDanceAtk4CarWindow","order":4,"path":"sprites/sprLiarDanceAtk4CarWindow/sprLiarDanceAtk4CarWindow.yy",},
     {"name":"sprLiarDanceAtk4Signs","order":1,"path":"sprites/sprLiarDanceAtk4Signs/sprLiarDanceAtk4Signs.yy",},

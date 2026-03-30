@@ -154,12 +154,22 @@ if t==1950 {
 	a2.image_yscale=a2.image_xscale;
 	a2.tag="atk 4 car window"
 	a2.persist=true
+	
+	b=instance_create_depth(_x,_y,-4,objCustomBullet)
+	b.sprite_index=sprLiarDanceAtk4BuroCat
+	b.parent_id=a.id;
+	b.image_xscale=-0.65;
+	b.image_yscale=abs(b.image_xscale);
+	a.image_speed=1
+	b.draw=true;
+	b.persist=true;
+	b.tag="atk 4 buro cat"
 }
 
 if t>=1950 {
 	with(objLiarDanceAtk4Car) {
 		if other.t>=2050
-			x=760+dsin(other.t/2)*16
+			x=lerp(x,790+dsin(other.t/2)*16,0.04)
 			
 		if other.t mod 72 == 0 {
 			
@@ -237,6 +247,25 @@ if t>=1950 {
 			a.persist=true
 		}
 	}
+	
+	if t==2143 {
+		
+		
+		scale=1.1
+		_x=-(324*scale/2)
+		_y=488
+		
+		a=instance_create_depth(_x,_y,-1,objCustomBullet)
+		a.sprite_index=sprLiarDanceAtk4BuroTank;
+		a.image_xscale=scale;
+		a.image_yscale=a.image_xscale;
+		a.image_speed=1
+		a.draw=true;
+		a.tag="atk 4 buro tank"
+		a.speed=1.5
+		a.persist=true
+	}
+	
 	with(objCustomBullet) {
 		if tag=="atk 4 small spiral spawner" {
 			if t<=48 {
@@ -265,6 +294,60 @@ if t>=1950 {
 			image_xscale=lerp(image_xscale,0.8,0.1)
 			image_yscale=image_xscale
 		}
+		if tag=="atk 4 buro cat" {
+			if other.t<=2013 {
+				x=parent_id.x-30;
+				y=parent_id.y-96;
+			}
+			if other.t==2013 {
+				image_speed=0
+				//direction=90;
+				vspeed=-3;
+				hspeed=-1
+				gravity=0.14;
+			}
+			
+			if other.t==2069 {
+				vspeed=0
+				image_speed=1;
+				gravity=0
+				direction=180;
+				accel=0.7;
+				free_variable[0]=1	
+			}
+			
+			if other.t>=2034 {
+				if free_variable[0]==0 {
+					//hspeed=lerp(hspeed,0,0.01)
+					
+					if vspeed>0 and depth!=8 {
+						depth=-8	
+					}
+					
+				}
+				if free_variable[0]==1 {
+					image_speed+=0.5
+					if t mod 4 == 0 {
+						a=instance_create_depth(x,y,depth+1,objCustomBullet)
+						a.draw=true;
+						a.killer=false;
+						a.sprite_index=sprite_index;
+						a.image_index=image_index;
+						a.image_xscale=image_xscale;
+						a.image_yscale=image_yscale;
+						a.image_blend=choose(c_blue,c_green,c_red)
+						a.tag="atk 4 buro trail"
+					}
+				}
+			}
+		}
+		
+		if tag=="atk 4 buro trail" {
+			image_alpha-=0.1
+			if image_alpha<=0
+				instance_destroy()
+		}
+		
 	}
 }
 

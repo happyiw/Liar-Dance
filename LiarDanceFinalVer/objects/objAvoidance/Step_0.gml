@@ -3873,12 +3873,18 @@ x-=75
 if(step=round(ts1*397.5))
 {
 	point[596]=0.5
-var lay_id = layer_get_id("Background");
-var back_id = layer_background_get_id(lay_id);
-layer_background_blend(back_id,c_red)
+cre(-4200,-4200,objSSCherry)
+a.image_xscale=10000
+a.image_yscale=10000
+a.depth=0
+a.mask_index=sprSSNothing
+a.image_blend=c_red
+a.sprite_index=sprSSWhite1
+a.trg=26
+a.point[29]=1
 with(objPlayer){visible=0}
 with(objBow){visible=0}
-with(objSSCherry){if(trg!=17){des()}}
+with(objSSCherry){if(trg!=17 and trg!=26){des()}}
 with(objSSCherry){if(trg=17){
 	point[4]=x point[5]=y
 if(point[1]){y-=75}
@@ -3889,6 +3895,7 @@ point[7]=y
 
 if(step=round(ts1*398))
 {
+with(objSSCherry){if(trg=26){des()}}
 var lay_id = layer_get_id("Background");
 var back_id = layer_background_get_id(lay_id);
 layer_background_blend(back_id,c_black)

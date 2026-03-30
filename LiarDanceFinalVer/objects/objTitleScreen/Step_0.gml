@@ -104,4 +104,4 @@ if(!LoadMode){room_goto(global.startRoom)}
 
 
 }
-else if (scrButtonCheckPressed(global.menuAcceptButton)){MenuMode=1}
+else if (scrButtonCheckPressed(global.menuAcceptButton)){MenuMode=1 audio_play_sound(sndTitleAccept,0,false);}

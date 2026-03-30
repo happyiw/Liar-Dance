@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"MusTitle",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":238.25998,
+  "exportDir":"",
+  "name":"MusTitle",
+  "parent":{
+    "name":"Music",
+    "path":"folders/z_Avoid_Sa/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"MusTitle.mp3",
+  "volume":1.0,
+}

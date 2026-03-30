@@ -9,7 +9,8 @@ function scrGetMusic() {
 	    case rMenu:
 	    case rOptions:
 	    case rDifficultySelect:
-	        roomSong = -1;
+		case rAvoidancePractice:
+	        roomSong = MusTitle;
 	        break; // Always put a break after setting the song
 		/*
 		case rSample01:
@@ -17,7 +18,7 @@ function scrGetMusic() {
 	        break;
 		*/
 	    case rEnd:
-	        roomSong = -1;
+	        roomSong = MusClear;
 	        break;
 	    default: // By default don't play anything in case the room does not have a song set
 	        roomSong = -1;

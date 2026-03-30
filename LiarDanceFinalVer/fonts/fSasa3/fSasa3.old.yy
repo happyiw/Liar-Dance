@@ -144,8 +144,8 @@
   "maintainGms1Font":false,
   "name":"fSasa3",
   "parent":{
-    "name":"基盤",
-    "path":"folders/基盤.yy",
+    "name":"Font",
+    "path":"folders/z_Avoid_Sa/Font.yy",
   },
   "pointRounding":0,
   "ranges":[

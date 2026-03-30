@@ -1,0 +1,101 @@
+
+
+if(MenuMode)
+{
+
+if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance)
+{
+        if (keyboard_check_pressed(vk_up)) { 
+            audio_play_sound(MENU_SOUND,0,false);
+            fileSelect -= 1;
+            if (fileSelect < 0) {
+                fileSelect = 2;
+			}
+        }  
+		if(keyboard_check_pressed(vk_down)) {
+            audio_play_sound(MENU_SOUND,0,false);
+            fileSelect += 1;
+            if (fileSelect > 2) {
+                fileSelect = 0;
+			}
+        }
+		if (scrButtonCheckPressed(global.menuAcceptButton)) {
+			if(fileSelect=0)
+             {
+if(file_exists("Data\\save"+string(1))){LoadMode=1 RoomTrance=1 MenuSelect=1}
+else
+{
+                        global.gameStarted = true;
+                        global.autosave = true;
+                        
+                        global.difficulty = 1;
+                        
+						RoomTrance=1 MenuSelect=1
+}
+			}	
+			if(fileSelect=1)
+			{
+                    if (!file_exists("Data\\save"+string(1))) {
+                        global.gameStarted = true;
+                        global.autosave = true;
+                        
+                        global.difficulty = 1;
+                        
+						RoomTrance=1 MenuSelect=1
+                    }
+					else
+					{
+						MenuSelect=1
+						DataWarn=1
+					}
+			}	
+			if(fileSelect=2)
+			{
+	MenuSelect=1 OptionMode=1
+	instance_create_depth(0,0,depth-1,objOptionsMenu)
+            }
+		}
+			
+}
+
+else if(DataWarn and !RoomTrance)
+{
+if (scrButtonCheckPressed(global.menuAcceptButton)) {
+	
+                        global.gameStarted = true;
+                        global.autosave = true;
+                        
+                        global.difficulty = 1;
+                        
+						RoomTrance=1 MenuSelect=1
+}
+if (scrButtonCheckPressed(global.menuBackButton)) {
+DataWarn=0
+MenuSelect=0
+}
+
+}
+
+else if(OptionMode)
+{
+if (scrButtonCheckPressed(global.menuBackButton)) {
+OptionMode=0
+MenuSelect=0
+with(objOptionsMenu){des()}
+}
+
+}
+
+else if(RoomTrance)
+{
+RoomTranceStep+=1
+if(!instance_exists(objScreenChangeBlackWall)){cre(0,0,objScreenChangeBlackWall)}
+if(RoomTranceStep=50){
+if(!LoadMode){room_goto(global.startRoom)}
+	else{scrLoadGame(true)}
+	}
+}
+
+
+}
+else if (scrButtonCheckPressed(global.menuAcceptButton)){MenuMode=1}

@@ -1,6 +1,6 @@
 scrPlayMusic(musLiarDance,false)
 t=global.AvoidanceStartTime		//4154		//3025		//2393		//1825		//1259      //-1
-
+global.edgeDeath=true
 global.noPause = true
 
 border_width=160

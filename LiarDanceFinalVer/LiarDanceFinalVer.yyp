@@ -86,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -279,9 +279,11 @@
     {"id":{"name":"shRectangle2","path":"shaders/shRectangle2/shRectangle2.yy",},},
     {"id":{"name":"shWaterDistortion","path":"shaders/shWaterDistortion/shWaterDistortion.yy",},},
     {"id":{"name":"MusAvoidance","path":"sounds/MusAvoidance/MusAvoidance.yy",},},
+    {"id":{"name":"MusClear","path":"sounds/MusClear/MusClear.yy",},},
     {"id":{"name":"musGuyRock","path":"sounds/musGuyRock/musGuyRock.yy",},},
     {"id":{"name":"musLiarDance","path":"sounds/musLiarDance/musLiarDance.yy",},},
     {"id":{"name":"musOnDeath","path":"sounds/musOnDeath/musOnDeath.yy",},},
+    {"id":{"name":"MusTitle","path":"sounds/MusTitle/MusTitle.yy",},},
     {"id":{"name":"sndBlockChange","path":"sounds/sndBlockChange/sndBlockChange.yy",},},
     {"id":{"name":"sndBossHit","path":"sounds/sndBossHit/sndBossHit.yy",},},
     {"id":{"name":"sndCherry","path":"sounds/sndCherry/sndCherry.yy",},},

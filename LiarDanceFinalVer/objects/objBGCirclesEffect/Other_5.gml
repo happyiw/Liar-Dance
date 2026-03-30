@@ -1,4 +1,3 @@
 //instance_destroy()
 
-if room==rAvoidance
-	instance_destroy()
+instance_destroy()

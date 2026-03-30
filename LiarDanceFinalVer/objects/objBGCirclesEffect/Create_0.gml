@@ -22,3 +22,6 @@ col=make_colour_rgb(119, 75, 172)
 circle_presicion=64
 
 black_merge=0.1
+
+
+depth=200

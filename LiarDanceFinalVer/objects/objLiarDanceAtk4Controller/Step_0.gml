@@ -161,7 +161,7 @@ if t>=1950 {
 		if other.t>=2050
 			x=760+dsin(other.t/2)*16
 			
-		if other.t mod 64 == 0 {
+		if other.t mod 72 == 0 {
 			
 			option=choose(1,2)
 			
@@ -189,7 +189,7 @@ if t>=1950 {
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
-		if other.t mod 64 == 32 {
+		if other.t mod 72 == 36 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)

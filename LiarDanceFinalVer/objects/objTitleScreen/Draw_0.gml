@@ -19,8 +19,8 @@ if( surface_exists(surf))
 {
 surface_set_target(surf)
 draw_clear_alpha(c_black,0)
-draw_sprite_ext(sprTitleLogo,0,400+point[5]+5,304+point[6]+5,1,1,point[11],c_black,0.5)
-draw_sprite_ext(sprTitleLogo,1,400+point[7]+5,304+point[8]+5,1,1,point[12],c_black,0.5)
+draw_sprite_ext(sprTitleLogo,0,400+point[5]+5,304+point[6]+5,1,1,point[11],c_black,0.7)
+draw_sprite_ext(sprTitleLogo,1,400+point[7]+5,304+point[8]+5,1,1,point[12],c_black,0.7)
 draw_sprite_ext(sprTitleLogo,0,400+point[5],304+point[6],1,1,point[11],c_white,1)
 draw_sprite_ext(sprTitleLogo,1,400+point[7],304+point[8],1,1,point[12],c_white,1)
 surface_reset_target()
@@ -38,8 +38,23 @@ point[21]=scrEasing1(point[20],2)*1/5
 if(point[23]<1){point[23]+=1/300}	
 point[24]=scrEasing1(point[23],2)
 
-draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*400+4,360+4,3/7,3/7,0,c_black,0.5)
-draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*400,360,3/7,3/7,0,c_white,1)
+
+
+repeat(5)
+{
+point[28]+=80
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800+400-point[24]*500-point[28]+4,360+4,3/7,3/7,0,c_black,0.5)
+}
+point[28]=0
+repeat(5)
+{
+point[28]+=80
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800+400-point[24]*500-point[28]  ,360  ,3/7,3/7,0,make_colour_hsv((point[28] mod 255),255,255),1)
+}
+point[28]=0
+
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*500+4,360+4,3/7,3/7,0,c_black,0.5)
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*500  ,360  ,3/7,3/7,0,c_white,1)
 
 point[26]+=4
 repeat(6)

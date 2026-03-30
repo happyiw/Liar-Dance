@@ -13,10 +13,13 @@ fileSelect=0
 RoomTrance=0
 RoomTranceStep=0
 LoadMode=0
+CanSelectStep=0
 surf=noone
 
 Px=0
 Py=0
+
+
 
 point[1]=random(360)
 point[2]=random(360)

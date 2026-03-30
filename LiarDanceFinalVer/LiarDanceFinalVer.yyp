@@ -412,6 +412,7 @@
     {"id":{"name":"sprTetoFD","path":"sprites/sprTetoFD/sprTetoFD.yy",},},
     {"id":{"name":"sprTitleLogo","path":"sprites/sprTitleLogo/sprTitleLogo.yy",},},
     {"id":{"name":"sprTitleTeto1","path":"sprites/sprTitleTeto1/sprTitleTeto1.yy",},},
+    {"id":{"name":"sprTitleTeto2","path":"sprites/sprTitleTeto2/sprTitleTeto2.yy",},},
     {"id":{"name":"sprTriggerButton","path":"sprites/sprTriggerButton/sprTriggerButton.yy",},},
     {"id":{"name":"sprTriggerMask","path":"sprites/sprTriggerMask/sprTriggerMask.yy",},},
     {"id":{"name":"sprWalljumpL","path":"sprites/sprWalljumpL/sprWalljumpL.yy",},},

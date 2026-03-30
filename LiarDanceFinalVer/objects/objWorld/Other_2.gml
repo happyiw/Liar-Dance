@@ -23,6 +23,10 @@ if (NO_FILE_SELECT_MODE) { // No file select mode is on, immediately start a new
 } else { // No file select mode is off, go to the main menu
 	room_goto_next();
 }
+sprite_prefetch(sprClearTeto)
+sprite_prefetch(sprTitleLogo)
+sprite_prefetch(sprTitleTeto1)
+sprite_prefetch(sprTitleTeto2)
 sprite_prefetch(sprSSTex)
 sprite_prefetch(shSSMirror)
 sprite_prefetch(sprAvdTeto1)

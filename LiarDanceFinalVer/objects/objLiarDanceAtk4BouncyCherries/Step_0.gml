@@ -8,32 +8,74 @@ if inst_place!=noone {
 		vspeed=-abs(vspeed)
 		gravity=free_variable[2]/2
 		if flag==1 {
-			repeat(4) {
-				a=instance_create_depth(x,y,depth,objCustomBullet)
-				a.sprite_index=sprite_index;
-				a.image_xscale=random_range(0.7,0.85);
-				a.image_yscale=a.image_xscale;
-				a.image_index=image_index;
-				a.direction=90+random_range(-15, 15)
-				a.speed=random_range(4,10)
-				a.gravity=0.15;
-				a.tag="atk 4 little explosions"
-				a.draw=true
-			}
-			repeat(15) {
-				a=instance_create_depth(x,y,depth+1,objCustomBullet)
-				a.sprite_index=sprWBCherry;
-				a.image_blend=make_colour_hsv((image_index*21) mod 255,255,255)
-				a.image_xscale=random_range(0.4,0.6);
-				a.image_yscale=a.image_xscale;
-				a.image_index=image_index;
-				a.direction=90+random_range(-15, 15)
-				a.speed=random_range(4,10)
-				a.gravity=0.15;
-				a.tag="atk 4 little explosions deco"
-				a.draw=true
-				a.image_alpha=0.2
-				a.killer=false;
+			switch(sprite_index) {
+				case sprLeeheCherry:
+					repeat(5) {
+						a=instance_create_depth(x,y,depth,objCustomBullet)
+						a.sprite_index=sprite_index;
+						a.image_xscale=random_range(0.7,0.85);
+						a.image_yscale=a.image_xscale;
+						a.image_index=image_index;
+						a.direction=90+random_range(-15, 15)
+						a.speed=random_range(4,10)
+						a.gravity=0.15;
+						a.tag="atk 4 little explosions"
+						a.draw=true
+					}
+					repeat(15) {
+						a=instance_create_depth(x,y,depth+1,objCustomBullet)
+						a.sprite_index=sprWBCherry;
+						a.image_blend=make_colour_hsv((image_index*21) mod 255,255,255)
+						a.image_xscale=random_range(0.4,0.6);
+						a.image_yscale=a.image_xscale;
+						a.image_index=image_index;
+						a.direction=90+random_range(-15, 15)
+						a.speed=random_range(4,10)
+						a.gravity=0.15;
+						a.tag="atk 4 little explosions deco"
+						a.draw=true
+						a.image_alpha=0.2
+						a.killer=false;
+					}
+				break;
+				case sprMayuCherry:
+					for (angle=0; angle<360; angle+=15) {
+						a=instance_create_depth(x,y+10,depth-dsin(angle)*3.5,objCustomBullet)
+						a.sprite_index=sprite_index;
+						a.image_xscale=0.4
+						a.image_yscale=a.image_xscale;
+						a.image_blend=image_blend;
+						a.b_trig=true;
+						a.cx=x;
+						a.cy=y;
+						a.dir=angle;
+						a.len_inc=5;
+						a.deg_y=-4;
+						a.deg_x=lerp(1,0.75,(image_xscale-1.35)/0.85);
+						a.killer=1-sign(angle mod 180 == 0)
+						a.tag="atk 4 shockwave"
+						a.draw=true
+						/*
+						a=instance_create_depth(x,y,depth,objCustomBullet)
+						a.sprite_index=sprite_index;
+						a.image_xscale=0.4
+						a.image_yscale=a.image_xscale;
+						a.image_blend=image_blend;
+						a.b_trig=true;
+						a.cx=x;
+						a.cy=y;
+						a.dir=angle;
+						a.len_inc=2;
+						a.deg_y=-3;
+						a.killer=1-sign(angle mod 180 == 0)
+						a.tag="atk 4 shockwave"
+						a.draw=true
+						*/
+					}
+				break;
+				case sprCustomRegularCherry:
+				
+				break;
 			}
 			flag=0
 			alarm[0]=4

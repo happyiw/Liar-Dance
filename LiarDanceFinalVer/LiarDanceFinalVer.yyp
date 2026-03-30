@@ -101,6 +101,8 @@
     {"id":{"name":"changelog","path":"notes/changelog/changelog.yy",},},
     {"id":{"name":"readme","path":"notes/readme/readme.yy",},},
     {"id":{"name":"objAvoidance","path":"objects/objAvoidance/objAvoidance.yy",},},
+    {"id":{"name":"objBGCircle","path":"objects/objBGCircle/objBGCircle.yy",},},
+    {"id":{"name":"objBGCirclesEffect","path":"objects/objBGCirclesEffect/objBGCirclesEffect.yy",},},
     {"id":{"name":"objBlock","path":"objects/objBlock/objBlock.yy",},},
     {"id":{"name":"objBlockFake","path":"objects/objBlockFake/objBlockFake.yy",},},
     {"id":{"name":"objBlockFall","path":"objects/objBlockFall/objBlockFall.yy",},},

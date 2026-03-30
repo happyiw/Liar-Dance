@@ -75,16 +75,33 @@ if t>=1826 and t<=1976 {
 }
 
 //if t mod (30+7*(t>=2012)) == 0 {
-if t mod 40 == 10 and t<2000 {
+if t mod 44 == 22 and t<2000 {
 	rand_y=480-random_range(32,128)
-	a = instance_create(832,rand_y,objLiarDanceAtk4BouncyCherries)
+	
+	option=choose(1,2)
+	
+	a = instance_create_depth(832,rand_y,-2,objLiarDanceAtk4BouncyCherries)
+	
+	switch(option) {
+		case 1:
+			a.sprite_index=sprMayuCherry;
+			a.image_blend=make_colour_hsv(random(255),255,255)
+		break;
+		case 2:
+			a.sprite_index=sprLeeheCherry;
+			a.image_index=irandom(12)
+		break;
+	}
+	
+	/*
 	a.sprite_index=sprCustomRegularCherry
 	a.image_index=irandom(12)
-	a.image_xscale=random_range(1.35,2.2)
+	*/
+	a.image_xscale=random_range(1.35,1.7)
 	a.image_yscale=a.image_xscale
 	a.image_angle=random(360)
 	a.direction=180-20		//random_range(12,25)
-	a.speed=random_range(4,8)
+	a.speed=random_range(4,9)
 	a.gravity=random_range(0.1,0.175)
 	a.persist=true;
 	a.free_variable[0]=random_range(1,3)
@@ -94,13 +111,33 @@ if t mod 40 == 10 and t<2000 {
 	a.draw=true
 }
 
-if t>=1966 and t<=2112 {
+if t mod 44 == 0 and t<1950 {
+	rand_y=480-random_range(32,128)
+	
+	a = instance_create_depth(832,rand_y,-2,objLiarDanceAtk4BouncyCherries)
+	a.sprite_index=sprCustomRegularCherry
+	a.image_index=irandom(12)
+	a.image_xscale=random_range(1.2,1.5)
+	a.image_yscale=a.image_xscale
+	a.image_angle=random(360)
+	a.direction=180-20		//random_range(12,25)
+	a.speed=random_range(4,9)
+	a.gravity=random_range(0.1,0.175)
+	a.persist=true;
+	a.free_variable[0]=random_range(1,3)
+	a.free_variable[1]=0
+	a.free_variable[2]=a.gravity
+	a.tag="atk 4 jumpy cherries"
+	a.draw=true	
+}
+
+if t>=1950 and t<=2050 {
 	with(objLiarDanceAtk4Car) {
-		x=EaseOutSine(other.t-2000,xstart,760+dsin(other.t/3)*32,112)
+		x=EaseOutSine(other.t-1950,xstart,760+dsin(other.t/2)*16,100)
 	}
 }
 
-if t==2000 {
+if t==1950 {
 	
 	scale=0.84
 	_x=800 + (549*scale/2)
@@ -119,16 +156,27 @@ if t==2000 {
 	a2.persist=true
 }
 
-if t>=2000 {
+if t>=1950 {
 	with(objLiarDanceAtk4Car) {
-		if other.t>=2112
+		if other.t>=2050
 			x=760+dsin(other.t/2)*16
 			
-		if other.t mod 50 == 0 {
+		if other.t mod 64 == 0 {
+			
+			option=choose(1,2)
+			
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
-			a.sprite_index=sprCustomRegularCherry
-			a.image_index=irandom(12)
-			a.image_xscale=random_range(1.35,2.2)
+			switch(option) {
+				case 1:
+					a.sprite_index=sprMayuCherry;
+					a.image_blend=make_colour_hsv(random(255),255,255)
+				break;
+				case 2:
+					a.sprite_index=sprLeeheCherry;
+					a.image_index=irandom(12)
+				break;
+			}
+			a.image_xscale=random_range(1.35,1.7)
 			a.image_yscale=a.image_xscale
 			a.image_angle=random(360)
 			a.direction=90+random_range(13,17)		//random_range(12,25)
@@ -141,33 +189,23 @@ if t>=2000 {
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
-		
-		/*
-		if other.t>=2108 and other.t mod 42 == 9 {
-			
-			with(objCustomBullet) {
-				if tag=="atk 4 shape spawner" {
-					instance_destroy()	
-				}
-			}
-			
-			a = instance_create_depth(x-22,y-52,-2,objCustomBullet)
+		if other.t mod 64 == 32 {
+			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)
-			a.image_xscale=0.8
+			a.image_xscale=random_range(1.2,1.5)
 			a.image_yscale=a.image_xscale
 			a.image_angle=random(360)
-			a.image_alpha=0.45
-			a.direction=90+random_range(5,15)
-			a.speed=random_range(7,8)				
+			a.direction=90+random_range(13,17)		//random_range(12,25)
+			a.speed=4.8			//random_range(5.5,7.5)
 			a.gravity=random_range(0.1,0.175)
 			a.persist=true;
 			a.free_variable[0]=random_range(1,3)
-			a.free_variable[1]=random_range(1.3,2.6)
-			a.tag="atk 4 shape spawner"
-			a.draw=true
+			a.free_variable[1]=random_range(1.3,2.6)*2
+			a.free_variable[2]=a.gravity
+			a.tag="atk 4 jumpy cherries"
+			a.draw=true		
 		}
-		*/
 	}
 	if t>=2108 {
 		if t==2108 || t mod 42 == 4 {
@@ -292,6 +330,16 @@ with(objCustomBullet) {
 	if tag=="atk 4 little explosions deco" {
 		if t>=25 {
 			image_alpha-=0.005
+			if image_alpha<=0
+				instance_destroy()
+		}
+	}
+	if tag=="atk 4 shockwave" {
+		len_inc=lerp(len_inc,0,0.1)
+		if len_inc<3 {
+			if image_alpha<0.75
+				killer=false;
+			image_alpha-=0.02
 			if image_alpha<=0
 				instance_destroy()
 		}

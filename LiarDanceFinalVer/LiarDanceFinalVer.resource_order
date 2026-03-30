@@ -43,6 +43,8 @@
     {"name":"fSasa3_1","order":3,"path":"fonts/fSasa3_1/fSasa3_1.yy",},
     {"name":"fSasa3","order":2,"path":"fonts/fSasa3/fSasa3.yy",},
     {"name":"changelog","order":1,"path":"notes/changelog/changelog.yy",},
+    {"name":"objBGCircle","order":4,"path":"objects/objBGCircle/objBGCircle.yy",},
+    {"name":"objBGCirclesEffect","order":3,"path":"objects/objBGCirclesEffect/objBGCirclesEffect.yy",},
     {"name":"objBlockFake","order":7,"path":"objects/objBlockFake/objBlockFake.yy",},
     {"name":"objBlockFall","order":4,"path":"objects/objBlockFall/objBlockFall.yy",},
     {"name":"objBlockInvis","order":6,"path":"objects/objBlockInvis/objBlockInvis.yy",},

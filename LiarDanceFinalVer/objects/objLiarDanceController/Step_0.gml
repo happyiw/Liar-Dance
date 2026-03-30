@@ -45,7 +45,6 @@ if t==1826 {
 if t==2394 {
 	instance_destroy(objLiarDanceAtk4Controller)	
 	if !instance_exists(objLiarDanceAtk5Controller) {
-		
 		a=instance_create(scrPX(),scrPY(),objLiarDanceAtk5Controller)
 		a.spiral_mirror=atk5_spiral_mirror;
 		a.teto_side=atk6_teto_side	

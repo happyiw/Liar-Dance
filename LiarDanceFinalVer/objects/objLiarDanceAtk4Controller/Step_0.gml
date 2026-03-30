@@ -26,7 +26,7 @@ else {
 		persist=false;	
 	}
 	
-	global.edgeDeath=true
+	//global.edgeDeath=true
 }
 
 if t==1826 {

@@ -17,7 +17,7 @@ instance_destroy(objDecoCustomObject)
 	a.tag="atk 6 starts with immediate flashbang"
 	
 
-	global.edgeDeath=true
+//global.edgeDeath=true
 
 /*
 _id = layer_get_id("Background")

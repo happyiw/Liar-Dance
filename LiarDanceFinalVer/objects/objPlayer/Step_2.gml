@@ -106,9 +106,22 @@ with (objWarpNext) {
 }
 
 // Check if player left the room and update player sprite (if set to)
-if ((x < 0 || x > room_width || y < 0 || y > room_height) && global.edgeDeath) {
+
+_x=camera_get_view_x(view_camera[0])
+_y=camera_get_view_y(view_camera[0])
+_w=camera_get_view_width(view_camera[0])
+_h=camera_get_view_height(view_camera[0])
+
+if ((x < min(0,_x) 
+  || x > max(room_width, _x+_w) 
+  || y < min(0, _y) 
+  || y > max(room_height, _y+_h)) 
+  && global.edgeDeath) {
     scrKillPlayer();
 }
+
+
+
 
 // Update player sprite
 if (PLAYER_ANIMATION_FIX) {

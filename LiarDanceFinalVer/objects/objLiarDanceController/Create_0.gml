@@ -22,7 +22,7 @@ switch(t) {
 		instance_create(0,0,objLiarDanceAtk3Controller);
 		break;
 	case 1825:
-		instance_create(0,0,objLiarDanceAtk4Controller);
+		instance_create(400,304,objLiarDanceAtk4Controller);
 		break;
 	case 2393:
 		a=instance_create(400,304,objLiarDanceAtk5Controller);

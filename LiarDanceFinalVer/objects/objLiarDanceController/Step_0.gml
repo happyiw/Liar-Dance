@@ -37,7 +37,7 @@ if t==1260 {
 if t==1826 {
 	instance_destroy(objLiarDanceAtk3Controller)	
 	if !instance_exists(objLiarDanceAtk4Controller)
-		instance_create(0,0,objLiarDanceAtk4Controller)
+		instance_create(400,304,objLiarDanceAtk4Controller)
 		
 	border_width=160-32
 }

@@ -8,6 +8,8 @@ if instance_exists(objPlayer) {
 			xprevious-=1.5
 		}
 	}
+	x=scrPX()
+	y=scrPY()
 }
 
 else {
@@ -23,11 +25,20 @@ else {
 	with(objCustomBullet) {
 		persist=false;	
 	}
+	
+	global.edgeDeath=true
 }
 
 if t==1826 {
 	
 	with(objBlock) {
+		if image_yscale>1
+			instance_destroy()
+			
+		else {
+			x-=96;
+			image_xscale+=5
+		}
 	}
 	
 	instance_create_depth(0,472,201,objLiarDanceAtk4Road)
@@ -74,7 +85,7 @@ if t>=1826 and t<=1976 {
 	}
 	
 	if t<=1926 {
-		v=EaseOutCubic(t-1826,160,0,100)
+		v=EaseOutCubic(t-1826,160,-32,100)
 		set_camera(v,v/1.3+EaseOutCubic(t-1826,112,0,100),800-v*2,608-v*2/1.3,0)
 	}
 	
@@ -146,7 +157,7 @@ if t>=1950 and t<=2050 {
 if t==1950 {
 	
 	scale=0.84
-	_x=800 + (549*scale/2)
+	_x=800 + (549*scale/2)+30
 	_y=488
 	
 	a=instance_create_depth(_x,_y,-1,objLiarDanceAtk4Car)
@@ -177,7 +188,7 @@ if t>=1950 {
 		if other.t>=2050
 			x=lerp(x,790+dsin(other.t/2)*16,0.04)
 			
-		if other.t mod 74 == 0 {
+		if other.t mod 77 == 0 {
 			
 			option=choose(1,2,(4-2),)
 			
@@ -205,7 +216,7 @@ if t>=1950 {
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
-		if other.t mod 74 == 37 {
+		if other.t mod 77 == 38 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)
@@ -254,11 +265,11 @@ if t>=1950 {
 		}
 	}
 	
-	if t==2143 {
+	if t==2133 {
 		
 		
 		scale=1.1
-		_x=-(324*scale/2)
+		_x=-(324*scale/2)-48
 		_y=488
 		
 		a=instance_create_depth(_x,_y,-1,objCustomBullet)
@@ -268,7 +279,7 @@ if t>=1950 {
 		a.image_speed=1
 		a.draw=true;
 		a.tag="atk 4 buro tank"
-		a.speed=1.35
+		a.speed=1.5
 		a.persist=true
 	}
 	
@@ -404,7 +415,7 @@ if t>=2332 and t<=2394 {
 		xprevious=x
 	}
 	
-	v=EaseInCubic(t-2332,0,128,62)
+	v=EaseInCubic(t-2332,-32,128,62)
 	set_camera(v,v/1.3+v/3,800-v*2,608-v*2/1.3,0)
 }
 

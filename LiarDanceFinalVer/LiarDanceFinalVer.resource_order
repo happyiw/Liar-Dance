@@ -309,6 +309,7 @@
     {"name":"sprT4PMask","order":2,"path":"sprites/sprT4PMask/sprT4PMask.yy",},
     {"name":"sprTetoDance","order":19,"path":"sprites/sprTetoDance/sprTetoDance.yy",},
     {"name":"sprTetoFD","order":20,"path":"sprites/sprTetoFD/sprTetoFD.yy",},
+    {"name":"sprTitleTeto1","order":5,"path":"sprites/sprTitleTeto1/sprTitleTeto1.yy",},
     {"name":"sprTriggerButton","order":1,"path":"sprites/sprTriggerButton/sprTriggerButton.yy",},
     {"name":"sprWalljumpL","order":3,"path":"sprites/sprWalljumpL/sprWalljumpL.yy",},
     {"name":"sprWalljumpR","order":2,"path":"sprites/sprWalljumpR/sprWalljumpR.yy",},

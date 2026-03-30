@@ -13,6 +13,7 @@ fileSelect=0
 RoomTrance=0
 RoomTranceStep=0
 LoadMode=0
+surf=0
 
 Px=0
 Py=0

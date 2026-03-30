@@ -22,4 +22,4 @@ instance_create_layer(400,460,"Player",objPlayer)
 x=400
 y=460
 
-global.edgeDeath=false
+//global.edgeDeath=false

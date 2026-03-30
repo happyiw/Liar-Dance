@@ -29,7 +29,7 @@ if !instance_exists(objPlayer) {
 		if tag!="atk 5 star spawner"
 			persist=false;	
 	}
-	global.edgeDeath=true
+	//global.edgeDeath=true
 		
 }
 

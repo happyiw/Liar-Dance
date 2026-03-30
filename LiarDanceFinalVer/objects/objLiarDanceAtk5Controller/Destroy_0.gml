@@ -1,1 +1,1 @@
-global.edgeDeath=true;
+//global.edgeDeath=true;

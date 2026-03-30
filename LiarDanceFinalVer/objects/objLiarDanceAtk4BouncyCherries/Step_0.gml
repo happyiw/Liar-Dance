@@ -6,7 +6,7 @@ inst_place=instance_place(x,y,objBlock)
 if inst_place!=noone {
 	if inst_place.y>y {
 		vspeed=-abs(vspeed)
-		gravity=free_variable[2]/2
+		gravity=free_variable[2]/2.4
 		if flag==1 {
 			switch(sprite_index) {
 				case sprLeeheCherry:

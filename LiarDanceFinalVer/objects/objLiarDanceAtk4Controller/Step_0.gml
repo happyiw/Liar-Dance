@@ -26,6 +26,10 @@ else {
 }
 
 if t==1826 {
+	
+	with(objBlock) {
+	}
+	
 	instance_create_depth(0,472,201,objLiarDanceAtk4Road)
 	//instance_create_depth(0,0,200,objLiarDanceAtk4ShadowDrawer)
 	
@@ -49,6 +53,8 @@ if t==1826 {
 		x=400
 		xprevious=x
 	}
+	
+	
 	
 	for (_x=300;_x<=300+800*4; _x+=1200) {
 		a=instance_create_depth(_x+random_range(-150,150),480-32,200,objLiarDanceAtk4RoadSign)
@@ -171,9 +177,9 @@ if t>=1950 {
 		if other.t>=2050
 			x=lerp(x,790+dsin(other.t/2)*16,0.04)
 			
-		if other.t mod 72 == 0 {
+		if other.t mod 74 == 0 {
 			
-			option=choose(1,2)
+			option=choose(1,2,(4-2),)
 			
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			switch(option) {
@@ -199,7 +205,7 @@ if t>=1950 {
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
-		if other.t mod 72 == 36 {
+		if other.t mod 74 == 37 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)
@@ -262,7 +268,7 @@ if t>=1950 {
 		a.image_speed=1
 		a.draw=true;
 		a.tag="atk 4 buro tank"
-		a.speed=1.5
+		a.speed=1.35
 		a.persist=true
 	}
 	
@@ -274,7 +280,7 @@ if t>=1950 {
 			}
 			if t==47 {
 				rand=random(360)
-				for (angle=0; angle<360; angle+=20) {
+				for (angle=0; angle<360; angle+=24) {
 					a=instance_create_depth(x,y,objLiarDanceAtk4Car.depth-15,objCustomBullet)
 					a.sprite_index=sprite_index;
 					a.image_xscale=image_xscale;

@@ -416,7 +416,7 @@ if t>=2332 and t<=2394 {
 	}
 	
 	v=EaseInCubic(t-2332,-32,128,62)
-	set_camera(v,v/1.3+v/3,800-v*2,608-v*2/1.3,0)
+	set_camera(v,v/1.3+EaseInCubic(t-2332,0,v/3,62),800-v*2,608-v*2/1.3,0)
 }
 
 with(objDecoCustomObject) {

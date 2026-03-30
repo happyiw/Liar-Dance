@@ -161,7 +161,7 @@ if t>=1950 {
 		if other.t>=2050
 			x=760+dsin(other.t/2)*16
 			
-		if other.t mod 72 == 0 {
+		if other.t mod 68 == 0 {
 			
 			option=choose(1,2)
 			
@@ -179,7 +179,7 @@ if t>=1950 {
 			a.image_xscale=random_range(1.35,1.7)
 			a.image_yscale=a.image_xscale
 			a.image_angle=random(360)
-			a.direction=90+random_range(13,17)		//random_range(12,25)
+			a.direction=90+random_range(13,23)		//random_range(12,25)
 			a.speed=4.8			//random_range(5.5,7.5)
 			a.gravity=random_range(0.1,0.175)
 			a.persist=true;
@@ -189,14 +189,14 @@ if t>=1950 {
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
 		}
-		if other.t mod 72 == 36 {
+		if other.t mod 68 == 34 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			a.sprite_index=sprCustomRegularCherry
 			a.image_index=irandom(12)
-			a.image_xscale=random_range(1.2,1.5)
+			a.image_xscale=random_range(1.7,2)
 			a.image_yscale=a.image_xscale
 			a.image_angle=random(360)
-			a.direction=90+random_range(13,17)		//random_range(12,25)
+			a.direction=90+random_range(13,23)		//random_range(12,25)
 			a.speed=4.8			//random_range(5.5,7.5)
 			a.gravity=random_range(0.1,0.175)
 			a.persist=true;

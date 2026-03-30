@@ -298,6 +298,7 @@
     {"id":{"name":"sndTitleCancel","path":"sounds/sndTitleCancel/sndTitleCancel.yy",},},
     {"id":{"name":"sndTitleMove","path":"sounds/sndTitleMove/sndTitleMove.yy",},},
     {"id":{"name":"sndWallJump","path":"sounds/sndWallJump/sndWallJump.yy",},},
+    {"id":{"name":"____12clip","path":"sprites/____12clip/____12clip.yy",},},
     {"id":{"name":"shSSMirror","path":"sprites/shSSMirror/shSSMirror.yy",},},
     {"id":{"name":"sprAllTiles","path":"sprites/sprAllTiles/sprAllTiles.yy",},},
     {"id":{"name":"sprAvdTeto1","path":"sprites/sprAvdTeto1/sprAvdTeto1.yy",},},

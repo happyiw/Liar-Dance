@@ -213,6 +213,7 @@
     {"name":"sndTitleCancel","order":9,"path":"sounds/sndTitleCancel/sndTitleCancel.yy",},
     {"name":"sndTitleMove","order":7,"path":"sounds/sndTitleMove/sndTitleMove.yy",},
     {"name":"sndWallJump","order":2,"path":"sounds/sndWallJump/sndWallJump.yy",},
+    {"name":"____12clip","order":13,"path":"sprites/____12clip/____12clip.yy",},
     {"name":"sprAvdTeto1","order":22,"path":"sprites/sprAvdTeto1/sprAvdTeto1.yy",},
     {"name":"sprAvdTeto2","order":23,"path":"sprites/sprAvdTeto2/sprAvdTeto2.yy",},
     {"name":"sprBlockMaskCentered","order":7,"path":"sprites/sprBlockMaskCentered/sprBlockMaskCentered.yy",},

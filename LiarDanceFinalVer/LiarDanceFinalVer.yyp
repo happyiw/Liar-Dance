@@ -86,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -308,11 +308,13 @@
     {"id":{"name":"sprBullet","path":"sprites/sprBullet/sprBullet.yy",},},
     {"id":{"name":"sprCamera","path":"sprites/sprCamera/sprCamera.yy",},},
     {"id":{"name":"sprCherry","path":"sprites/sprCherry/sprCherry.yy",},},
+    {"id":{"name":"sprClearArrow","path":"sprites/sprClearArrow/sprClearArrow.yy",},},
     {"id":{"name":"sprClearTeto","path":"sprites/sprClearTeto/sprClearTeto.yy",},},
     {"id":{"name":"sprCustomGreyCherry","path":"sprites/sprCustomGreyCherry/sprCustomGreyCherry.yy",},},
     {"id":{"name":"sprCustomRegularCherry","path":"sprites/sprCustomRegularCherry/sprCustomRegularCherry.yy",},},
     {"id":{"name":"sprDtetS","path":"sprites/sprDtetS/sprDtetS.yy",},},
     {"id":{"name":"sprEmptyCherry","path":"sprites/sprEmptyCherry/sprEmptyCherry.yy",},},
+    {"id":{"name":"sprEveryone","path":"sprites/sprEveryone/sprEveryone.yy",},},
     {"id":{"name":"sprGameOver","path":"sprites/sprGameOver/sprGameOver.yy",},},
     {"id":{"name":"sprGravityDown","path":"sprites/sprGravityDown/sprGravityDown.yy",},},
     {"id":{"name":"sprGravityUp","path":"sprites/sprGravityUp/sprGravityUp.yy",},},

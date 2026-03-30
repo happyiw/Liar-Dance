@@ -5,13 +5,13 @@ playerIndex = (playerIndex + 1/5) mod 4;
 
 // Check for button inputs
 if (scrButtonCheckPressed(global.menuUpButton)) { // Move up in the menu
-    audio_play_sound(MENU_SOUND,0,false);
+    audio_play_sound(sndTitleMove,0,false);
     optionSelect -= 1;
     if (optionSelect < 0) {
         optionSelect = optionNum - 1;
 	}
 } else if (scrButtonCheckPressed(global.menuDownButton)) { // Move down in the menu
-    audio_play_sound(MENU_SOUND,0,false);
+    audio_play_sound(sndTitleMove,0,false);
     optionSelect += 1;
     if (optionSelect > optionNum - 1) {
         optionSelect = 0;

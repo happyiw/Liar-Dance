@@ -4812,7 +4812,7 @@ if(step>=round(ts1*431) and step<round(ts1*447))
 {
 	if(trg=5)
 	{
-		speed+=0.08+random(0.08)
+		speed+=0.05+random(0.05)
 	}
 	if(trg=4)
 	{

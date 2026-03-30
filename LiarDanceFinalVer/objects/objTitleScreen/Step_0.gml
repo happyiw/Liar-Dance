@@ -6,14 +6,14 @@ if(MenuMode)
 if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance)
 {
         if (keyboard_check_pressed(vk_up)) { 
-            audio_play_sound(MENU_SOUND,0,false);
+            audio_play_sound(sndTitleMove,0,false);
             fileSelect -= 1;
             if (fileSelect < 0) {
                 fileSelect = 2;
 			}
         }  
 		if(keyboard_check_pressed(vk_down)) {
-            audio_play_sound(MENU_SOUND,0,false);
+            audio_play_sound(sndTitleMove,0,false);
             fileSelect += 1;
             if (fileSelect > 2) {
                 fileSelect = 0;
@@ -22,7 +22,7 @@ if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance)
 		if (scrButtonCheckPressed(global.menuAcceptButton)) {
 			if(fileSelect=0)
              {
-if(file_exists("Data\\save"+string(1))){LoadMode=1 RoomTrance=1 MenuSelect=1}
+if(file_exists("Data\\save"+string(1))){LoadMode=1 RoomTrance=1 MenuSelect=1 audio_play_sound(sndTitleAccept,0,false);}
 else
 {
                         global.gameStarted = true;
@@ -31,6 +31,7 @@ else
                         global.difficulty = 1;
                         
 						RoomTrance=1 MenuSelect=1
+						audio_play_sound(sndTitleAccept,0,false);
 }
 			}	
 			if(fileSelect=1)
@@ -42,17 +43,20 @@ else
                         global.difficulty = 1;
                         
 						RoomTrance=1 MenuSelect=1
+						audio_play_sound(sndTitleAccept,0,false);
                     }
 					else
 					{
 						MenuSelect=1
 						DataWarn=1
+						audio_play_sound(sndTitleAccept,0,false);
 					}
 			}	
 			if(fileSelect=2)
 			{
 	MenuSelect=1 OptionMode=1
 	instance_create_depth(0,0,depth-1,objOptionsMenu)
+	audio_play_sound(sndTitleAccept,0,false);
             }
 		}
 			
@@ -66,12 +70,13 @@ if (scrButtonCheckPressed(global.menuAcceptButton)) {
                         global.autosave = true;
                         
                         global.difficulty = 1;
-                        
+                        audio_play_sound(sndTitleAccept,0,false);
 						RoomTrance=1 MenuSelect=1
 }
 if (scrButtonCheckPressed(global.menuBackButton)) {
 DataWarn=0
 MenuSelect=0
+audio_play_sound(sndTitleCancel,0,false);
 }
 
 }
@@ -79,6 +84,7 @@ MenuSelect=0
 else if(OptionMode)
 {
 if (scrButtonCheckPressed(global.menuBackButton)) {
+	audio_play_sound(sndTitleCancel,0,false);
 OptionMode=0
 MenuSelect=0
 with(objOptionsMenu){des()}

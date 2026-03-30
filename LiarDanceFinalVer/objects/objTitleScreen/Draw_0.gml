@@ -44,14 +44,17 @@ repeat(5)
 {
 point[28]+=80
 draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800+400-point[24]*500-point[28]+4,360+4,3/7,3/7,0,c_black,0.5)
+point[29]+=45
 }
 point[28]=0
 repeat(5)
 {
 point[28]+=80
-draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800+400-point[24]*500-point[28]  ,360  ,3/7,3/7,0,make_colour_hsv((point[28] mod 255),255,255),1)
+draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800+400-point[24]*500-point[28]  ,360  ,3/7,3/7,0,make_colour_hsv((point[29] mod 255),255,255),1)
+point[29]+=45
 }
 point[28]=0
+point[29]=0
 
 draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*500+4,360+4,3/7,3/7,0,c_black,0.5)
 draw_sprite_ext(sprTitleTeto1,point[22]*2/3,800-point[24]*500  ,360  ,3/7,3/7,0,c_white,1)
@@ -65,9 +68,9 @@ point[27]+=200
 }
 point[27]=0
 	
-if(fileSelect=0){Px=60 Py=304}
-if(fileSelect=1){Px=60 Py=374}
-if(fileSelect=2){Px=60 Py=444}
+if(fileSelect=0){Px=60 Py=308}
+if(fileSelect=1){Px=60 Py=378}
+if(fileSelect=2){Px=60 Py=448}
 
 draw_sprite_ext(sprPlayerIdle,point[22],Px+3,Py+3,2,2,0,c_black,0.5)
 draw_sprite_ext(sprPlayerIdle,point[22],Px,Py,2,2,0,c_white,1)
@@ -84,14 +87,10 @@ draw_surface_ext(surf,point[21]*1000,-point[21]*210,1-point[21],1-point[21],0,c_
 
 if(DataWarn)
 {
-draw_set_font(fSasa)
-draw_set_colour(c_black)
-draw_set_alpha(0.6)
-draw_rectangle(0,0,800,608,0)
-draw_set_alpha(1)
-draw_set_halign(fa_center)
+draw_set_font(fSasa3_2)
+draw_set_halign(fa_left)
 draw_set_valign(fa_center)
-draw_text_outline(400,304,string("Delete Data?\n[Z : Back]\n[Shift : Accept]"),c_white,c_black)
+draw_text_outline(130,404,string("Delete Data?[Z : Back][Shift : Accept]"),c_red,c_black)
 }
 
 if(OptionMode)

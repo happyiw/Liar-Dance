@@ -5,6 +5,9 @@ t=3025      //-1
 
 teto_side=objLiarDanceController.atk6_teto_side
 
+instance_destroy(objDarkness)
+
+
 instance_create(0,0,objShadowDrawer)
 
 instance_destroy(objDecoCustomObject)

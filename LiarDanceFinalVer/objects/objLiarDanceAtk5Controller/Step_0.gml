@@ -70,7 +70,7 @@ if t==2394 {
 	
 	
 	
-	a = instance_create_layer(400,304,"Background_cherries",objLiarDanceAtk5KaijuBG)
+	a = instance_create_depth(400,304,200,objLiarDanceAtk5KaijuBG)
 	//a.sprite_index=sprLiarDanceAtk5KaijuBG
 	a.image_xscale=1.25;
 	a.image_yscale=a.image_xscale
@@ -771,11 +771,14 @@ if t==2952 {
 	instance_destroy(objLiarDanceAtk5KaijuBG)
 	instance_destroy(objLiarDanceSpotlight)
 	
+	/*
 	_id = layer_get_id("Background")
 	bg_id = layer_background_get_id(_id)
 	layer_background_blend(bg_id,c_black)
+	*/
 	
-	
+	a=instance_create_depth(0,0,0,objDarkness)
+	a.image_blend=c_black
 	
 	a=instance_create_depth(0,0,-400,objDecoCustomObject)
 	a.sprite_index=sprLiarDanceAtk5BRB

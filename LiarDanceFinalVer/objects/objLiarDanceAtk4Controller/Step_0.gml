@@ -85,7 +85,7 @@ if t>=1826 and t<=1976 {
 	}
 	
 	if t<=1926 {
-		v=EaseOutCubic(t-1826,160,-32,100)
+		v=EaseOutCubic(t-1826,160,0,100)
 		set_camera(v,v/1.3+EaseOutCubic(t-1826,112,0,100),800-v*2,608-v*2/1.3,0)
 	}
 	
@@ -269,7 +269,7 @@ if t>=1950 {
 		
 		
 		scale=1.1
-		_x=-(324*scale/2)-48
+		_x=-(324*scale/2)//-48
 		_y=488
 		
 		a=instance_create_depth(_x,_y,-1,objCustomBullet)
@@ -279,7 +279,7 @@ if t>=1950 {
 		a.image_speed=1
 		a.draw=true;
 		a.tag="atk 4 buro tank"
-		a.speed=1.5
+		a.speed=1.25
 		a.persist=true
 	}
 	
@@ -376,10 +376,12 @@ if t==2332 {
 	    a.alpha=1;
 	    a.enable_alphablend=false
 	    a.move=0;
+		a.draw_bg=1
 	}
 	with(objPlayer) {
 		image_alpha=0	
 	}
+	instance_destroy(objShadowDrawer)
 	instance_destroy(objLiarDanceAtk4ShadowDrawer)
 	instance_destroy(objLiarDanceAtk3PrimitiveTransition)
 }
@@ -415,8 +417,8 @@ if t>=2332 and t<=2394 {
 		xprevious=x
 	}
 	
-	v=EaseInCubic(t-2332,-32,128,62)
-	set_camera(v,v/1.3+EaseInCubic(t-2332,0,v/3,62),800-v*2,608-v*2/1.3,0)
+	v=EaseInCubic(t-2332,0,128,62)
+	set_camera(v,v/1.3,800-v*2,608-v*2/1.3,0)		//+EaseInCubic(t-2332,0,v/3,62)
 }
 
 with(objDecoCustomObject) {

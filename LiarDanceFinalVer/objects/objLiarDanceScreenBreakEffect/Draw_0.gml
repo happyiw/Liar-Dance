@@ -48,21 +48,7 @@ if surface_exists(srf) {
 		
     for(i = 0; i < 25; i ++){
         for(ii = 0; ii < 19; ii ++){
-			/*
-			flag[i, ii]=0
-            if squares_list_limit>1 {
-				for (i=0; i<squares_list_limit; i++) {
-					_index=ds_list_find_value(squares_list,i)
-					if ii+i*19==_index
-						flag[i, ii]=1
-				}
-			}
 			
-			if flag[i, ii]==0
-				draw_surface_general(srf,i * 32,ii * 32,32,32,(i * 32) + xx[i,ii] + xx_offset[i, ii],(ii * 32) + yy[i,ii] + yy_offset[i, ii],scale[i,ii],scale[i,ii],rotate[i,ii],blend[i, ii], blend[i, ii], blend[i, ii], blend[i, ii],alpha);
-			else
-				draw_sprite_part_ext(sprLiarDanceAtk4WhiteNoiseTexture,0,i * 32,ii * 32,32,32,(i * 32) + xx[i,ii] + xx_offset[i, ii],(ii * 32) + yy[i,ii] + yy_offset[i, ii],scale[i,ii],scale[i,ii],c_white,alpha)
-            */
 			draw_surface_general(srf,i * 32,ii * 32,32,32,(i * 32) + xx[i,ii] + xx_offset[i, ii],(ii * 32) + yy[i,ii] + yy_offset[i, ii],scale[i,ii],scale[i,ii],rotate[i,ii],blend[i, ii], blend[i, ii], blend[i, ii], blend[i, ii],alpha);
 		    xx[i,ii] += lengthdir_x(spd[i,ii]*move,dir[i,ii]);
             yy[i,ii] += lengthdir_y(spd[i,ii]*move,dir[i,ii]);

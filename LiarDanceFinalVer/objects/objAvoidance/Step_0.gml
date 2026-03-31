@@ -5215,6 +5215,7 @@ if(step=round(ts1*431+ts1*16))
 
 if(step=round(ts1*431+ts1*16) or step=round(ts1*439+ts1*16))
 {
+point[709]=2
 repeat(9-point[709])
 {
 point[701]=3+random(2)

@@ -404,13 +404,13 @@ if t>=2332 and t<=2394 {
 			}
 		}
     }
-	if t>=2360 {
+	//if t>=2360 {
 		with(objLiarDanceAtk4BouncyCherries)
 			killer=false;
 			
 		with(objCustomBullet)
 			killer=false;
-	}
+	//}
 	
 	with(objPlayer) {
 		x=clamp(x,32,768)

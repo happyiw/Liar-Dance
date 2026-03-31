@@ -104,6 +104,21 @@ cre(0,0,objSSsh)
 a.sh=shOutline
 
 
+cre(0,32,objBlock)
+a.visible=1
+a.image_xscale=-16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0
+a.depth=-100
+
+cre(800,32,objBlock)
+a.visible=1
+a.image_xscale=16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0
+a.depth=-100
 
 cre(0,304+32*6,objBlock)
 a.visible=1
@@ -1523,6 +1538,21 @@ with(objPlayer) {
 	y=clamp(y,64,608-64)
 	yprevious=y
 }
+cre(0,32,objBlock)
+a.visible=1
+a.image_xscale=-16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0
+a.depth=-100
+
+cre(800,32,objBlock)
+a.visible=1
+a.image_xscale=16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0
+a.depth=-100
 
 cre(-400,608-32,objBlock)
 a.visible=1
@@ -1538,6 +1568,8 @@ a.image_yscale=-1004
 a.sprite_index=sprSSBlack1
 a.image_alpha=0.6
 a.depth=-100
+
+
 cre(-400,-608,objSSCherry)
 a.trg=99
 a.image_xscale=1600
@@ -1705,6 +1737,7 @@ point[15]=1
 
 if(step=round(ts1*303))
 {
+
 	cre(-800,-608,objSSCherry)
 	a.trg=900
 	a.image_xscale=2400
@@ -1754,6 +1787,22 @@ if(step=round(ts1*307))
 	    
 		}
 	}
+cre(0,32,objBlock)
+a.visible=1
+a.image_xscale=-16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0.6
+a.depth=-100
+
+cre(800,32,objBlock)
+a.visible=1
+a.image_xscale=16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0.6
+a.depth=-100
+
 }
 
 if(step=round(ts1*304.5)
@@ -1800,6 +1849,7 @@ if(step>=round(ts1*309) and step<round(ts1*311))
 		{
 	    gravity=0
 		speed*=0.9
+		image_alpha+=0.02
 		}
 	}
 }
@@ -4767,6 +4817,21 @@ if(step=round(ts1*431))
 {
 	des()
 }
+cre(0,32,objBlock)
+a.visible=1
+a.image_xscale=-16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0.6
+a.depth=-100
+
+cre(800,32,objBlock)
+a.visible=1
+a.image_xscale=16
+a.image_yscale=608-64
+a.sprite_index=sprSSBlack1
+a.image_alpha=0.6
+a.depth=-100
 cre(0,32*3,objBlock)
 a.image_xscale=32*30
 a.image_yscale=32*-3

@@ -4,15 +4,15 @@
   "bboxMode":0,
   "bbox_bottom":607,
   "bbox_left":0,
-  "bbox_right":796,
-  "bbox_top":3,
+  "bbox_right":799,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"97b5a12f-7500-4093-986f-82666f1b63fa","name":"97b5a12f-7500-4093-986f-82666f1b63fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e049ebc4-865e-464f-bfed-7e6fea9e06d2","name":"e049ebc4-865e-464f-bfed-7e6fea9e06d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"cd110676-1e05-448d-a83b-a61b782cdf44","name":"cd110676-1e05-448d-a83b-a61b782cdf44","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"2bfc137f-8c70-419b-89d9-bf0e33adce98","name":"2bfc137f-8c70-419b-89d9-bf0e33adce98","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97b5a12f-7500-4093-986f-82666f1b63fa","path":"sprites/sprLiarDanceAtk3VariousScreens/sprLiarDanceAtk3VariousScreens.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c9c7673d-f292-438d-b924-5cded5d1a950","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e049ebc4-865e-464f-bfed-7e6fea9e06d2","path":"sprites/sprLiarDanceAtk3VariousScreens/sprLiarDanceAtk3VariousScreens.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7ef9a8e7-2b7a-41e0-adf6-1fab830c7644","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd110676-1e05-448d-a83b-a61b782cdf44","path":"sprites/sprLiarDanceAtk3VariousScreens/sprLiarDanceAtk3VariousScreens.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e7846022-ee9f-4704-81c1-150ea983e906","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

@@ -274,9 +274,9 @@ if t==1265+140 || t==1280+140 || t==1300+140 || t==1315+140 || t==1335+140 || t=
 	switch(attack_option) {
 		case 0:
 			
-			_x=choose(0, 800)
+			//_x=choose(0, 800)
 			
-			//for (_x=0; _x<=800; _x+=800) {
+			for (_x=0; _x<=800; _x+=800) {
 				_y=304+random_range(-100,100)
 				a=instance_create(_x, _y, objLiarDanceAtk3Bullet)
 				a.image_xscale=2.5
@@ -308,7 +308,7 @@ if t==1265+140 || t==1280+140 || t==1300+140 || t==1315+140 || t==1335+140 || t=
 					aa.tag="atk 3 overtake circle"
 					aa.persist=true
 				}
-			//}
+			}
 			
 		break;
 		
@@ -437,7 +437,7 @@ if t==1545 {
 	
 	with(objDecoCustomObject) {
 		if tag=="atk 3 explosion jumpscare" {
-			a=instance_create(xstart,clamp(ystart,-224*0.93,224*0.93),objCustomBullet)
+			a=instance_create(xstart,clamp(ystart,304-224*0.93,304+224*0.93),objCustomBullet)
 			a.sprite_index=sprWhiteCherry
 			a.image_xscale=random_range(1,1.5)
 			a.image_yscale=a.image_xscale;
@@ -865,7 +865,7 @@ with(objLiarDanceAtk3Bullet) {
 		}
 		if t==22 {
 			direction=dir
-			speed=4.5+max(0,1*sign(1-image_xscale))
+			speed=4.4+max(0,1*sign(1-image_xscale))
 			persist=false
 		}
 	}

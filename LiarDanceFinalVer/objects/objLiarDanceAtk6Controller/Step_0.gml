@@ -190,7 +190,7 @@ if t>=3076 and t<=3136 {
 				
 				a.free_variable[2]=angle+rand;
 				a.free_variable[3]=random(180);
-				a.t=-irandom(8)
+				a.t=-irandom_range(1,10)
 				
 				//a.t=-i*2
 				a.t_inc=lerp(0.7,1.5,i/8)
@@ -200,7 +200,7 @@ if t>=3076 and t<=3136 {
 	}
 	
 	for (i=0; i<circles_amount; i++) {
-		increment=angle_offset_inc[i]/EaseOutSine(t-3086,4,10,100)
+		increment=angle_offset_inc[i]/EaseOutSine(t-3086,4,18,100)
 		angle_offset[i]+=increment
 		if i!=0 {
 			xx[i]=xx[i-1]+lengthdir_x(radius_offset[i],angle_offset[i])

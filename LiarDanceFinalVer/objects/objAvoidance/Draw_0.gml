@@ -366,7 +366,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 draw_set_colour(make_colour_hsv(10,140,255))
 draw_set_font(fSasa3)
-draw_text_transformed(410,354+point[680]*100,"嘘で踊るのさ",0.5+point[680],0.5+point[680],0)
+draw_text_transformed(413,354+point[680]*100,"嘘で踊るのさ",0.5+point[680],0.5+point[680],0)
 point[680]+=0.0004
 }
 
@@ -380,7 +380,7 @@ draw_set_font(fSasa3)
 repeat(21)
 {
 draw_set_alpha(0.3)
-draw_text_transformed(410,354+point[680]*100+point[686]-50*point[688]+(point[687] mod 808)-454,"嘘で踊るのさ",0.5+point[680],0.5+point[680],0)
+draw_text_transformed(413,354+point[680]*100+point[686]-50*point[688]+(point[687] mod 808)-454,"嘘で踊るのさ",0.5+point[680],0.5+point[680],0)
 draw_set_alpha(1)
 point[686]+=5*point[688]
 }

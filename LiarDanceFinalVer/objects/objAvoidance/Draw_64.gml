@@ -229,13 +229,13 @@ if(point[131]<1){point[131]+=1/30}
 point[130]=scrEasing1(point[131],2)
 draw_set_color(make_color_rgb(118,75,172))
 draw_rectangle(800-800*point[130],  0,800,304,0)
-draw_rectangle(    800*point[130],304,  0,608,0)
+draw_rectangle(   -1+801*point[130],304,  0,608,0)
 if(step>=round(ts1*332))
 {
 if(point[133]<1){point[133]+=1/30}
 point[132]=scrEasing1(point[133],2)
 draw_set_color(c_white)
-draw_rectangle(400,    608*point[132],800,0,0)
+draw_rectangle(400,    608*point[132],800,-1,0)
 draw_rectangle(400,608-608*point[132],  0,608,0)
 }
 if(step>=round(ts1*333))

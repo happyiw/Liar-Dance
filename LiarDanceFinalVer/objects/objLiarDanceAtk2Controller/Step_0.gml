@@ -18,6 +18,8 @@ if t==630 {
 	//instance_destroy(objUglyTransitionGUIDrawerStyle3_4)
 	//instance_destroy(objAtk1TransitionStyle3_4)
 	instance_destroy(objDecoCustomObject)
+instance_destroy(objLiarDanceAtk1TransitionText)
+
 	with(objPlayer) {
 	    frozen=false
 		visible=true

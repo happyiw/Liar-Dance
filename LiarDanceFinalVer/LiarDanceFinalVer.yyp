@@ -139,6 +139,7 @@
     {"id":{"name":"objLDBasicShaderHandler","path":"objects/objLDBasicShaderHandler/objLDBasicShaderHandler.yy",},},
     {"id":{"name":"objLiarDanceAtk1Controller","path":"objects/objLiarDanceAtk1Controller/objLiarDanceAtk1Controller.yy",},},
     {"id":{"name":"objLiarDanceAtk1SurfaceCopy","path":"objects/objLiarDanceAtk1SurfaceCopy/objLiarDanceAtk1SurfaceCopy.yy",},},
+    {"id":{"name":"objLiarDanceAtk1TransitionText","path":"objects/objLiarDanceAtk1TransitionText/objLiarDanceAtk1TransitionText.yy",},},
     {"id":{"name":"objLiarDanceAtk2Controller","path":"objects/objLiarDanceAtk2Controller/objLiarDanceAtk2Controller.yy",},},
     {"id":{"name":"objLiarDanceAtk3Bullet","path":"objects/objLiarDanceAtk3Bullet/objLiarDanceAtk3Bullet.yy",},},
     {"id":{"name":"objLiarDanceAtk3CloudSurface","path":"objects/objLiarDanceAtk3CloudSurface/objLiarDanceAtk3CloudSurface.yy",},},

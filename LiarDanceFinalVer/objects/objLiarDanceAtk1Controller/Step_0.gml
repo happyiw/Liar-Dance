@@ -259,6 +259,8 @@ if t==592 {
 	a.image_speed=3/17
 	a.tag="atk 1 transition spawner"
 	*/
+	
+	a=instance_create_depth(400,304,-500,objLiarDanceAtk1TransitionText)
 }
 
 if t==593 {
@@ -274,6 +276,17 @@ if t==593 {
 }
 
 if t>=595 and t<=612 {
+	
+	with(objLiarDanceAtk1TransitionText) {
+		
+		if (other.t-592) mod 6 == 0 
+			image_index++
+			
+		if other.t==612 {
+			bg_flag=1
+			t_inc=1
+		}
+	}
 	
 	camera_set_view_angle(0,EaseOutExpo(t-595,0,15,17))
 	

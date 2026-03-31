@@ -77,6 +77,7 @@
     {"name":"objKillerTrigger","order":2,"path":"objects/objKillerTrigger/objKillerTrigger.yy",},
     {"name":"objLDBasicShaderHandler","order":8,"path":"objects/objLDBasicShaderHandler/objLDBasicShaderHandler.yy",},
     {"name":"objLiarDanceAtk1Controller","order":9,"path":"objects/objLiarDanceAtk1Controller/objLiarDanceAtk1Controller.yy",},
+    {"name":"objLiarDanceAtk1TransitionText","order":1,"path":"objects/objLiarDanceAtk1TransitionText/objLiarDanceAtk1TransitionText.yy",},
     {"name":"objLiarDanceAtk2Controller","order":10,"path":"objects/objLiarDanceAtk2Controller/objLiarDanceAtk2Controller.yy",},
     {"name":"objLiarDanceAtk3CloudSurface","order":1,"path":"objects/objLiarDanceAtk3CloudSurface/objLiarDanceAtk3CloudSurface.yy",},
     {"name":"objLiarDanceAtk3CloudSurfaceTarget","order":2,"path":"objects/objLiarDanceAtk3CloudSurfaceTarget/objLiarDanceAtk3CloudSurfaceTarget.yy",},

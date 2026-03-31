@@ -2,6 +2,7 @@ t=629
 
 muteki=0
 
+
 atk2_indicator=choose(0,1,2)
 
 /*

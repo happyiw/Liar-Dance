@@ -3935,12 +3935,26 @@ a.point[29]=1
 with(objPlayer){visible=0}
 with(objBow){visible=0}
 with(objSSCherry){if(trg!=17 and trg!=26){des()}}
+if(point[590]=-100)
+{
+with(objSSCherry){if(trg=17){
+	point[4]=x point[5]=y
+if(!point[1]){y-=100}
+point[6]=x
+point[7]=y
+}}
+}
+
+if(point[590]=-200)
+{
 with(objSSCherry){if(trg=17){
 	point[4]=x point[5]=y
 if(point[1]){y-=100}
 point[6]=x
 point[7]=y
 }}
+}
+
 }
 
 if(step=round(ts1*398))

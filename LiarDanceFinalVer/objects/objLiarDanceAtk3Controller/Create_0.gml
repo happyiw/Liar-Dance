@@ -1,5 +1,6 @@
 t=1259
 
+player_size=1
 
 
 instance_create_depth(0,0,-100,objLiarDanceAtk3CloudSurface)
@@ -57,6 +58,14 @@ switch(attack_option) {
 		
 		a=instance_create_layer(400, a.y-30, "Player", objPlayer)
 		a.image_alpha=0
+		
+		a.image_xscale=player_size;
+		a.image_yscale=a.image_xscale;
+		a.jump = 8.5 * global.grav * a.image_xscale;
+		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.gravity = 0.4 * global.grav * a.image_xscale;
+		a.maxHSpeed = 3 * a.image_xscale;
+		a.maxVSpeed = 9 * a.image_xscale;
 	break;
 			
 	case 1:
@@ -75,6 +84,14 @@ switch(attack_option) {
 		
 		a=instance_create_layer(400, 410, "Player", objPlayer)
 		a.image_alpha=0
+		
+		a.image_xscale=player_size;
+		a.image_yscale=a.image_xscale;
+		a.jump = 8.5 * global.grav * a.image_xscale;
+		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.gravity = 0.4 * global.grav * a.image_xscale;
+		a.maxHSpeed = 3 * a.image_xscale;
+		a.maxVSpeed = 9 * a.image_xscale;
 		
 	break;
 		
@@ -114,13 +131,21 @@ switch(attack_option) {
 		a.image_yscale=25
 		
 		a=instance_create_layer(400, 450, "Player", objPlayer)
+		
+		a.image_xscale=player_size;
+		a.image_yscale=a.image_xscale;
+		a.jump = 8.5 * global.grav * a.image_xscale;
+		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.gravity = 0.4 * global.grav * a.image_xscale;
+		a.maxHSpeed = 3 * a.image_xscale;
+		a.maxVSpeed = 9 * a.image_xscale;
 	break;
 		
 		
 	case 3:
 		
 		/*fail to make an avoidance in 24h*/
-		
+		/*It didnt look good, so i scrapped it*/
 		
 		instance_destroy(objBlock)
 		
@@ -159,6 +184,14 @@ switch(attack_option) {
 		
 		a=instance_create_layer(400, 450, "Player", objPlayer)
 		a.image_alpha=0
+		
+		a.image_xscale=player_size;
+		a.image_yscale=a.image_xscale;
+		a.jump = 8.5 * global.grav * a.image_xscale;
+		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.gravity = 0.4 * global.grav * a.image_xscale;
+		a.maxHSpeed = 3 * a.image_xscale;
+		a.maxVSpeed = 9 * a.image_xscale;
 	break;
 	
 }

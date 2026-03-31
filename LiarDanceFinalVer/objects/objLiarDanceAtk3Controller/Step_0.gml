@@ -274,7 +274,9 @@ if t==1265+140 || t==1280+140 || t==1300+140 || t==1315+140 || t==1335+140 || t=
 	switch(attack_option) {
 		case 0:
 			
-			for (_x=0; _x<=800; _x+=800) {
+			_x=choose(0, 800)
+			
+			//for (_x=0; _x<=800; _x+=800) {
 				_y=304+random_range(-100,100)
 				a=instance_create(_x, _y, objLiarDanceAtk3Bullet)
 				a.image_xscale=2.5
@@ -306,7 +308,7 @@ if t==1265+140 || t==1280+140 || t==1300+140 || t==1315+140 || t==1335+140 || t=
 					aa.tag="atk 3 overtake circle"
 					aa.persist=true
 				}
-			}
+			//}
 			
 		break;
 		

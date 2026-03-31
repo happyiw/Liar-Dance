@@ -10,7 +10,7 @@ if inst_place!=noone {
 		if flag==1 {
 			switch(sprite_index) {
 				case sprLeeheCherry:
-					repeat(5) {
+					repeat(5 - instance_exists(objLiarDanceAtk4Car)) {
 						a=instance_create_depth(x,y,depth,objCustomBullet)
 						a.sprite_index=sprite_index;
 						a.image_xscale=random_range(0.7,0.85);

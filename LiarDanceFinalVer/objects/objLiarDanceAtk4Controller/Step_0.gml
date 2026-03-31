@@ -1,6 +1,14 @@
 
 t++
 
+/*
+if global.debugMode {
+	if keyboard_check_pressed(ord("E")) {
+		attack_mode = 1	
+	}
+}
+*/
+
 if instance_exists(objPlayer) {
 	with(objPlayer) {
 		if !place_free(x,y+9) and other.t<2332 {
@@ -95,16 +103,16 @@ if t>=1826 and t<=1976 {
 if t mod 44 == 22 and t<2000 {
 	rand_y=480-random_range(32,128)
 	
-	option=choose(1,2)
+	option=1-sign(bouncing_option)
 	
 	a = instance_create_depth(832,rand_y,-2,objLiarDanceAtk4BouncyCherries)
 	
 	switch(option) {
-		case 1:
+		case 0:
 			a.sprite_index=sprMayuCherry;
 			a.image_blend=make_colour_hsv(random(255),255,255)
 		break;
-		case 2:
+		case 1:
 			a.sprite_index=sprLeeheCherry;
 			a.image_index=irandom(12)
 		break;
@@ -126,6 +134,8 @@ if t mod 44 == 22 and t<2000 {
 	a.free_variable[2]=a.gravity
 	a.tag="atk 4 jumpy cherries"
 	a.draw=true
+	
+	bouncing_option = (bouncing_option+1) mod swap_variable
 }
 
 if t mod 44 == 0 and t<1950 {
@@ -190,15 +200,18 @@ if t>=1950 {
 			
 		if other.t mod 77 == 0 {
 			
-			option=choose(1,2,(4-2),)
+			if other.attack_mode==1
+				option=1-sign(other.bouncing_option)		//choose(1,2,(4-2),)
+			else
+				option=0
 			
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			switch(option) {
-				case 1:
+				case 0:
 					a.sprite_index=sprMayuCherry;
 					a.image_blend=make_colour_hsv(random(255),255,255)
 				break;
-				case 2:
+				case 1:
 					a.sprite_index=sprLeeheCherry;
 					a.image_index=irandom(12)
 				break;
@@ -215,6 +228,9 @@ if t>=1950 {
 			a.free_variable[2]=a.gravity
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
+			
+			other.bouncing_option = (other.bouncing_option+1) mod 3
+			
 		}
 		if other.t mod 77 == 38 {
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)

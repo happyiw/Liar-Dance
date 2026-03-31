@@ -287,6 +287,14 @@ draw_surface(surf,0,0)
 draw_sprite_ext(sprSSShapedStar,1,400,304,point[162]/2,point[162]/2,point[161]*72,c_white,1)
 draw_sprite_ext(sprSSDarkness,0,400,304,2,2,0,c_white,0.7)
 }
+
+if(step>=round(ts1*351))
+{
+if(point[845]<60){point[845]+=0.8}else{point[845]=60}
+}
+draw_set_colour(c_black)
+draw_rectangle(0,0,800,60-point[845],0)
+draw_rectangle(0,608,800,608-60+point[845],0)
 }
 
 

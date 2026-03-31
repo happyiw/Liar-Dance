@@ -117,7 +117,7 @@ if t mod 44 == 22 and t<2000 {
 	a.image_xscale=random_range(1.35,1.7)
 	a.image_yscale=a.image_xscale
 	a.image_angle=random(360)
-	a.direction=180-20		//random_range(12,25)
+	a.direction=180-25		//random_range(12,25)
 	a.speed=random_range(4,9)
 	a.gravity=random_range(0.1,0.175)
 	a.persist=true;
@@ -436,6 +436,12 @@ with(objCustomBullet) {
 				instance_destroy()
 		}
 	}
+	
+	if tag=="atk 4 little explosions" {
+		if vspeed>7
+			gravity=0
+	}
+	
 	if tag=="atk 4 shockwave" {
 		len_inc=lerp(len_inc,0,0.1)
 		if len_inc<3 {

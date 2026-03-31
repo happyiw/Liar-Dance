@@ -40,6 +40,10 @@ if t==3026 {
 	a.image_xscale=teto_side
 	a.t=random(360)
 	
+	a=instance_create_depth(400,304,230,objBGCirclesEffect)
+	a.intensity=0.3
+	a.black_merge=0.04;
+	
 	//color=make_color_rgb(201,131,255)
 	for (dist=160; dist<=220; dist+=60) {
 		for (angle=0; angle<360; angle+=4) {
@@ -1093,6 +1097,8 @@ if t==3590 {
 	instance_destroy(objCustomBullet)
 	instance_destroy(objLiarDanceAtk6Transition)
 	instance_destroy(objLiarDanceAtk6Teto)
+	instance_destroy(objBGCirclesEffect)
+	
 	
 	with(objLiarDanceAtk6FakeGlow) {
 		gravity=0;

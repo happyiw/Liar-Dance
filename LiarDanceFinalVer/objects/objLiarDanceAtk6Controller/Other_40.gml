@@ -1,1 +1,1 @@
-scrKillPlayer()
+//scrKillPlayer()

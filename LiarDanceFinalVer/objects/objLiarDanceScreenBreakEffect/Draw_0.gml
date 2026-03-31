@@ -37,10 +37,11 @@ if surface_exists(srf) {
 		}
 		draw_set_font(fSasa)
 		draw_set_align(0,0)
-		
+		/*
 		draw_set_alpha(text_alpha/25)
 		draw_text_outline(400,304,"Get ready",scrLiarDanceColorPicker(0),scrLiarDanceColorPicker(0))
 		draw_set_alpha(1)
+		*/
 	surface_reset_target()
 	
 	if draw_bg

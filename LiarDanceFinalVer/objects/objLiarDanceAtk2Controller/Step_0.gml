@@ -99,11 +99,12 @@ if t>=630 and t<=913 {
 	            persist=true
 	            killer=false;
 	            free_variable[1]=80
-	            if other.t==870 
-	                len=16
+	            if other.t==869 
+	                len=0
 	            dir_inc=lerp(-15,0,(other.t-870)/15)
-	            cx=EaseOutSine(other.t-869,xprevious,400+lengthdir_x(80,64+120*free_variable[0]),15)
-	            cy=EaseOutSine(other.t-869,yprevious,304+lengthdir_y(80,64+120*free_variable[0]),15)
+				len=lerp(len,80,0.15)
+	            cx=EaseOutSine(other.t-869,xprevious,400+lengthdir_x(len,64+120*free_variable[0]),15)
+	            cy=EaseOutSine(other.t-869,yprevious,304+lengthdir_y(len,64+120*free_variable[0]),15)
 	        }
 	    }
 	}
@@ -288,6 +289,7 @@ if t>=914 and t<=1196 {
 	    a.speed=random_range(5,9)
 	    a.image_xscale=random_range(0.8,1)
 	    a.image_yscale=a.image_xscale;
+		a.image_blend=make_color_rgb(215,215,215)
 	    a.tag="atk 3"
 	}
 	if t mod 4 == 0 and instance_exists(objPlayer) {
@@ -403,10 +405,17 @@ if t==1195 || t==1215 {
 		_x=random(800)
 		_y=304-random(208)*sign(t-1205)
 		
+		if point_distance(_x,_y,savespot_x,savespot_y)<8 {
+			dir=point_direction(_x,_y,savespot_x,savespot_y)
+			_x+=lengthdir_x(10,dir)
+			_y+=lengthdir_y(10,dir)
+		}
+		
+		
 	    a = instance_create(400,304,objCustomBullet)
 	    a.killer=false;
 	    a.drop_shadow=false;
-	    a.image_xscale=random_range(1,1.75)
+	    a.image_xscale=random_range(0.8,1.55)
 	    a.image_yscale=a.image_xscale
 	    a.image_alpha=-0.1
 	    a.image_angle=random(360)

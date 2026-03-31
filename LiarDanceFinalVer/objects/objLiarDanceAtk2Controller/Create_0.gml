@@ -2,6 +2,8 @@ t=629
 
 muteki=0
 
+savespot_x=400+random_range(-80,80)
+savespot_y=480-random_range(32,6)
 
 atk2_indicator=choose(0,1,2)
 

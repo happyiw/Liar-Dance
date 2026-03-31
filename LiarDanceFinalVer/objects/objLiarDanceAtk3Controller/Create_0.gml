@@ -62,7 +62,7 @@ switch(attack_option) {
 		a.image_xscale=player_size;
 		a.image_yscale=a.image_xscale;
 		a.jump = 8.5 * global.grav * a.image_xscale;
-		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.jump2 = 7 * global.grav * a.image_xscale;
 		a.gravity = 0.4 * global.grav * a.image_xscale;
 		a.maxHSpeed = 3 * a.image_xscale;
 		a.maxVSpeed = 9 * a.image_xscale;
@@ -88,7 +88,7 @@ switch(attack_option) {
 		a.image_xscale=player_size;
 		a.image_yscale=a.image_xscale;
 		a.jump = 8.5 * global.grav * a.image_xscale;
-		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.jump2 = 7 * global.grav * a.image_xscale;
 		a.gravity = 0.4 * global.grav * a.image_xscale;
 		a.maxHSpeed = 3 * a.image_xscale;
 		a.maxVSpeed = 9 * a.image_xscale;
@@ -135,7 +135,7 @@ switch(attack_option) {
 		a.image_xscale=player_size;
 		a.image_yscale=a.image_xscale;
 		a.jump = 8.5 * global.grav * a.image_xscale;
-		a.jump2 = 7 * global.grab * a.image_xscale;
+		a.jump2 = 7 * global.grav * a.image_xscale;
 		a.gravity = 0.4 * global.grav * a.image_xscale;
 		a.maxHSpeed = 3 * a.image_xscale;
 		a.maxVSpeed = 9 * a.image_xscale;

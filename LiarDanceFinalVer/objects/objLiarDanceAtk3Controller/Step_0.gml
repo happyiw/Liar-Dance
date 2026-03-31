@@ -437,7 +437,7 @@ if t==1545 {
 	
 	with(objDecoCustomObject) {
 		if tag=="atk 3 explosion jumpscare" {
-			a=instance_create(xstart,ystart,objCustomBullet)
+			a=instance_create(xstart,clamp(ystart,-224*0.93,224*0.93),objCustomBullet)
 			a.sprite_index=sprWhiteCherry
 			a.image_xscale=random_range(1,1.5)
 			a.image_yscale=a.image_xscale;
@@ -446,6 +446,7 @@ if t==1545 {
 			a.gravity=random_range(0.1,0.2)
 			a.tag=tag
 			a.persist=true
+			a.killer=false;
 		}
 		instance_destroy()
 	}
@@ -543,6 +544,10 @@ if t>=1545 and t<=1660 {
 			image_xscale=EaseLinear(t,5,1.5,115);
 			image_yscale=image_xscale;
 			len=EaseOutCubic(t,900,100,115)	
+		}
+		if tag=="atk 3 explosion jumpscare" {
+			if other.t==1555
+				killer=true
 		}
 	}
 }
@@ -860,7 +865,7 @@ with(objLiarDanceAtk3Bullet) {
 		}
 		if t==22 {
 			direction=dir
-			speed=5+max(0,1*sign(1-image_xscale))
+			speed=4.5+max(0,1*sign(1-image_xscale))
 			persist=false
 		}
 	}

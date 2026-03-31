@@ -1,6 +1,6 @@
 t=1259
 
-player_size=1
+player_size=0.7
 
 
 instance_create_depth(0,0,-100,objLiarDanceAtk3CloudSurface)

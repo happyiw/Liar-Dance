@@ -3878,14 +3878,14 @@ des()
 if(step=round(ts1*395.5))
 {
 point[599]=choose(1,2)
-point[590]=-random(150)
+point[590]=-100-choose(0,100)
 repeat(5)
 {
 repeat(10)
 {
 cre(point[590]+point[591],point[592],objSSCherry)
-a.image_xscale=3
-a.image_yscale=3
+a.image_xscale=4
+a.image_yscale=4
 a.trg=17
 a.image_alpha=0
 a.point[29]=1
@@ -3893,9 +3893,9 @@ a.point[1]=1
 a.image_index=9
 a.mask_index=sprSSNothing
 a.depth=-80
-cre(point[590]+point[591]-75,point[592]+75,objSSCherry)
-a.image_xscale=3
-a.image_yscale=3
+cre(point[590]+point[591]-100,point[592]+100,objSSCherry)
+a.image_xscale=4
+a.image_yscale=4
 a.trg=17
 a.image_alpha=0
 a.point[29]=1
@@ -3903,9 +3903,9 @@ a.point[1]=0
 a.image_index=9
 a.mask_index=sprSSNothing
 a.depth=-80
-point[591]+=150
+point[591]+=200
 }
-point[592]+=150
+point[592]+=200
 point[591]=0
 }
 
@@ -3916,7 +3916,7 @@ if(step=round(ts1*396.5))
 {
 with(objSSCherry){if(trg=17){
 	point[2]=x point[3]=y
-x-=75
+x-=100
 }}
 }
 
@@ -3937,7 +3937,7 @@ with(objBow){visible=0}
 with(objSSCherry){if(trg!=17 and trg!=26){des()}}
 with(objSSCherry){if(trg=17){
 	point[4]=x point[5]=y
-if(point[1]){y-=75}
+if(point[1]){y-=100}
 point[6]=x
 point[7]=y
 }}
@@ -4098,10 +4098,23 @@ a.image_alpha=0.45
 a.image_blend=c_black
 
 point[900]=1
+
+if(point[599]=1)
+{
 if(instance_exists(objPlayer)){
 with(objPlayer){des()}
-cre(400,304,objPlayer)
+cre(370,304,objPlayer)
 }
+}
+
+if(point[599]=2)
+{
+if(instance_exists(objPlayer)){
+with(objPlayer){des()}
+cre(420,304,objPlayer)
+}
+}
+
 }
 
 if(step=round(ts1*399))
@@ -4129,8 +4142,8 @@ with(objSSCherry)
 {
 	if(trg=19)
 	{
-	if(other.point[599]=1){point[1]=-70}
-	if(other.point[599]=2){point[1]= 70}
+	if(other.point[599]=1){point[1]=-100}
+	if(other.point[599]=2){point[1]= 100}
 	point[2]=point[1]
 	}	
 }
@@ -4143,8 +4156,8 @@ with(objSSCherry)
 {
 	if(trg=19)
 	{
-	if(other.point[599]=1){point[3]=point[1] point[1]=70 point[6]=point[7]}
-	if(other.point[599]=2){point[3]=point[1] point[1]=-70 point[6]=point[7]}
+	if(other.point[599]=1){point[3]=point[1] point[1]=100 point[6]=point[7]}
+	if(other.point[599]=2){point[3]=point[1] point[1]=-100 point[6]=point[7]}
 	point[2]=point[1]
 	}
 }
@@ -5425,7 +5438,7 @@ point[22]=0
 
 if(step>=round(ts1*479) and step<round(ts1*495))
 {
-point[21]+=44.325
+point[21]+=49.325
  point[22]=370*sin(degtorad(point[21]))
 	if(step mod 4=0)
 	{

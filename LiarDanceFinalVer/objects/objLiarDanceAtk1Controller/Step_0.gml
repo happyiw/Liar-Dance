@@ -74,7 +74,10 @@ if(t<345){Mstep=2}
 					
 					
 	                var a = instance_create_layer(xx,yy,"Foreground_cherries",objCustomBullet);
-	                a.direction=random(360);
+					if t==65 || t==82
+		                a.direction=point_direction(xx,yy,scrPX(),scrPY())+random_range(30,330)
+					else
+						a.direction=random(360);
 	                a.speed=random_range(2,10);
 	                a.image_xscale=4;
 	                a.image_yscale=a.image_xscale;
@@ -103,6 +106,19 @@ if(t<345){Mstep=2}
 					//show_message(a.depth)
 	                i2++
 	            }
+				if t>=345 {
+					repeat(10) {
+						var a = instance_create_layer(xx,yy,"Foreground_cherries",objCustomBullet);
+		                a.direction=point_direction(xx,yy,scrPX(),scrPY())+random_range(20,340)
+		                a.speed=random_range(5,10);
+		                a.image_xscale=4;
+		                a.image_yscale=a.image_xscale;
+		                a.free_variable[0]=random_range(0.5,1.15);    //end size
+		                a.free_variable[1]=0;      //only half of the objects leave trail
+		                a.persist=true;
+		                a.tag="atk 1 bursts";	
+					}
+				}
 	        }
 	    }
         

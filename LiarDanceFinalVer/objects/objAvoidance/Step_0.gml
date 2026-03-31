@@ -1094,7 +1094,7 @@ a.depth=3
 #endregion
 #region
 cre(400+40,304-192,objSSCherry)
-a.direction=6-point[60]
+a.direction=360-point[60]
 a.speed=19.5
 a.image_index=12
 a.image_blend=make_color_hsv(0,100,255)

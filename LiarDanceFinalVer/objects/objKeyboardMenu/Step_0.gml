@@ -6,20 +6,20 @@ playerIndex = (playerIndex + 1/5) mod 4;
 // Check for button inputs
 if (!settingKey) { // Check if we're currently setting a key bind
     if (scrButtonCheckPressed(global.menuUpButton)) { // Move up in the menu
-        audio_play_sound(MENU_SOUND,0,false);
+        audio_play_sound(sndTitleMove,0,false);
         keySelect -= 1;
         if (keySelect < 0) {
             keySelect = 10;
 		}
     } else if (scrButtonCheckPressed(global.menuDownButton)) { // Move down in the menu
-        audio_play_sound(MENU_SOUND,0,false);
+        audio_play_sound(sndTitleMove,0,false);
         keySelect += 1;
         if (keySelect > 10) {
             keySelect = 0;
 		}
     } else if (scrButtonCheckPressed(global.menuBackButton)) { // Save changes and go back to the options menu
         scrSaveConfig();
-        instance_create_layer(x,y,layer,objOptionsMenu);
+        instance_create_depth(x,y,depth,objOptionsMenu);
         instance_destroy();
     } else if (scrButtonCheckPressed(global.menuAcceptButton)) { // Select current option
         if (keySelect != 10) { // Set the selected key

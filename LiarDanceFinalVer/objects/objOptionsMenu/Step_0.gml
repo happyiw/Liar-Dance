@@ -27,6 +27,18 @@ if (scrButtonCheckPressed(global.menuUpButton)) { // Move up in the menu
         window_set_fullscreen(global.fullscreenMode);
     } else if (optionSelect == 3) { // Toggle smoothing mode
         global.smoothingMode = !global.smoothingMode;
+    } else if (optionSelect == 4) { // Save changes and go to the keyboard controls menu
+        scrSaveConfig();
+        global.menuSelectPrev[1] = optionSelect;
+		instance_create_depth(x,y,depth,objKeyboardMenu);
+        instance_destroy();
+        exit;
+    } else if (optionSelect == 5) { // Save changes and go to the controller options menu
+        scrSaveConfig();
+        global.menuSelectPrev[1] = optionSelect;
+		instance_create_depth(x,y,depth,objControllerMenu);
+		instance_destroy();
+        exit;
     }
 }
 

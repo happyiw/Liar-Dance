@@ -1,6 +1,6 @@
 /// @description Draw menu
 
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_set_font(fDefault24);
 draw_set_valign(fa_top);
 

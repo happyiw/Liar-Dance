@@ -1,6 +1,6 @@
 /// @description Initialize variables
 
-optionNum = 4; // Sets number of separate menu options available
+optionNum = 6; // Sets number of separate menu options available
 optionSelect = global.menuSelectPrev[1]; // Sets which option is currently selected
 
 xSelector = 124; // Sets where to draw the menu text on the x axis
@@ -17,6 +17,8 @@ strSelect[0] = "Music";
 strSelect[1] = "Volume Level";
 strSelect[2] = "Screen Mode";
 strSelect[3] = "Smoothing Mode";
+strSelect[4] = "Keyboard Controls";
+strSelect[5] = "Controller Options";
 
 // Stores the image index of the menu sprite
 playerIndex = 0;

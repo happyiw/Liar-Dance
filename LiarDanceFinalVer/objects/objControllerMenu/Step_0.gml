@@ -6,20 +6,20 @@ playerIndex = (playerIndex + 1/5) mod 4;
 // Check for button inputs
 if (!settingButton) { // Check if we're currently setting a button bind
     if (scrButtonCheckPressed(global.menuUpButton)) { // Move up in the menu
-        audio_play_sound(MENU_SOUND,0,false);
+        audio_play_sound(sndTitleMove,0,false);
         buttonSelect -= 1;
         if (buttonSelect < 0) {
             buttonSelect = 11;
 		}
     } else if (scrButtonCheckPressed(global.menuDownButton)) { // Move down in the menu
-        audio_play_sound(MENU_SOUND,0,false);
+        audio_play_sound(sndTitleMove,0,false);
         buttonSelect += 1;
         if (buttonSelect > 11) {
             buttonSelect = 0;
 		}
     } else if (scrButtonCheckPressed(global.menuBackButton)) { // Save changes and go back to the options menu
         scrSaveConfig();
-        instance_create_layer(x,y,layer,objOptionsMenu);
+        instance_create_depth(x,y,depth,objOptionsMenu);
         instance_destroy();
     } else if (scrButtonCheckPressed(global.menuAcceptButton)) {  // Select current option
         if (buttonSelect != 0) {

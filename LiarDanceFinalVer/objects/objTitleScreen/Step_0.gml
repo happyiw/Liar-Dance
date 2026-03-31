@@ -5,14 +5,14 @@ if(MenuMode)
 CanSelectStep+=1
 if(!MenuSelect and !DataWarn and !OptionMode and !RoomTrance and CanSelectStep>50)
 {
-        if (keyboard_check_pressed(vk_up)) { 
+        if (scrButtonCheckPressed(global.menuUpButton)) { 
             audio_play_sound(sndTitleMove,0,false);
             fileSelect -= 1;
             if (fileSelect < 0) {
                 fileSelect = 2;
 			}
         }  
-		if(keyboard_check_pressed(vk_down)) {
+		if(scrButtonCheckPressed(global.menuDownButton)) {
             audio_play_sound(sndTitleMove,0,false);
             fileSelect += 1;
             if (fileSelect > 2) {
@@ -83,7 +83,7 @@ audio_play_sound(sndTitleCancel,0,false);
 
 else if(OptionMode)
 {
-if (scrButtonCheckPressed(global.menuBackButton)) {
+if (scrButtonCheckPressed(global.menuBackButton) and instance_exists(objOptionsMenu)) {
 	audio_play_sound(sndTitleCancel,0,false);
 OptionMode=0
 MenuSelect=0

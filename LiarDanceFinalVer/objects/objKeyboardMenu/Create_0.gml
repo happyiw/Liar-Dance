@@ -3,9 +3,9 @@
 keySelect = 0; // Sets which key is currently selected
 
 xSelector = 120; // Sets where to draw the menu text on the x axis
-ySelector = 53; // Sets where to draw the menu text on the y axis
+ySelector = 90; // Sets where to draw the menu text on the y axis
 xSeperation = 560; // Sets how far to separate the key name from the key value
-ySeperation = 40; // Sets how far each option is from each other
+ySeperation = 34; // Sets how far each option is from each other
 
 settingKey = false; // Sets whether or not a key is currently getting set
 resetPrompt = false; // Sets whether to show the message that controls were reset

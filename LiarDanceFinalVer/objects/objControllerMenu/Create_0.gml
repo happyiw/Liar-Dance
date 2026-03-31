@@ -3,9 +3,9 @@
 buttonSelect = 0; // Sets which button is currently selected
 
 xSelector = 120; // Sets where to draw the menu text on the x axis
-ySelector = 29; // Sets where to draw the menu text on the y axis
+ySelector = 70; // Sets where to draw the menu text on the y axis
 xSeperation = 560; // Sets how far to separate the button name from the button value
-ySeperation = 40; // Sets how far each option is from each other
+ySeperation = 34; // Sets how far each option is from each other
 
 settingButton = false; // Sets whether or not a button is currently getting set
 resetPrompt = false; // Sets whether to show the message that controls were reset

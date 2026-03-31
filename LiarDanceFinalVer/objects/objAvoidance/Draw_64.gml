@@ -293,8 +293,8 @@ if(step>=round(ts1*351))
 if(point[845]<60){point[845]+=0.8}else{point[845]=60}
 }
 draw_set_colour(c_black)
-draw_rectangle(0,0,800,60-point[845],0)
-draw_rectangle(0,608,800,608-60+point[845],0)
+draw_rectangle(0,-1,800,59-point[845],0)
+draw_rectangle(0,608,800,609-59+point[845],0)
 }
 
 

@@ -3,7 +3,7 @@
   "%Name":"sprEveryone",
   "bboxMode":0,
   "bbox_bottom":578,
-  "bbox_left":4,
+  "bbox_left":1,
   "bbox_right":779,
   "bbox_top":25,
   "collisionKind":1,

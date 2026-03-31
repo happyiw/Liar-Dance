@@ -5689,7 +5689,7 @@ cre(0,0,objScreenChangeBlackWall)
 }
 
 
-if( step=round(ts1*512))
+if( step=round(ts1*512)-2)
 {
 room_goto(rEnd)
 with(objPlayer){des()}

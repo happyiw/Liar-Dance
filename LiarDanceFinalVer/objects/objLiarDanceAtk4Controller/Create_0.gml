@@ -6,7 +6,7 @@ muteki=0
 
 
 
-attack_mode=1
+attack_mode=0
 swap_variable=2				//defines how often will leehe cherry will appear (2 = every 2nd bouncing)
 /*
 0 - car wont spawn leehe cherries

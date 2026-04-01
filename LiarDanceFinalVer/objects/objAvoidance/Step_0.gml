@@ -2593,8 +2593,8 @@ if(trg=2)
 	if(!point[4]){speed*=0.85}else{ gravity_direction=direction gravity=(1-point[3])/5}
 	point[2]*=0.85
 	
-image_xscale=1+point[2]-point[3]
-image_yscale=1+point[2]-point[3]
+image_xscale=0.9+point[2]-point[3]
+image_yscale=0.9+point[2]-point[3]
 }
 }
 
@@ -5605,7 +5605,7 @@ with(objSSCherry)
 	if(trg=14)
 	{
 		if(!point[3] and !point[1]){point[2]+=1 if(point[2]=4){speed=0}}
-		if(point[1]){speed=18
+		if(point[1]){speed=25
 			if(image_alpha=1){
 		cre(x,y,objSSCherry) 
 		a.image_alpha=0.2 

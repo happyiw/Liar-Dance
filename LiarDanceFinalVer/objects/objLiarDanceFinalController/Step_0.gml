@@ -147,8 +147,8 @@ if t>=630 and t<=913 {
 	        if tag=="atk 2 beloved instagibs" || tag=="atk 3 circles" || tag=="atk 3" {
 				b_trig=false;
 	            direction=point_direction(scrPX(),scrPY(),x,y)
-	            gravity=0.2;
-	            speed=random_range(3,10)
+	            gravity=0.17;
+	            speed=random_range(5,12)
 	            persist=false
 			}
 		}

@@ -281,7 +281,6 @@
     {"id":{"name":"shWaterDistortion","path":"shaders/shWaterDistortion/shWaterDistortion.yy",},},
     {"id":{"name":"MusAvoidance","path":"sounds/MusAvoidance/MusAvoidance.yy",},},
     {"id":{"name":"MusClear","path":"sounds/MusClear/MusClear.yy",},},
-    {"id":{"name":"musGuyRock","path":"sounds/musGuyRock/musGuyRock.yy",},},
     {"id":{"name":"musLiarDance","path":"sounds/musLiarDance/musLiarDance.yy",},},
     {"id":{"name":"musOnDeath","path":"sounds/musOnDeath/musOnDeath.yy",},},
     {"id":{"name":"MusTitle","path":"sounds/MusTitle/MusTitle.yy",},},

@@ -202,8 +202,18 @@ if t>=1950 {
 			
 			if other.attack_mode==1
 				option=1-sign(other.bouncing_option)		//choose(1,2,(4-2),)
-			else
-				option=0
+			else {
+				if other.t<=2108 {
+					option=1-sign(other.bouncing_option)
+				}
+				else {
+					rand=choose(0,5)
+					if rand==5
+						option=2
+					else
+						option=0
+				}
+			}
 			
 			a = instance_create_depth(x-22,y-52,-2,objLiarDanceAtk4BouncyCherries)
 			switch(option) {
@@ -215,6 +225,9 @@ if t>=1950 {
 					a.sprite_index=sprLeeheCherry;
 					a.image_index=irandom(12)
 				break;
+				case 2:
+					a.sprite_index=sprLiarDanceAtk4Trash;
+					a.image_index=irandom(3)
 			}
 			a.image_xscale=random_range(1.35,1.7)
 			a.image_yscale=a.image_xscale
@@ -228,8 +241,10 @@ if t>=1950 {
 			a.free_variable[2]=a.gravity
 			a.tag="atk 4 jumpy cherries"
 			a.draw=true
+			if other.t>=2108
+				a.flag=-1
 			
-			other.bouncing_option = (other.bouncing_option+1) mod 3
+			other.bouncing_option = (other.bouncing_option+1) mod other.swap_variable
 			
 		}
 		if other.t mod 77 == 38 {
@@ -247,7 +262,9 @@ if t>=1950 {
 			a.free_variable[1]=random_range(1.3,2.6)*2
 			a.free_variable[2]=a.gravity
 			a.tag="atk 4 jumpy cherries"
-			a.draw=true		
+			a.draw=true	
+			if other.t>=2108
+				a.flag=-1	
 		}
 	}
 	if t>=2108 {

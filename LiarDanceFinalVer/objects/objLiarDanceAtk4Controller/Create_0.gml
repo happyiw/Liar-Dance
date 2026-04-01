@@ -13,4 +13,4 @@ swap_variable=2				//defines how often will leehe cherry will appear (2 = every 
 1 - every 3rd special bouncing will be a leehe cherry
 */
 
-bouncing_option=1
+bouncing_option=0

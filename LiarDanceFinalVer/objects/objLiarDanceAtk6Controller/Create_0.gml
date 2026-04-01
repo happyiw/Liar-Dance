@@ -81,6 +81,98 @@ liar_circle_finradius=liar_circle_radius
 
 
 text_t=0
+
+
+a=instance_create_depth(400,304,200,objLiarDanceAtk6Teto)
+a.image_alpha=0.25
+a.image_xscale=teto_side
+a.t=random(360)
+	
+a=instance_create_depth(400,304,230,objBGCirclesEffect)
+a.intensity=0.3
+a.black_merge=0.04;
+	
+//color=make_color_rgb(201,131,255)
+for (dist=160; dist<=220; dist+=60) {
+	for (angle=0; angle<360; angle+=4) {
+		a=instance_create_depth(400+lengthdir_x(96,angle),304+lengthdir_y(96,angle),500-dist,objCustomBullet)
+		a.sprite_index=sprLiarDanceAtk6CherryLine
+		a.image_angle=angle+90
+		switch(dist) {
+			case 160:
+				a.dir_inc=3
+				a.image_blend=c_black;
+				a.image_xscale=1.7;
+				break;
+					
+			case 220:
+				a.dir_inc=-3
+				a.image_blend=c_white;
+				a.image_xscale=1.1;
+				break;
+					
+		}
+		a.image_yscale=a.image_xscale
+		a.drop_shadow=false
+		a.tag="atk 6 start transition"
+		a.free_variable[0]=sign(angle mod 12)
+		a.free_variable[1]=random_range(-32,32)
+		a.free_variable[2]=500-dist;
+		a.dir=angle;
+		a.persist=true
+		a.t=-1
+	}
+}
+	
+for (i=0; i<2; i++) {
+		
+	for (angle=0; angle<360; angle+=120) {
+		a=instance_create_depth(400+lengthdir_x(96,angle),304+lengthdir_y(96,angle),-50,objCustomBullet)
+		a.drop_shadow=false;
+		a.draw=true
+		a.sprite_index=sprCustomRegularCherry
+		a.image_index=((angle+60*i)/30)
+		a.image_xscale=1.4
+		a.image_yscale=a.image_xscale;
+		a.free_variable[0]=random_range(32,-64)
+		a.b_trig=true;
+		a.cx=400
+		a.cy=304
+		a.len=96
+		a.dir=(angle+60*i)
+		//a.parent_id=aa.id
+		a.dir_inc=-4.3
+		a.persist=true
+		a.free_variable[0]=i*3+angle/120
+		a.tag="atk 6 six spawners"
+		a.t=-1
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 a=instance_create(400,304+96,objBlock)
 a.visible=true;

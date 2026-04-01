@@ -24,9 +24,13 @@ if instance_exists(objPlayer) {
 	y=scrPY()
 }
 if !instance_exists(objPlayer) {
-	
+	instance_destroy(objLiarDanceAtk5TechIssuesEffect)
+	with(objDecoCustomObject) {
+		if sprite_index!=sprLiarDanceAtk5BRB
+			instance_destroy()
+	}
 	with(objCustomBullet) {
-		if tag!="atk 5 star spawner"
+		if tag!="atk 5 star spawner" and tag!="atk 5 star formation"
 			persist=false;	
 	}
 	//global.edgeDeath=true
@@ -563,7 +567,7 @@ if t==2675 {
 	val=irandom_range(20,100)
 	mirror=choose(-1,1)
 	for (i=0; i<3; i++) {
-		a=instance_create(-100,-100,objCustomBullet)
+		a=instance_create(-300,-300,objCustomBullet)
 		
 		a.sprite_index=sprMayuCherry;
 		a.image_blend=make_color_hsv(39+val*i,255,255)				
@@ -753,13 +757,21 @@ if t>=2856 and t<=2952 {
 }
 
 if t==2925 {
-	a=instance_create_depth(0,0,-500,objLiarDanceAtk5TechIssuesEffect)
-	a.alarm[0]=29
+	if instance_exists(objPlayer) {
+		a=instance_create_depth(0,0,-500,objLiarDanceAtk5TechIssuesEffect)
+		a.alarm[0]=27
+	}
 }
 
-if t>=2925 {
+if t>=2923 {
 	with(objCustomBullet) {
 		killer=false;	
+	}
+}
+
+if t==2949 {
+	with(objLiarDanceAtk5TechIssuesEffect) {
+		t_inc=0
 	}
 }
 
@@ -780,9 +792,12 @@ if t==2952 {
 	a=instance_create_depth(0,0,0,objDarkness)
 	a.image_blend=c_black
 	
-	a=instance_create_depth(0,0,-400,objDecoCustomObject)
-	a.sprite_index=sprLiarDanceAtk5BRB
-	a.image_index=choose(0,1)
+	if instance_exists(objPlayer) {
+		a=instance_create_depth(0,0,-400,objDecoCustomObject)
+		a.sprite_index=sprLiarDanceAtk5BRB
+		a.image_index=choose(0,1)
+	}
+	
 	//show_message(layer_background_get_blend((bg_id)))
 	
 }
@@ -801,11 +816,12 @@ if t>=2952 {
 
 if t==2994 {
 	
-	a=instance_create_depth(0,0,-500,objLiarDanceAtk5TechIssuesEffect)
-	//a.alarm[0]=29
-	a.t=26
-	a.t_inc=-1
-	
+	if instance_exists(objPlayer) {
+		a=instance_create_depth(0,0,-500,objLiarDanceAtk5TechIssuesEffect)
+		//a.alarm[0]=29
+		a.t=26
+		a.t_inc=-1
+	}
 }
 
 if t==2995 {
@@ -815,13 +831,15 @@ if t==2995 {
 	v=144;
 	set_camera(v,v/1.3,800-v*2,608-v*2/1.3,0)
 	
-	instance_destroy(objDecoCustomObject)
-	a=instance_create_depth(400,304,-300,objLiarDanceAtk5Crutch)
-	a.sprite_index=sprLiarDanceAtk6TetoSilhoulette;
-	a.image_alpha=0.2
-	a.image_xscale=teto_side
-	a.tag="atk 5 dancing silhoulette"
-	a.alarm[1]=30
+	if instance_exists(objPlayer) {
+		instance_destroy(objDecoCustomObject)
+		a=instance_create_depth(400,304,-300,objLiarDanceAtk5Crutch)
+		a.sprite_index=sprLiarDanceAtk6TetoSilhoulette;
+		a.image_alpha=0.2
+		a.image_xscale=teto_side
+		a.tag="atk 5 dancing silhoulette"
+		a.alarm[1]=30
+	}
 }
 if t>=2995 and t<=3000 {
 }

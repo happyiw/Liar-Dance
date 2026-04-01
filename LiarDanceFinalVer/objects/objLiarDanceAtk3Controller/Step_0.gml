@@ -615,7 +615,8 @@ if t==1686 {
 		else if tag!="atk 3 happy teto"
 			instance_destroy()
 		else {
-			image_speed=0
+			sprite_index=sprLiarDanceAtk3TetoFullsize
+			//image_speed=0
 			
 		}
 	}
@@ -755,6 +756,15 @@ if t>=1756 and t<=1786 {
 	with(objLiarDanceAtk3FinalTransition) {
 		surf_r=EaseOutSine(other.t-1756,0,800,30)
 	}
+	
+	/*
+	with(objDecoCustomObject) {
+		if tag=="atk 3 happy teto" {
+			
+			
+		}
+	}
+	*/
 }
 if t==1786 {
 	

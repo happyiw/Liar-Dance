@@ -86,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.212",
   },
   "name":"LiarDanceFinalVer",
   "resources":[
@@ -331,6 +331,7 @@
     {"id":{"name":"sprLiarDanceAtk3Cloud","path":"sprites/sprLiarDanceAtk3Cloud/sprLiarDanceAtk3Cloud.yy",},},
     {"id":{"name":"sprLiarDanceAtk3CloudDistorted","path":"sprites/sprLiarDanceAtk3CloudDistorted/sprLiarDanceAtk3CloudDistorted.yy",},},
     {"id":{"name":"sprLiarDanceAtk3Phone","path":"sprites/sprLiarDanceAtk3Phone/sprLiarDanceAtk3Phone.yy",},},
+    {"id":{"name":"sprLiarDanceAtk3TetoFullsize","path":"sprites/sprLiarDanceAtk3TetoFullsize/sprLiarDanceAtk3TetoFullsize.yy",},},
     {"id":{"name":"sprLiarDanceAtk3VariousScreens","path":"sprites/sprLiarDanceAtk3VariousScreens/sprLiarDanceAtk3VariousScreens.yy",},},
     {"id":{"name":"sprLiarDanceAtk4BuroCat","path":"sprites/sprLiarDanceAtk4BuroCat/sprLiarDanceAtk4BuroCat.yy",},},
     {"id":{"name":"sprLiarDanceAtk4BuroTank","path":"sprites/sprLiarDanceAtk4BuroTank/sprLiarDanceAtk4BuroTank.yy",},},
@@ -338,6 +339,7 @@
     {"id":{"name":"sprLiarDanceAtk4CarWindow","path":"sprites/sprLiarDanceAtk4CarWindow/sprLiarDanceAtk4CarWindow.yy",},},
     {"id":{"name":"sprLiarDanceAtk4Road","path":"sprites/sprLiarDanceAtk4Road/sprLiarDanceAtk4Road.yy",},},
     {"id":{"name":"sprLiarDanceAtk4Signs","path":"sprites/sprLiarDanceAtk4Signs/sprLiarDanceAtk4Signs.yy",},},
+    {"id":{"name":"sprLiarDanceAtk4Trash","path":"sprites/sprLiarDanceAtk4Trash/sprLiarDanceAtk4Trash.yy",},},
     {"id":{"name":"sprLiarDanceAtk4WhiteNoiseTexture","path":"sprites/sprLiarDanceAtk4WhiteNoiseTexture/sprLiarDanceAtk4WhiteNoiseTexture.yy",},},
     {"id":{"name":"sprLiarDanceAtk5BRB","path":"sprites/sprLiarDanceAtk5BRB/sprLiarDanceAtk5BRB.yy",},},
     {"id":{"name":"sprLiarDanceAtk5CherryStar","path":"sprites/sprLiarDanceAtk5CherryStar/sprLiarDanceAtk5CherryStar.yy",},},

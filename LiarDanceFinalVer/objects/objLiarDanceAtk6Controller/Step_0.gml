@@ -34,7 +34,7 @@ if !instance_exists(objPlayer) {
 
 if t==3026 {
 	
-	
+	/*
 	a=instance_create_depth(400,304,200,objLiarDanceAtk6Teto)
 	a.image_alpha=0.25
 	a.image_xscale=teto_side
@@ -77,13 +77,6 @@ if t==3026 {
 	
 	for (i=0; i<2; i++) {
 		
-		/*
-		aa=instance_create(400,304,objCustomBullet)
-		aa.killer=false;
-		aa.drop_shadow=false;
-		aa.image_alpha=0
-		aa.tag="atk 6 six spawner parent"
-		*/
 		for (angle=0; angle<360; angle+=120) {
 			a=instance_create_depth(400+lengthdir_x(96,angle),304+lengthdir_y(96,angle),-50,objCustomBullet)
 			a.drop_shadow=false;
@@ -106,6 +99,7 @@ if t==3026 {
 			
 		}
 	}
+	*/
 }
 
 if t>=3026 and t<=3076 {
@@ -400,8 +394,8 @@ if t==3200 || t==3220 {
 			dir_inc=15
 			
 			
-			for (spd=3; spd<21; spd+=3) {
-				for (angle=-120; angle<=120; angle+=120) {
+			for (spd=2; spd<21; spd+=2) {
+				for (angle=-145; angle<=145; angle+=145) {
 					
 					a=instance_create_depth(x,y,depth+1,objCustomBullet)
 					a.sprite_index=sprite_index		//sprInvertedLeeheCherry			//sprCustomRegularCherry;
@@ -874,12 +868,12 @@ if t==3440 || t==3485 {
 			case 2: col=c_white; break;
 		}
 		for (angle=0; angle<=180; angle+=angle_inc) {
-			a=instance_create_depth(_x,_y,-400,objCustomBullet)
+			a=instance_create_depth(-50,_y,-400,objCustomBullet)
 			a.drop_shadow=false;
 			//a.killer=false;
 			a.draw=true
 			a.b_trig=true;
-			a.cx=a.x;
+			a.cx=_x;
 			a.cy=a.y;
 			a.dir=point_direction(a.x,a.y,400,304) - 90;
 			a.len=dist;
@@ -901,7 +895,7 @@ if t==3440 || t==3485 {
 		if tag=="atk 6 expanding circles" {
 			if dir==0 {
 				for (add_angle_value=0; add_angle_value<360; add_angle_value+=10) {
-					a=instance_create(x,y,objCustomBullet);
+					a=instance_create(400,0,objCustomBullet);
 					a.sprite_index=sprWBCherry_2;
 					a.image_xscale=image_xscale;
 					a.image_yscale=image_yscale;
@@ -930,7 +924,7 @@ if t==3440 || t==3485 {
 	for (dist=30; dist<90; dist+=30) {
 		rand=dist//random(360)
 		for (add_angle_value=0; add_angle_value<360; add_angle_value+=10) {
-			a=instance_create(0,0,objCustomBullet);
+			a=instance_create(400,0,objCustomBullet);
 			a.sprite_index=sprWBCherry_2;
 			if t==3485
 				a.image_blend=c_black

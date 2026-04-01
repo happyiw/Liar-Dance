@@ -763,7 +763,7 @@ if t==2925 {
 	}
 }
 
-if t>=2923 {
+if t>=2925 {
 	with(objCustomBullet) {
 		killer=false;	
 	}

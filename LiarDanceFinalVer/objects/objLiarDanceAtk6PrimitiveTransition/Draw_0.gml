@@ -14,7 +14,7 @@ surface_set_target(srf)
 	draw_rectangle_colour(-32,-32,832,640,c_black,c_black,c_black,c_black,false)
 
 	with(objLiarDanceAtk6Teto) {
-		draw_sprite_ext(sprLiarDanceAtk6NeonTeto,image_index,x,y,image_xscale,image_yscale,image_angle,c_red,0.5)	
+		draw_sprite_ext(sprLiarDanceAtk6NeonTeto,image_index,x,y,-image_xscale,image_yscale,image_angle,c_red,0.5)	
 	}
 	
 	if draw_player {

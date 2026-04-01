@@ -36,17 +36,22 @@ color_offset=2*irandom(5)
 xx[0]=400
 yy[0]=304
 circle_radius[0]=340
-angle_offset[0]=0
+angle_offset[0]=random(360)
 //angle_offset[0]=random(360)
 angle_offset_inc[0]=0
 circles_amount=8
 for (i=1; i<circles_amount; i++) {
-	circle_radius[i]=340-37*i
-	angle_offset[i]=random(360)
+	circle_radius[i]=340-35.5*i
+	/*
+	if i!=(circles_amount-1)
+		angle_offset[i]=random(360)
+	else
+	*/
+		angle_offset[i]=angle_offset[0]+90*i
 	radius_offset[i]=circle_radius[i-1]-circle_radius[i]
 	xx[i]=xx[i-1]+lengthdir_x(radius_offset[i],angle_offset[i])
 	yy[i]=yy[i-1]+lengthdir_y(radius_offset[i],angle_offset[i])
-	angle_offset_inc[i]=irandom_range(12,18)*choose(-1,1)*lerp(1,1.5,i/circles_amount)
+	angle_offset_inc[i]=irandom_range(15,18)*choose(-1,1)*lerp(1,1.5,i/circles_amount)
 }
 
 spiral_angle=random(360)
@@ -78,7 +83,7 @@ liar_grid_y=304+random_range(-48,48)
 liar_circle_radius=500
 liar_circle_finradius=liar_circle_radius
 
-
+shake=0
 
 text_t=0
 

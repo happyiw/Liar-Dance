@@ -480,7 +480,7 @@ if t==3240 || t==3260 || t==3275 || t==3295 {
 if t==3240 {
 	a=instance_create_depth(0,0,-500,objLiarDanceAtk6SmallTransitionSurface)
 	a.target_tag="atk 6 transition 1"
-	a.teto_side=-1
+	a.teto_side=-teto_side
 	
 	/*
 	for (dist=transition_circle_radius; dist<transition_circle_radius+80*5; dist+=80) {
@@ -583,7 +583,7 @@ if t==3255 {
 	
 	a=instance_create_depth(0,0,-600,objLiarDanceAtk6SmallTransitionSurface)
 	a.target_tag="atk 6 transition 2"
-	//a.teto_side=-1
+	a.teto_side=teto_side
 	a.draw_start_index=2
 }
 
@@ -1362,6 +1362,9 @@ if t>=3730 and t<=3800 {
 if t==3806 || t==3822 || t==3842 || t==3860 {
 	liar_circle_radius-=150					//lerp(liar_circle_radius,64,0.35)
 	rand_dir_inc=random_range(4,9)
+	
+	shake=5
+	
 	with(objCustomBullet) {
 		if tag=="atk 6 i ran out of ideas for tags" {
 			free_variable[0]=lerp(free_variable[0],64,0.45)
@@ -1423,6 +1426,8 @@ if t>=3806 and t<=3880 {
 			image_yscale=image_xscale;
 		}
 	}
+	shake=lerp(shake,0,0.17)
+	camera_set_view_pos(view_camera[0], 32+random_range(-shake,shake), (32+random_range(-shake,shake))/1.3)
 }
 
 
@@ -1444,6 +1449,7 @@ if t==3875 {
 	a.tag="atk 6 and another flashbang"
 	
 	
+	camera_set_view_pos(view_camera[0], 0, 0)
 	
 	_y=304+304*second_part_side
 	scaler=1;
